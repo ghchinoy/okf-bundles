@@ -210,11 +210,6 @@
       "text": "govern"
     },
     {
-      "from": "categories/govern-1",
-      "to": "functions/govern",
-      "text": "govern"
-    },
-    {
       "from": "categories/govern-2",
       "to": "categories/govern-1",
       "text": "govern-1"
@@ -223,11 +218,6 @@
       "from": "categories/govern-2",
       "to": "characteristics/accountable-and-transparent",
       "text": "accountable-and-transparent"
-    },
-    {
-      "from": "categories/govern-2",
-      "to": "functions/govern",
-      "text": "govern"
     },
     {
       "from": "categories/govern-2",
@@ -250,11 +240,6 @@
       "text": "govern"
     },
     {
-      "from": "categories/govern-3",
-      "to": "functions/govern",
-      "text": "govern"
-    },
-    {
       "from": "categories/govern-4",
       "to": "characteristics/explainable-and-interpretable",
       "text": "explainable-and-interpretable"
@@ -263,11 +248,6 @@
       "from": "categories/govern-4",
       "to": "characteristics/safe",
       "text": "safe"
-    },
-    {
-      "from": "categories/govern-4",
-      "to": "functions/govern",
-      "text": "govern"
     },
     {
       "from": "categories/govern-4",
@@ -295,11 +275,6 @@
       "text": "manage"
     },
     {
-      "from": "categories/manage-1",
-      "to": "functions/manage",
-      "text": "manage"
-    },
-    {
       "from": "categories/manage-2",
       "to": "categories/govern-4",
       "text": "govern-4"
@@ -308,11 +283,6 @@
       "from": "categories/manage-2",
       "to": "characteristics/accountable-and-transparent",
       "text": "accountable-and-transparent"
-    },
-    {
-      "from": "categories/manage-2",
-      "to": "functions/manage",
-      "text": "manage"
     },
     {
       "from": "categories/manage-2",
@@ -335,11 +305,6 @@
       "text": "manage"
     },
     {
-      "from": "categories/manage-3",
-      "to": "functions/manage",
-      "text": "manage"
-    },
-    {
       "from": "categories/map-1",
       "to": "categories/govern-1",
       "text": "govern-1"
@@ -348,11 +313,6 @@
       "from": "categories/map-1",
       "to": "characteristics/valid-and-reliable",
       "text": "valid-and-reliable"
-    },
-    {
-      "from": "categories/map-1",
-      "to": "functions/map",
-      "text": "map"
     },
     {
       "from": "categories/map-1",
@@ -380,11 +340,6 @@
       "text": "map"
     },
     {
-      "from": "categories/map-2",
-      "to": "functions/map",
-      "text": "map"
-    },
-    {
       "from": "categories/map-3",
       "to": "categories/measure-1",
       "text": "measure-1"
@@ -393,11 +348,6 @@
       "from": "categories/map-3",
       "to": "characteristics/explainable-and-interpretable",
       "text": "explainable-and-interpretable"
-    },
-    {
-      "from": "categories/map-3",
-      "to": "functions/map",
-      "text": "map"
     },
     {
       "from": "categories/map-3",
@@ -418,11 +368,6 @@
       "from": "categories/measure-1",
       "to": "computations/demographic-parity-ratio",
       "text": "demographic-parity-ratio"
-    },
-    {
-      "from": "categories/measure-1",
-      "to": "functions/measure",
-      "text": "measure"
     },
     {
       "from": "categories/measure-1",
@@ -455,11 +400,6 @@
       "text": "measure"
     },
     {
-      "from": "categories/measure-2",
-      "to": "functions/measure",
-      "text": "measure"
-    },
-    {
       "from": "categories/measure-3",
       "to": "categories/manage-1",
       "text": "manage-1"
@@ -468,11 +408,6 @@
       "from": "categories/measure-3",
       "to": "computations/calibration-drift-score",
       "text": "calibration-drift-score"
-    },
-    {
-      "from": "categories/measure-3",
-      "to": "functions/measure",
-      "text": "measure"
     },
     {
       "from": "categories/measure-3",
@@ -611,16 +546,6 @@
     },
     {
       "from": "functions/govern",
-      "to": "categories/govern-1",
-      "text": "govern-1"
-    },
-    {
-      "from": "functions/govern",
-      "to": "categories/govern-2",
-      "text": "govern-2"
-    },
-    {
-      "from": "functions/govern",
       "to": "categories/govern-2",
       "text": "govern-2"
     },
@@ -628,16 +553,6 @@
       "from": "functions/govern",
       "to": "categories/govern-3",
       "text": "govern-3"
-    },
-    {
-      "from": "functions/govern",
-      "to": "categories/govern-3",
-      "text": "govern-3"
-    },
-    {
-      "from": "functions/govern",
-      "to": "categories/govern-4",
-      "text": "govern-4"
     },
     {
       "from": "functions/govern",
@@ -681,23 +596,8 @@
     },
     {
       "from": "functions/manage",
-      "to": "categories/manage-1",
-      "text": "manage-1"
-    },
-    {
-      "from": "functions/manage",
       "to": "categories/manage-2",
       "text": "manage-2"
-    },
-    {
-      "from": "functions/manage",
-      "to": "categories/manage-2",
-      "text": "manage-2"
-    },
-    {
-      "from": "functions/manage",
-      "to": "categories/manage-3",
-      "text": "manage-3"
     },
     {
       "from": "functions/manage",
@@ -726,23 +626,8 @@
     },
     {
       "from": "functions/map",
-      "to": "categories/map-1",
-      "text": "map-1"
-    },
-    {
-      "from": "functions/map",
       "to": "categories/map-2",
       "text": "map-2"
-    },
-    {
-      "from": "functions/map",
-      "to": "categories/map-2",
-      "text": "map-2"
-    },
-    {
-      "from": "functions/map",
-      "to": "categories/map-3",
-      "text": "map-3"
     },
     {
       "from": "functions/map",
@@ -786,16 +671,6 @@
     },
     {
       "from": "functions/measure",
-      "to": "categories/measure-1",
-      "text": "measure-1"
-    },
-    {
-      "from": "functions/measure",
-      "to": "categories/measure-2",
-      "text": "measure-2"
-    },
-    {
-      "from": "functions/measure",
       "to": "categories/measure-2",
       "text": "measure-2"
     },
@@ -806,23 +681,8 @@
     },
     {
       "from": "functions/measure",
-      "to": "categories/measure-3",
-      "text": "measure-3"
-    },
-    {
-      "from": "functions/measure",
       "to": "computations/calibration-drift-score",
       "text": "calibration-drift-score"
-    },
-    {
-      "from": "functions/measure",
-      "to": "computations/calibration-drift-score",
-      "text": "calibration-drift-score"
-    },
-    {
-      "from": "functions/measure",
-      "to": "computations/demographic-parity-ratio",
-      "text": "demographic-parity-ratio"
     },
     {
       "from": "functions/measure",
