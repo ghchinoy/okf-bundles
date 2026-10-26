@@ -1,0 +1,929 @@
+{
+  "nodes": [
+    {
+      "id": "artifacts/aegis",
+      "title": "The Aegis",
+      "type": "Artifact",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "artifacts/golden-fleece",
+      "title": "The Golden Fleece",
+      "type": "Artifact",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/apollo",
+      "title": "Apollo",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/artemis",
+      "title": "Artemis (Diana)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/athena",
+      "title": "Athena (Minerva)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/hades",
+      "title": "Hades (Pluto)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/hera",
+      "title": "Hera (Juno)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/hermes",
+      "title": "Hermes (Mercury)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/poseidon",
+      "title": "Poseidon (Neptune)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "deities/zeus",
+      "title": "Zeus (Jupiter)",
+      "type": "Deity",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "heroes/achilles",
+      "title": "Achilles",
+      "type": "Hero",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "heroes/heracles",
+      "title": "Heracles (Hercules)",
+      "type": "Hero",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "heroes/jason",
+      "title": "Jason",
+      "type": "Hero",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "heroes/odysseus",
+      "title": "Odysseus (Ulysses)",
+      "type": "Hero",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "heroes/perseus",
+      "title": "Perseus",
+      "type": "Hero",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "places/delphi",
+      "title": "Oracle of Delphi",
+      "type": "Place",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "places/ithaca",
+      "title": "Ithaca",
+      "type": "Place",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "places/mount-olympus",
+      "title": "Mount Olympus",
+      "type": "Place",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "places/troy",
+      "title": "Troy (Ilium)",
+      "type": "Place",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "places/underworld",
+      "title": "The Underworld (Hades)",
+      "type": "Place",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "quests/odyssey",
+      "title": "The Odyssey (Voyage of Odysseus)",
+      "type": "Quest",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "quests/quest-for-the-golden-fleece",
+      "title": "Quest of the Argonauts for the Golden Fleece",
+      "type": "Quest",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "quests/trojan-war",
+      "title": "The Trojan War",
+      "type": "Quest",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "quests/twelve-labors-of-heracles",
+      "title": "The Twelve Labors of Heracles",
+      "type": "Quest",
+      "tier": "human-reviewed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "artifacts/aegis",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "artifacts/aegis",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "artifacts/aegis",
+      "to": "heroes/perseus",
+      "text": "perseus"
+    },
+    {
+      "from": "artifacts/golden-fleece",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "artifacts/golden-fleece",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "artifacts/golden-fleece",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "artifacts/golden-fleece",
+      "to": "quests/quest-for-the-golden-fleece",
+      "text": "quest-for-the-golden-fleece"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "deities/artemis",
+      "text": "artemis"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "heroes/achilles",
+      "text": "achilles"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "places/delphi",
+      "text": "delphi"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "deities/apollo",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "deities/artemis",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "deities/athena",
+      "to": "artifacts/aegis",
+      "text": "aegis"
+    },
+    {
+      "from": "deities/athena",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "deities/athena",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/athena",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "deities/athena",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "deities/athena",
+      "to": "heroes/perseus",
+      "text": "perseus"
+    },
+    {
+      "from": "deities/athena",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/athena",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "deities/athena",
+      "to": "quests/quest-for-the-golden-fleece",
+      "text": "quest-for-the-golden-fleece"
+    },
+    {
+      "from": "deities/athena",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "deities/hades",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "deities/hades",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "deities/hades",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/hades",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "deities/hades",
+      "to": "places/underworld",
+      "text": "underworld"
+    },
+    {
+      "from": "deities/hades",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "deities/hera",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/hera",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "deities/hera",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "deities/hera",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/hera",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "deities/hera",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "heroes/perseus",
+      "text": "perseus"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "places/underworld",
+      "text": "underworld"
+    },
+    {
+      "from": "deities/hermes",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "deities/poseidon",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "artifacts/aegis",
+      "text": "aegis"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "deities/artemis",
+      "text": "artemis"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "heroes/perseus",
+      "text": "perseus"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "deities/zeus",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "heroes/achilles",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "heroes/achilles",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "heroes/achilles",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "heroes/achilles",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "places/underworld",
+      "text": "underworld"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "quests/quest-for-the-golden-fleece",
+      "text": "quest-for-the-golden-fleece"
+    },
+    {
+      "from": "heroes/heracles",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "heroes/jason",
+      "to": "artifacts/golden-fleece",
+      "text": "golden-fleece"
+    },
+    {
+      "from": "heroes/jason",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "heroes/jason",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "heroes/jason",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "heroes/jason",
+      "to": "quests/quest-for-the-golden-fleece",
+      "text": "quest-for-the-golden-fleece"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "heroes/achilles",
+      "text": "achilles"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "places/ithaca",
+      "text": "ithaca"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "heroes/perseus",
+      "to": "artifacts/aegis",
+      "text": "aegis"
+    },
+    {
+      "from": "heroes/perseus",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "heroes/perseus",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "heroes/perseus",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "places/delphi",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "places/delphi",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "places/delphi",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "places/delphi",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "places/ithaca",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "places/ithaca",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "places/ithaca",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/artemis",
+      "text": "artemis"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "places/mount-olympus",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "places/troy",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "places/troy",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "places/troy",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "places/troy",
+      "to": "heroes/achilles",
+      "text": "achilles"
+    },
+    {
+      "from": "places/troy",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "places/troy",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "places/underworld",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "places/underworld",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "places/underworld",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "places/underworld",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "places/underworld",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "places/underworld",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "deities/hermes",
+      "text": "hermes"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "places/ithaca",
+      "text": "ithaca"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "places/underworld",
+      "text": "underworld"
+    },
+    {
+      "from": "quests/odyssey",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
+    },
+    {
+      "from": "quests/quest-for-the-golden-fleece",
+      "to": "artifacts/golden-fleece",
+      "text": "golden-fleece"
+    },
+    {
+      "from": "quests/quest-for-the-golden-fleece",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "quests/quest-for-the-golden-fleece",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "quests/quest-for-the-golden-fleece",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "quests/quest-for-the-golden-fleece",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "heroes/achilles",
+      "text": "achilles"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "quests/trojan-war",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "deities/artemis",
+      "text": "artemis"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "places/delphi",
+      "text": "delphi"
+    },
+    {
+      "from": "quests/twelve-labors-of-heracles",
+      "to": "places/underworld",
+      "text": "underworld"
+    }
+  ]
+}

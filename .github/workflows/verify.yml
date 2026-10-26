@@ -1,0 +1,30 @@
+name: Verify OKF Bundles
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install binder
+        run: |
+          TAG=$(curl -fsSL https://api.github.com/repos/ghchinoy/binder/releases/latest | jq -r .tag_name)
+          VERSION="${TAG#v}"
+          curl -fsSL -O "https://github.com/ghchinoy/binder/releases/download/${TAG}/binder_${VERSION}_linux_amd64.tar.gz"
+          tar -xzf "binder_${VERSION}_linux_amd64.tar.gz"
+          sudo mv binder /usr/local/bin/
+          binder --version
+
+      - name: Validate and review all bundles
+        run: |
+          for b in bundles/*/; do
+            echo "=== Validating $b ==="
+            binder validate --strict "$b"
+            binder review --require-tier machine-confirmed "$b"
+          done

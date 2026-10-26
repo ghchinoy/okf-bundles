@@ -1,0 +1,18 @@
+node_key,title,type,tier,stale,stale_after
+auth/draft-ietf-oauth-v2-1,Draft: The OAuth 2.1 Authorization Framework,Internet-Draft,machine-confirmed,false,2027-06-01
+auth/rfc6749,RFC 6749: The OAuth 2.0 Authorization Framework,RFC,machine-confirmed,false,
+auth/rfc6750,RFC 6750: The OAuth 2.0 Authorization Framework: Bearer Token Usage,RFC,machine-confirmed,false,
+auth/rfc7519,RFC 7519: JSON Web Token (JWT),RFC,machine-confirmed,false,
+auth/rfc7636,RFC 7636: Proof Key for Code Exchange by OAuth Public Clients (PKCE),RFC,machine-confirmed,false,
+data/rfc3986,RFC 3986: Uniform Resource Identifier (URI): Generic Syntax (STD 66),RFC,machine-confirmed,false,
+data/rfc8259,RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format (STD 90),RFC,machine-confirmed,false,
+data/rfc9562,RFC 9562: Universally Unique IDentifiers (UUIDs),RFC,machine-confirmed,false,
+http/rfc2616,RFC 2616: Hypertext Transfer Protocol -- HTTP/1.1 (Obsoleted),RFC,machine-confirmed,true,2014-06-01
+http/rfc9000,RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport,RFC,machine-confirmed,false,
+http/rfc9110,RFC 9110: HTTP Semantics,RFC,machine-confirmed,false,
+http/rfc9111,RFC 9111: HTTP Caching,RFC,machine-confirmed,false,
+http/rfc9113,RFC 9113: HTTP/2,RFC,machine-confirmed,false,
+http/rfc9114,RFC 9114: HTTP/3,RFC,machine-confirmed,false,
+http/rfc9457,RFC 9457: Problem Details for HTTP APIs,RFC,machine-confirmed,false,
+security/rfc5246,RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2 (Obsoleted),RFC,machine-confirmed,true,2018-08-01
+security/rfc8446,RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3,RFC,machine-confirmed,false,

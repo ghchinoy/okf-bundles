@@ -1,0 +1,1027 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>binder graph</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;}table{border-collapse:collapse;margin-bottom:2rem;}th,td{border:1px solid #ccc;padding:4px 8px;text-align:left;}caption{font-weight:bold;text-align:left;margin-bottom:.5rem;}</style>
+</head>
+<body>
+<h1>binder graph</h1>
+<table>
+<caption>Concepts</caption>
+<tr><th>id</th><th>title</th><th>type</th><th>tier</th><th>stale</th></tr>
+<tr><td>categories/govern-1</td><td>GOVERN 1: Policies and Procedures</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/govern-2</td><td>GOVERN 2: Accountability Structures</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/govern-3</td><td>GOVERN 3: Workforce Diversity &amp; Inclusion</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/govern-4</td><td>GOVERN 4: Risk-Aware Organizational Culture</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/manage-1</td><td>MANAGE 1: Risk Prioritization &amp; Response</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/manage-2</td><td>MANAGE 2: Benefit Maximization &amp; Impact Mitigation</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/manage-3</td><td>MANAGE 3: Third-Party &amp; Supply Chain AI Risk</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/map-1</td><td>MAP 1: Context Established</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/map-2</td><td>MAP 2: AI System Categorization</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/map-3</td><td>MAP 3: Capabilities and Limitations</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/measure-1</td><td>MEASURE 1: Methods and Metrics</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/measure-2</td><td>MEASURE 2: Trustworthiness Evaluation</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>categories/measure-3</td><td>MEASURE 3: Continuous Risk Tracking</td><td>Category</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/accountable-and-transparent</td><td>Accountable and Transparent</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/explainable-and-interpretable</td><td>Explainable and Interpretable</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/fair-with-harmful-bias-managed</td><td>Fair — with Harmful Bias Managed</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/privacy-enhanced</td><td>Privacy-Enhanced</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/safe</td><td>Safe</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/secure-and-resilient</td><td>Secure and Resilient</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>characteristics/valid-and-reliable</td><td>Valid and Reliable</td><td>Trustworthiness Characteristic</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/calibration-drift-score</td><td>Population Stability Index (PSI) Calibration Drift</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/demographic-parity-ratio</td><td>Demographic Parity Ratio (80% Four-Fifths Rule)</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>functions/govern</td><td>GOVERN</td><td>Function</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>functions/manage</td><td>MANAGE</td><td>Function</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>functions/map</td><td>MAP</td><td>Function</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>functions/measure</td><td>MEASURE</td><td>Function</td><td>human-reviewed</td><td>false</td></tr>
+</table>
+<table>
+<caption>Edges</caption>
+<tr><th>from</th><th>to</th><th>relationship</th></tr>
+<tr><td>categories/govern-1</td><td>categories/manage-1</td><td>manage-1</td></tr>
+<tr><td>categories/govern-1</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>categories/govern-1</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>categories/govern-1</td><td>characteristics/accountable-and-transparent</td><td>accountable-and-transparent</td></tr>
+<tr><td>categories/govern-1</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-1</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-2</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>categories/govern-2</td><td>characteristics/accountable-and-transparent</td><td>accountable-and-transparent</td></tr>
+<tr><td>categories/govern-2</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-2</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-3</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>categories/govern-3</td><td>characteristics/fair-with-harmful-bias-managed</td><td>fair-with-harmful-bias-managed</td></tr>
+<tr><td>categories/govern-3</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-3</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-4</td><td>characteristics/explainable-and-interpretable</td><td>explainable-and-interpretable</td></tr>
+<tr><td>categories/govern-4</td><td>characteristics/safe</td><td>safe</td></tr>
+<tr><td>categories/govern-4</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/govern-4</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>categories/manage-1</td><td>categories/map-2</td><td>map-2</td></tr>
+<tr><td>categories/manage-1</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>categories/manage-1</td><td>characteristics/safe</td><td>safe</td></tr>
+<tr><td>categories/manage-1</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/manage-1</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/manage-2</td><td>categories/govern-4</td><td>govern-4</td></tr>
+<tr><td>categories/manage-2</td><td>characteristics/accountable-and-transparent</td><td>accountable-and-transparent</td></tr>
+<tr><td>categories/manage-2</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/manage-2</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/manage-3</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>categories/manage-3</td><td>characteristics/secure-and-resilient</td><td>secure-and-resilient</td></tr>
+<tr><td>categories/manage-3</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/manage-3</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>categories/map-1</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>categories/map-1</td><td>characteristics/valid-and-reliable</td><td>valid-and-reliable</td></tr>
+<tr><td>categories/map-1</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/map-1</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/map-2</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>categories/map-2</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>categories/map-2</td><td>characteristics/safe</td><td>safe</td></tr>
+<tr><td>categories/map-2</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/map-2</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/map-3</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>categories/map-3</td><td>characteristics/explainable-and-interpretable</td><td>explainable-and-interpretable</td></tr>
+<tr><td>categories/map-3</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/map-3</td><td>functions/map</td><td>map</td></tr>
+<tr><td>categories/measure-1</td><td>characteristics/valid-and-reliable</td><td>valid-and-reliable</td></tr>
+<tr><td>categories/measure-1</td><td>computations/calibration-drift-score</td><td>calibration-drift-score</td></tr>
+<tr><td>categories/measure-1</td><td>computations/demographic-parity-ratio</td><td>demographic-parity-ratio</td></tr>
+<tr><td>categories/measure-1</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>categories/measure-1</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>categories/measure-2</td><td>characteristics/fair-with-harmful-bias-managed</td><td>fair-with-harmful-bias-managed</td></tr>
+<tr><td>categories/measure-2</td><td>characteristics/privacy-enhanced</td><td>privacy-enhanced</td></tr>
+<tr><td>categories/measure-2</td><td>characteristics/safe</td><td>safe</td></tr>
+<tr><td>categories/measure-2</td><td>characteristics/secure-and-resilient</td><td>secure-and-resilient</td></tr>
+<tr><td>categories/measure-2</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>categories/measure-2</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>categories/measure-3</td><td>categories/manage-1</td><td>manage-1</td></tr>
+<tr><td>categories/measure-3</td><td>computations/calibration-drift-score</td><td>calibration-drift-score</td></tr>
+<tr><td>categories/measure-3</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>categories/measure-3</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>characteristics/accountable-and-transparent</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>characteristics/accountable-and-transparent</td><td>categories/govern-2</td><td>govern-2</td></tr>
+<tr><td>characteristics/accountable-and-transparent</td><td>categories/manage-2</td><td>manage-2</td></tr>
+<tr><td>characteristics/explainable-and-interpretable</td><td>categories/govern-4</td><td>govern-4</td></tr>
+<tr><td>characteristics/explainable-and-interpretable</td><td>categories/map-3</td><td>map-3</td></tr>
+<tr><td>characteristics/fair-with-harmful-bias-managed</td><td>categories/govern-3</td><td>govern-3</td></tr>
+<tr><td>characteristics/fair-with-harmful-bias-managed</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>characteristics/fair-with-harmful-bias-managed</td><td>computations/demographic-parity-ratio</td><td>demographic-parity-ratio</td></tr>
+<tr><td>characteristics/privacy-enhanced</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>characteristics/privacy-enhanced</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>characteristics/safe</td><td>categories/govern-4</td><td>govern-4</td></tr>
+<tr><td>characteristics/safe</td><td>categories/manage-1</td><td>manage-1</td></tr>
+<tr><td>characteristics/safe</td><td>categories/map-2</td><td>map-2</td></tr>
+<tr><td>characteristics/safe</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>characteristics/secure-and-resilient</td><td>categories/manage-3</td><td>manage-3</td></tr>
+<tr><td>characteristics/secure-and-resilient</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>characteristics/valid-and-reliable</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>characteristics/valid-and-reliable</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>characteristics/valid-and-reliable</td><td>computations/calibration-drift-score</td><td>calibration-drift-score</td></tr>
+<tr><td>computations/calibration-drift-score</td><td>categories/measure-3</td><td>measure-3</td></tr>
+<tr><td>computations/calibration-drift-score</td><td>characteristics/valid-and-reliable</td><td>valid-and-reliable</td></tr>
+<tr><td>computations/calibration-drift-score</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>computations/demographic-parity-ratio</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>computations/demographic-parity-ratio</td><td>characteristics/fair-with-harmful-bias-managed</td><td>fair-with-harmful-bias-managed</td></tr>
+<tr><td>computations/demographic-parity-ratio</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-1</td><td>govern-1</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-2</td><td>govern-2</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-2</td><td>govern-2</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-3</td><td>govern-3</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-3</td><td>govern-3</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-4</td><td>govern-4</td></tr>
+<tr><td>functions/govern</td><td>categories/govern-4</td><td>govern-4</td></tr>
+<tr><td>functions/govern</td><td>characteristics/accountable-and-transparent</td><td>accountable-and-transparent</td></tr>
+<tr><td>functions/govern</td><td>characteristics/fair-with-harmful-bias-managed</td><td>fair-with-harmful-bias-managed</td></tr>
+<tr><td>functions/govern</td><td>characteristics/safe</td><td>safe</td></tr>
+<tr><td>functions/govern</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>functions/govern</td><td>functions/map</td><td>map</td></tr>
+<tr><td>functions/govern</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-1</td><td>manage-1</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-1</td><td>manage-1</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-2</td><td>manage-2</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-2</td><td>manage-2</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-3</td><td>manage-3</td></tr>
+<tr><td>functions/manage</td><td>categories/manage-3</td><td>manage-3</td></tr>
+<tr><td>functions/manage</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>functions/manage</td><td>functions/map</td><td>map</td></tr>
+<tr><td>functions/manage</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>functions/map</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>functions/map</td><td>categories/map-1</td><td>map-1</td></tr>
+<tr><td>functions/map</td><td>categories/map-2</td><td>map-2</td></tr>
+<tr><td>functions/map</td><td>categories/map-2</td><td>map-2</td></tr>
+<tr><td>functions/map</td><td>categories/map-3</td><td>map-3</td></tr>
+<tr><td>functions/map</td><td>categories/map-3</td><td>map-3</td></tr>
+<tr><td>functions/map</td><td>characteristics/explainable-and-interpretable</td><td>explainable-and-interpretable</td></tr>
+<tr><td>functions/map</td><td>characteristics/privacy-enhanced</td><td>privacy-enhanced</td></tr>
+<tr><td>functions/map</td><td>characteristics/valid-and-reliable</td><td>valid-and-reliable</td></tr>
+<tr><td>functions/map</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>functions/map</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>functions/map</td><td>functions/measure</td><td>measure</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-1</td><td>measure-1</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-2</td><td>measure-2</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-3</td><td>measure-3</td></tr>
+<tr><td>functions/measure</td><td>categories/measure-3</td><td>measure-3</td></tr>
+<tr><td>functions/measure</td><td>computations/calibration-drift-score</td><td>calibration-drift-score</td></tr>
+<tr><td>functions/measure</td><td>computations/calibration-drift-score</td><td>calibration-drift-score</td></tr>
+<tr><td>functions/measure</td><td>computations/demographic-parity-ratio</td><td>demographic-parity-ratio</td></tr>
+<tr><td>functions/measure</td><td>computations/demographic-parity-ratio</td><td>demographic-parity-ratio</td></tr>
+<tr><td>functions/measure</td><td>functions/govern</td><td>govern</td></tr>
+<tr><td>functions/measure</td><td>functions/manage</td><td>manage</td></tr>
+<tr><td>functions/measure</td><td>functions/map</td><td>map</td></tr>
+</table>
+<script type="application/json" id="graph-data">
+{
+  "nodes": [
+    {
+      "id": "categories/govern-1",
+      "title": "GOVERN 1: Policies and Procedures",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/govern-2",
+      "title": "GOVERN 2: Accountability Structures",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/govern-3",
+      "title": "GOVERN 3: Workforce Diversity \u0026 Inclusion",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/govern-4",
+      "title": "GOVERN 4: Risk-Aware Organizational Culture",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/manage-1",
+      "title": "MANAGE 1: Risk Prioritization \u0026 Response",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/manage-2",
+      "title": "MANAGE 2: Benefit Maximization \u0026 Impact Mitigation",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/manage-3",
+      "title": "MANAGE 3: Third-Party \u0026 Supply Chain AI Risk",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/map-1",
+      "title": "MAP 1: Context Established",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/map-2",
+      "title": "MAP 2: AI System Categorization",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/map-3",
+      "title": "MAP 3: Capabilities and Limitations",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/measure-1",
+      "title": "MEASURE 1: Methods and Metrics",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/measure-2",
+      "title": "MEASURE 2: Trustworthiness Evaluation",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "categories/measure-3",
+      "title": "MEASURE 3: Continuous Risk Tracking",
+      "type": "Category",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/accountable-and-transparent",
+      "title": "Accountable and Transparent",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/explainable-and-interpretable",
+      "title": "Explainable and Interpretable",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/fair-with-harmful-bias-managed",
+      "title": "Fair — with Harmful Bias Managed",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/privacy-enhanced",
+      "title": "Privacy-Enhanced",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/safe",
+      "title": "Safe",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/secure-and-resilient",
+      "title": "Secure and Resilient",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "characteristics/valid-and-reliable",
+      "title": "Valid and Reliable",
+      "type": "Trustworthiness Characteristic",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/calibration-drift-score",
+      "title": "Population Stability Index (PSI) Calibration Drift",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/demographic-parity-ratio",
+      "title": "Demographic Parity Ratio (80% Four-Fifths Rule)",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "functions/govern",
+      "title": "GOVERN",
+      "type": "Function",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "functions/manage",
+      "title": "MANAGE",
+      "type": "Function",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "functions/map",
+      "title": "MAP",
+      "type": "Function",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "functions/measure",
+      "title": "MEASURE",
+      "type": "Function",
+      "tier": "human-reviewed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "categories/govern-1",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "categories/govern-1",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "categories/govern-1",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "categories/govern-1",
+      "to": "characteristics/accountable-and-transparent",
+      "text": "accountable-and-transparent"
+    },
+    {
+      "from": "categories/govern-1",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-1",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-2",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "categories/govern-2",
+      "to": "characteristics/accountable-and-transparent",
+      "text": "accountable-and-transparent"
+    },
+    {
+      "from": "categories/govern-2",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-2",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-3",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "categories/govern-3",
+      "to": "characteristics/fair-with-harmful-bias-managed",
+      "text": "fair-with-harmful-bias-managed"
+    },
+    {
+      "from": "categories/govern-3",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-3",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-4",
+      "to": "characteristics/explainable-and-interpretable",
+      "text": "explainable-and-interpretable"
+    },
+    {
+      "from": "categories/govern-4",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "categories/govern-4",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/govern-4",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "categories/manage-1",
+      "to": "categories/map-2",
+      "text": "map-2"
+    },
+    {
+      "from": "categories/manage-1",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "categories/manage-1",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "categories/manage-1",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/manage-1",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/manage-2",
+      "to": "categories/govern-4",
+      "text": "govern-4"
+    },
+    {
+      "from": "categories/manage-2",
+      "to": "characteristics/accountable-and-transparent",
+      "text": "accountable-and-transparent"
+    },
+    {
+      "from": "categories/manage-2",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/manage-2",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/manage-3",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "categories/manage-3",
+      "to": "characteristics/secure-and-resilient",
+      "text": "secure-and-resilient"
+    },
+    {
+      "from": "categories/manage-3",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/manage-3",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "categories/map-1",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "categories/map-1",
+      "to": "characteristics/valid-and-reliable",
+      "text": "valid-and-reliable"
+    },
+    {
+      "from": "categories/map-1",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/map-1",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/map-2",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "categories/map-2",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "categories/map-2",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "categories/map-2",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/map-2",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/map-3",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "categories/map-3",
+      "to": "characteristics/explainable-and-interpretable",
+      "text": "explainable-and-interpretable"
+    },
+    {
+      "from": "categories/map-3",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/map-3",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "categories/measure-1",
+      "to": "characteristics/valid-and-reliable",
+      "text": "valid-and-reliable"
+    },
+    {
+      "from": "categories/measure-1",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "categories/measure-1",
+      "to": "computations/demographic-parity-ratio",
+      "text": "demographic-parity-ratio"
+    },
+    {
+      "from": "categories/measure-1",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "categories/measure-1",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "characteristics/fair-with-harmful-bias-managed",
+      "text": "fair-with-harmful-bias-managed"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "characteristics/privacy-enhanced",
+      "text": "privacy-enhanced"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "characteristics/secure-and-resilient",
+      "text": "secure-and-resilient"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "categories/measure-2",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "categories/measure-3",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "categories/measure-3",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "categories/measure-3",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "categories/measure-3",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "characteristics/accountable-and-transparent",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "characteristics/accountable-and-transparent",
+      "to": "categories/govern-2",
+      "text": "govern-2"
+    },
+    {
+      "from": "characteristics/accountable-and-transparent",
+      "to": "categories/manage-2",
+      "text": "manage-2"
+    },
+    {
+      "from": "characteristics/explainable-and-interpretable",
+      "to": "categories/govern-4",
+      "text": "govern-4"
+    },
+    {
+      "from": "characteristics/explainable-and-interpretable",
+      "to": "categories/map-3",
+      "text": "map-3"
+    },
+    {
+      "from": "characteristics/fair-with-harmful-bias-managed",
+      "to": "categories/govern-3",
+      "text": "govern-3"
+    },
+    {
+      "from": "characteristics/fair-with-harmful-bias-managed",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "characteristics/fair-with-harmful-bias-managed",
+      "to": "computations/demographic-parity-ratio",
+      "text": "demographic-parity-ratio"
+    },
+    {
+      "from": "characteristics/privacy-enhanced",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "characteristics/privacy-enhanced",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "characteristics/safe",
+      "to": "categories/govern-4",
+      "text": "govern-4"
+    },
+    {
+      "from": "characteristics/safe",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "characteristics/safe",
+      "to": "categories/map-2",
+      "text": "map-2"
+    },
+    {
+      "from": "characteristics/safe",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "characteristics/secure-and-resilient",
+      "to": "categories/manage-3",
+      "text": "manage-3"
+    },
+    {
+      "from": "characteristics/secure-and-resilient",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "characteristics/valid-and-reliable",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "characteristics/valid-and-reliable",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "characteristics/valid-and-reliable",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "computations/calibration-drift-score",
+      "to": "categories/measure-3",
+      "text": "measure-3"
+    },
+    {
+      "from": "computations/calibration-drift-score",
+      "to": "characteristics/valid-and-reliable",
+      "text": "valid-and-reliable"
+    },
+    {
+      "from": "computations/calibration-drift-score",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "computations/demographic-parity-ratio",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "computations/demographic-parity-ratio",
+      "to": "characteristics/fair-with-harmful-bias-managed",
+      "text": "fair-with-harmful-bias-managed"
+    },
+    {
+      "from": "computations/demographic-parity-ratio",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-2",
+      "text": "govern-2"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-2",
+      "text": "govern-2"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-3",
+      "text": "govern-3"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-3",
+      "text": "govern-3"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-4",
+      "text": "govern-4"
+    },
+    {
+      "from": "functions/govern",
+      "to": "categories/govern-4",
+      "text": "govern-4"
+    },
+    {
+      "from": "functions/govern",
+      "to": "characteristics/accountable-and-transparent",
+      "text": "accountable-and-transparent"
+    },
+    {
+      "from": "functions/govern",
+      "to": "characteristics/fair-with-harmful-bias-managed",
+      "text": "fair-with-harmful-bias-managed"
+    },
+    {
+      "from": "functions/govern",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "functions/govern",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "functions/govern",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "functions/govern",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-2",
+      "text": "manage-2"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-2",
+      "text": "manage-2"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-3",
+      "text": "manage-3"
+    },
+    {
+      "from": "functions/manage",
+      "to": "categories/manage-3",
+      "text": "manage-3"
+    },
+    {
+      "from": "functions/manage",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "functions/manage",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "functions/manage",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-1",
+      "text": "map-1"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-2",
+      "text": "map-2"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-2",
+      "text": "map-2"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-3",
+      "text": "map-3"
+    },
+    {
+      "from": "functions/map",
+      "to": "categories/map-3",
+      "text": "map-3"
+    },
+    {
+      "from": "functions/map",
+      "to": "characteristics/explainable-and-interpretable",
+      "text": "explainable-and-interpretable"
+    },
+    {
+      "from": "functions/map",
+      "to": "characteristics/privacy-enhanced",
+      "text": "privacy-enhanced"
+    },
+    {
+      "from": "functions/map",
+      "to": "characteristics/valid-and-reliable",
+      "text": "valid-and-reliable"
+    },
+    {
+      "from": "functions/map",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "functions/map",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "functions/map",
+      "to": "functions/measure",
+      "text": "measure"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-2",
+      "text": "measure-2"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-3",
+      "text": "measure-3"
+    },
+    {
+      "from": "functions/measure",
+      "to": "categories/measure-3",
+      "text": "measure-3"
+    },
+    {
+      "from": "functions/measure",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "functions/measure",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "functions/measure",
+      "to": "computations/demographic-parity-ratio",
+      "text": "demographic-parity-ratio"
+    },
+    {
+      "from": "functions/measure",
+      "to": "computations/demographic-parity-ratio",
+      "text": "demographic-parity-ratio"
+    },
+    {
+      "from": "functions/measure",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "functions/measure",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "functions/measure",
+      "to": "functions/map",
+      "text": "map"
+    }
+  ]
+}
+</script>
+</body>
+</html>

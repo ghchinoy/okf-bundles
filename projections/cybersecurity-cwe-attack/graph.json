@@ -1,0 +1,432 @@
+{
+  "nodes": [
+    {
+      "id": "detections/impossible-travel-detection",
+      "title": "Impossible Travel \u0026 Anomalous Session Detection (T1078)",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/csp-header-policy",
+      "title": "Strict Content-Security-Policy (CSP)",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/m1022",
+      "title": "M1022: Restrict File and Directory Permissions",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/m1032",
+      "title": "M1032: Multi-Factor Authentication (MFA)",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/m1037",
+      "title": "M1037: Filter Network Traffic \u0026 Egress Allowlisting",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/m1050",
+      "title": "M1050: Exploit Protection \u0026 Input Validation",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "mitigations/parameterized-queries",
+      "title": "Parameterized Queries (Prepared Statements)",
+      "type": "Mitigation",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "techniques/t1059",
+      "title": "T1059: Command and Scripting Interpreter",
+      "type": "Technique",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "techniques/t1078",
+      "title": "T1078: Valid Accounts",
+      "type": "Technique",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "techniques/t1190",
+      "title": "T1190: Exploit Public-Facing Application",
+      "type": "Technique",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "techniques/t1552",
+      "title": "T1552: Unsecured Credentials",
+      "type": "Technique",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-22",
+      "title": "CWE-22: Path Traversal",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-287",
+      "title": "CWE-287: Improper Authentication",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-502",
+      "title": "CWE-502: Deserialization of Untrusted Data",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-78",
+      "title": "CWE-78: OS Command Injection",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-79",
+      "title": "CWE-79: Cross-site Scripting (XSS)",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-89",
+      "title": "CWE-89: SQL Injection (SQLi)",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "weaknesses/cwe-918",
+      "title": "CWE-918: Server-Side Request Forgery (SSRF)",
+      "type": "Weakness",
+      "tier": "machine-confirmed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "detections/impossible-travel-detection",
+      "to": "mitigations/m1032",
+      "text": "m1032"
+    },
+    {
+      "from": "detections/impossible-travel-detection",
+      "to": "techniques/t1078",
+      "text": "t1078"
+    },
+    {
+      "from": "detections/impossible-travel-detection",
+      "to": "weaknesses/cwe-287",
+      "text": "cwe-287"
+    },
+    {
+      "from": "mitigations/csp-header-policy",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "mitigations/csp-header-policy",
+      "to": "weaknesses/cwe-79",
+      "text": "cwe-79"
+    },
+    {
+      "from": "mitigations/m1022",
+      "to": "techniques/t1059",
+      "text": "t1059"
+    },
+    {
+      "from": "mitigations/m1022",
+      "to": "techniques/t1552",
+      "text": "t1552"
+    },
+    {
+      "from": "mitigations/m1022",
+      "to": "weaknesses/cwe-22",
+      "text": "cwe-22"
+    },
+    {
+      "from": "mitigations/m1032",
+      "to": "detections/impossible-travel-detection",
+      "text": "impossible-travel-detection"
+    },
+    {
+      "from": "mitigations/m1032",
+      "to": "techniques/t1078",
+      "text": "t1078"
+    },
+    {
+      "from": "mitigations/m1032",
+      "to": "weaknesses/cwe-287",
+      "text": "cwe-287"
+    },
+    {
+      "from": "mitigations/m1037",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "mitigations/m1037",
+      "to": "techniques/t1552",
+      "text": "t1552"
+    },
+    {
+      "from": "mitigations/m1037",
+      "to": "weaknesses/cwe-918",
+      "text": "cwe-918"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "mitigations/csp-header-policy",
+      "text": "csp-header-policy"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "mitigations/parameterized-queries",
+      "text": "parameterized-queries"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "weaknesses/cwe-502",
+      "text": "cwe-502"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "weaknesses/cwe-78",
+      "text": "cwe-78"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "weaknesses/cwe-79",
+      "text": "cwe-79"
+    },
+    {
+      "from": "mitigations/m1050",
+      "to": "weaknesses/cwe-89",
+      "text": "cwe-89"
+    },
+    {
+      "from": "mitigations/parameterized-queries",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "mitigations/parameterized-queries",
+      "to": "weaknesses/cwe-89",
+      "text": "cwe-89"
+    },
+    {
+      "from": "techniques/t1059",
+      "to": "mitigations/m1022",
+      "text": "m1022"
+    },
+    {
+      "from": "techniques/t1059",
+      "to": "weaknesses/cwe-502",
+      "text": "cwe-502"
+    },
+    {
+      "from": "techniques/t1059",
+      "to": "weaknesses/cwe-78",
+      "text": "cwe-78"
+    },
+    {
+      "from": "techniques/t1078",
+      "to": "detections/impossible-travel-detection",
+      "text": "impossible-travel-detection"
+    },
+    {
+      "from": "techniques/t1078",
+      "to": "mitigations/m1032",
+      "text": "m1032"
+    },
+    {
+      "from": "techniques/t1078",
+      "to": "techniques/t1552",
+      "text": "t1552"
+    },
+    {
+      "from": "techniques/t1078",
+      "to": "weaknesses/cwe-287",
+      "text": "cwe-287"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "mitigations/m1037",
+      "text": "m1037"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-22",
+      "text": "cwe-22"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-502",
+      "text": "cwe-502"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-78",
+      "text": "cwe-78"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-79",
+      "text": "cwe-79"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-89",
+      "text": "cwe-89"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "weaknesses/cwe-918",
+      "text": "cwe-918"
+    },
+    {
+      "from": "techniques/t1552",
+      "to": "mitigations/m1022",
+      "text": "m1022"
+    },
+    {
+      "from": "techniques/t1552",
+      "to": "mitigations/m1037",
+      "text": "m1037"
+    },
+    {
+      "from": "techniques/t1552",
+      "to": "techniques/t1078",
+      "text": "t1078"
+    },
+    {
+      "from": "techniques/t1552",
+      "to": "weaknesses/cwe-918",
+      "text": "cwe-918"
+    },
+    {
+      "from": "weaknesses/cwe-22",
+      "to": "mitigations/m1022",
+      "text": "m1022"
+    },
+    {
+      "from": "weaknesses/cwe-22",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-287",
+      "to": "mitigations/m1032",
+      "text": "m1032"
+    },
+    {
+      "from": "weaknesses/cwe-287",
+      "to": "techniques/t1078",
+      "text": "t1078"
+    },
+    {
+      "from": "weaknesses/cwe-502",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "weaknesses/cwe-502",
+      "to": "techniques/t1059",
+      "text": "t1059"
+    },
+    {
+      "from": "weaknesses/cwe-502",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-78",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "weaknesses/cwe-78",
+      "to": "techniques/t1059",
+      "text": "t1059"
+    },
+    {
+      "from": "weaknesses/cwe-78",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-79",
+      "to": "mitigations/csp-header-policy",
+      "text": "csp-header-policy"
+    },
+    {
+      "from": "weaknesses/cwe-79",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "weaknesses/cwe-79",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-89",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "weaknesses/cwe-89",
+      "to": "mitigations/parameterized-queries",
+      "text": "parameterized-queries"
+    },
+    {
+      "from": "weaknesses/cwe-89",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-918",
+      "to": "mitigations/m1037",
+      "text": "m1037"
+    },
+    {
+      "from": "weaknesses/cwe-918",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "weaknesses/cwe-918",
+      "to": "techniques/t1552",
+      "text": "t1552"
+    }
+  ]
+}
