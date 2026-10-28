@@ -1,13 +1,20 @@
 #!/usr/bin/env bash
+# Builds, validates, reviews, graphs, and projects all OKF v0.2 bundles from corpora/.
+#
+# Prerequisites:
+#   - `binder` must be installed globally on PATH (e.g., `brew install ghchinoy/tap/binder`
+#     or downloaded from https://github.com/ghchinoy/binder/releases), OR specified via
+#     the BINDER_BIN environment variable (`BINDER_BIN=/path/to/binder ./scripts/build.sh`).
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-if command -v binder >/dev/null 2>&1; then
-  BINDER="${BINDER_BIN:-binder}"
-elif [ -x "$ROOT/../binder/bin/binder" ]; then
-  BINDER="${BINDER_BIN:-$ROOT/../binder/bin/binder}"
-else
-  BINDER="${BINDER_BIN:-binder}"
+BINDER="${BINDER_BIN:-binder}"
+if ! command -v "$BINDER" >/dev/null 2>&1; then
+  echo "Error: '$BINDER' not found on PATH." >&2
+  echo "Install binder globally via: brew install ghchinoy/tap/binder" >&2
+  echo "Or download a release binary: https://github.com/ghchinoy/binder/releases" >&2
+  echo "Or pass a custom binary path: BINDER_BIN=/path/to/binder ./scripts/build.sh" >&2
+  exit 1
 fi
 export SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:-1785456000}" # 2026-07-31T00:00:00Z
 
