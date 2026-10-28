@@ -24,12 +24,15 @@ INSERT INTO Nodes (node_key, title, type, tier, stale, stale_after) VALUES
   ('http/rfc9114', 'RFC 9114: HTTP/3', 'RFC', 'machine-confirmed', false, NULL),
   ('http/rfc9457', 'RFC 9457: Problem Details for HTTP APIs', 'RFC', 'machine-confirmed', false, NULL),
   ('security/rfc5246', 'RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2 (Obsoleted)', 'RFC', 'machine-confirmed', true, DATE '2018-08-01'),
-  ('security/rfc8446', 'RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3', 'RFC', 'machine-confirmed', false, NULL);
+  ('security/rfc8446', 'RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3', 'RFC', 'machine-confirmed', false, NULL),
+  ('tours/tour-evolution-of-http-and-quic', 'Tour: From Obsoleted HTTP/1.1 & TLS 1.2 to HTTP/3 over QUIC', 'Tour', 'machine-confirmed', false, NULL),
+  ('tours/tour-modern-api-identity-oauth21', 'Tour: Securing Modern JSON APIs with OAuth 2.1, PKCE, and JWT', 'Tour', 'machine-confirmed', false, NULL);
 
 INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('auth/draft-ietf-oauth-v2-1', 'auth/rfc6749', 'rfc6749'),
   ('auth/draft-ietf-oauth-v2-1', 'auth/rfc6750', 'rfc6750'),
   ('auth/draft-ietf-oauth-v2-1', 'auth/rfc7636', 'rfc7636'),
+  ('auth/draft-ietf-oauth-v2-1', 'tours/tour-modern-api-identity-oauth21', 'tour-modern-api-identity-oauth21'),
   ('auth/rfc6749', 'auth/draft-ietf-oauth-v2-1', 'draft-ietf-oauth-v2-1'),
   ('auth/rfc6749', 'auth/rfc6750', 'rfc6750'),
   ('auth/rfc6749', 'auth/rfc7519', 'rfc7519'),
@@ -63,6 +66,7 @@ INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('http/rfc9110', 'http/rfc9114', 'rfc9114'),
   ('http/rfc9110', 'http/rfc9457', 'rfc9457'),
   ('http/rfc9110', 'security/rfc8446', 'rfc8446'),
+  ('http/rfc9110', 'tours/tour-evolution-of-http-and-quic', 'tour-evolution-of-http-and-quic'),
   ('http/rfc9111', 'http/rfc2616', 'rfc2616'),
   ('http/rfc9111', 'http/rfc9110', 'rfc9110'),
   ('http/rfc9113', 'http/rfc9110', 'rfc9110'),
@@ -77,4 +81,21 @@ INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('security/rfc5246', 'security/rfc8446', 'rfc8446'),
   ('security/rfc8446', 'http/rfc9000', 'rfc9000'),
   ('security/rfc8446', 'http/rfc9110', 'rfc9110'),
-  ('security/rfc8446', 'security/rfc5246', 'rfc5246');
+  ('security/rfc8446', 'security/rfc5246', 'rfc5246'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc2616', 'rfc2616'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc9000', 'rfc9000'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc9110', 'rfc9110'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc9111', 'rfc9111'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc9113', 'rfc9113'),
+  ('tours/tour-evolution-of-http-and-quic', 'http/rfc9114', 'rfc9114'),
+  ('tours/tour-evolution-of-http-and-quic', 'security/rfc5246', 'rfc5246'),
+  ('tours/tour-evolution-of-http-and-quic', 'security/rfc8446', 'rfc8446'),
+  ('tours/tour-modern-api-identity-oauth21', 'auth/draft-ietf-oauth-v2-1', 'draft-ietf-oauth-v2-1'),
+  ('tours/tour-modern-api-identity-oauth21', 'auth/rfc6749', 'rfc6749'),
+  ('tours/tour-modern-api-identity-oauth21', 'auth/rfc6750', 'rfc6750'),
+  ('tours/tour-modern-api-identity-oauth21', 'auth/rfc7519', 'rfc7519'),
+  ('tours/tour-modern-api-identity-oauth21', 'auth/rfc7636', 'rfc7636'),
+  ('tours/tour-modern-api-identity-oauth21', 'data/rfc3986', 'rfc3986'),
+  ('tours/tour-modern-api-identity-oauth21', 'data/rfc8259', 'rfc8259'),
+  ('tours/tour-modern-api-identity-oauth21', 'data/rfc9562', 'rfc9562'),
+  ('tours/tour-modern-api-identity-oauth21', 'http/rfc9457', 'rfc9457');

@@ -20,12 +20,12 @@ verified:
     at: "2026-07-31T00:00:00Z"
 generated:
   at: "2026-07-31T00:00:00Z"
-  by: binder/0.8.1-0.20261023014107-c59404ef16b0+dirty
+  by: binder/0.8.1-0.20261026041026-3bd0c625532d
 ---
 
 # Population Stability Index (PSI) Calibration Drift
 
-An OKF v0.2 **Attested Computation** supporting continuous monitoring in [measure-3](/categories/measure-3.md) and [valid-and-reliable](/characteristics/valid-and-reliable.md) under [measure](/functions/measure.md).
+An OKF v0.2 **Attested Computation** supporting continuous monitoring in [measure-3](/categories/measure-3.md) and [valid-and-reliable](/characteristics/valid-and-reliable.md) under [measure](/functions/measure.md). Featured in [tour-continuous-drift-and-safety](/tours/tour-continuous-drift-and-safety.md).
 
 ```sql
 SELECT SUM((actual_pct - expected_pct) * LN(actual_pct / NULLIF(expected_pct, 0))) AS psi_score

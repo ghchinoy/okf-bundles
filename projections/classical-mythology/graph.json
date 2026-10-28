@@ -167,6 +167,20 @@
       "type": "Quest",
       "tier": "human-reviewed",
       "stale": false
+    },
+    {
+      "id": "tours/tour-olympian-interventions-and-quests",
+      "title": "Tour: Divine Patronage, Relics, and the Great Heroic Quests",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "title": "Tour: Wrath and Homecoming — Contrast of Achilles and Odysseus",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
     }
   ],
   "edges": [
@@ -501,6 +515,11 @@
       "text": "trojan-war"
     },
     {
+      "from": "deities/zeus",
+      "to": "tours/tour-olympian-interventions-and-quests",
+      "text": "tour-olympian-interventions-and-quests"
+    },
+    {
       "from": "heroes/achilles",
       "to": "deities/apollo",
       "text": "apollo"
@@ -624,6 +643,11 @@
       "from": "heroes/odysseus",
       "to": "quests/trojan-war",
       "text": "trojan-war"
+    },
+    {
+      "from": "heroes/odysseus",
+      "to": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "text": "tour-wrath-and-homecoming-iliad-odyssey"
     },
     {
       "from": "heroes/perseus",
@@ -764,6 +788,11 @@
       "from": "places/underworld",
       "to": "heroes/odysseus",
       "text": "odysseus"
+    },
+    {
+      "from": "places/underworld",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
     },
     {
       "from": "places/underworld",
@@ -924,6 +953,116 @@
       "from": "quests/twelve-labors-of-heracles",
       "to": "places/underworld",
       "text": "underworld"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "artifacts/aegis",
+      "text": "aegis"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "artifacts/golden-fleece",
+      "text": "golden-fleece"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "deities/hades",
+      "text": "hades"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "deities/hera",
+      "text": "hera"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "deities/zeus",
+      "text": "zeus"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "heroes/heracles",
+      "text": "heracles"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "heroes/jason",
+      "text": "jason"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "heroes/perseus",
+      "text": "perseus"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "places/delphi",
+      "text": "delphi"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "quests/quest-for-the-golden-fleece",
+      "text": "quest-for-the-golden-fleece"
+    },
+    {
+      "from": "tours/tour-olympian-interventions-and-quests",
+      "to": "quests/twelve-labors-of-heracles",
+      "text": "twelve-labors-of-heracles"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "deities/apollo",
+      "text": "apollo"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "deities/athena",
+      "text": "athena"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "deities/poseidon",
+      "text": "poseidon"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "heroes/achilles",
+      "text": "achilles"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "heroes/odysseus",
+      "text": "odysseus"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "places/ithaca",
+      "text": "ithaca"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "places/mount-olympus",
+      "text": "mount-olympus"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "places/troy",
+      "text": "troy"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "places/underworld",
+      "text": "underworld"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "quests/odyssey",
+      "text": "odyssey"
+    },
+    {
+      "from": "tours/tour-wrath-and-homecoming-iliad-odyssey",
+      "to": "quests/trojan-war",
+      "text": "trojan-war"
     }
   ]
 }

@@ -21,12 +21,12 @@ verified:
     at: "2026-07-31T00:00:00Z"
 generated:
   at: "2026-07-31T00:00:00Z"
-  by: binder/0.8.1-0.20261023014107-c59404ef16b0+dirty
+  by: binder/0.8.1-0.20261026041026-3bd0c625532d
 ---
 
 # Demographic Parity Ratio
 
-An OKF v0.2 **Attested Computation** implementing quantitative fairness evaluation for [measure-1](/categories/measure-1.md) and [fair-with-harmful-bias-managed](/characteristics/fair-with-harmful-bias-managed.md) under the [measure](/functions/measure.md) function.
+An OKF v0.2 **Attested Computation** implementing quantitative fairness evaluation for [measure-1](/categories/measure-1.md) and [fair-with-harmful-bias-managed](/characteristics/fair-with-harmful-bias-managed.md) under the [measure](/functions/measure.md) function. Featured in [tour-governance-to-sql-metrics](/tours/tour-governance-to-sql-metrics.md).
 
 ```sql
 WITH group_rates AS (

@@ -4,6 +4,7 @@ title: "Hermes (Mercury)"
 description: "Herald and messenger of the Olympian gods, guide of souls to the Underworld (Psychopompos), and patron of travelers."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

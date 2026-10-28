@@ -4,6 +4,7 @@ title: "The Underworld (Hades)"
 description: "Realm of the dead bounded by the rivers Styx and Acheron, ruled by Hades and Persephone."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["mount-olympus"]
 tags: ["mythology", "places", "public-domain"]
 sources:
   - id: "gutenberg-4928"

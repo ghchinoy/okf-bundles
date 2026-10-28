@@ -1,0 +1,5 @@
+# Concepts
+
+* [Tour: The Great Mind Debate — Turing's Imitation Game vs. Searle's Chinese Room](tour-can-machines-understand-turing-vs-searle.md) - A dialectical point-counterpoint episode walking through Computational Functionalism, the Turing Test, Searle's Chinese Room, the Systems Reply, Harnad's Symbol Grounding Problem, Enactivism, and Neuro-Symbolic synthesis.
+* [Tour: From Norbert Wiener's Cybernetics & Ashby's Law to Modern Reward Hacking](tour-from-wiener-cybernetics-to-reward-hacking.md) - Traces the unbroken 80-year intellectual arc from Wiener's 1948 negative feedback and Ashby's Law of Requisite Variety through Goodhart's Law, the Paperclip Maximizer, KL-regularization, and Cooperative Inverse Reinforcement Learning.
+* [Tour: From Hume's Is–Ought Guillotine to Orthogonality, Mesa-Optimizers & Constitutional AI](tour-is-ought-to-constitutional-ai.md) - Follows how Hume's fact-value gap underpins Bostrom's Orthogonality Thesis and Instrumental Convergence, why Mesa-Optimization creates deceptive inner-alignment risks, and how Constitutional AI and Debate respond.

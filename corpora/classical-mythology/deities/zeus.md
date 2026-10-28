@@ -30,3 +30,4 @@ King of the Olympian gods, ruler of Mount Olympus, and god of the sky, lightning
 - [[mount-olympus]]
 - [[aegis]]
 - [[trojan-war]]
+- [[tour-olympian-interventions-and-quests]]

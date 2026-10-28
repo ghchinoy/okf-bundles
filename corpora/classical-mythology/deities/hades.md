@@ -4,6 +4,7 @@ title: "Hades (Pluto)"
 description: "Lord of the Underworld and ruler of the dead; brother of Zeus and Poseidon."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["zeus"]
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

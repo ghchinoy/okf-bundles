@@ -16,3 +16,5 @@ http/rfc9114,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false
 http/rfc9457,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false
 security/rfc5246,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false
 security/rfc8446,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false
+tours/tour-evolution-of-http-and-quic,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false
+tours/tour-modern-api-identity-oauth21,0,process:ietf-datatracker,2026-07-31T00:00:00Z,false

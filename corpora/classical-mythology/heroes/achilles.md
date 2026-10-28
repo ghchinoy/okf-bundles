@@ -4,6 +4,7 @@ title: "Achilles"
 description: "Greatest warrior of the Achaeans in the Trojan War, son of Peleus and the sea-nymph Thetis, central figure of Homer's Iliad."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["odysseus", "apollo"]
 tags: ["mythology", "heroes", "public-domain"]
 sources:
   - id: "gutenberg-4928"

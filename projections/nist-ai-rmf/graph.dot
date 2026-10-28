@@ -27,6 +27,8 @@ digraph okf {
   "functions/manage" [label="MANAGE"];
   "functions/map" [label="MAP"];
   "functions/measure" [label="MEASURE"];
+  "tours/tour-continuous-drift-and-safety" [label="Tour: Continuous Production Drift Monitoring and Safety Incident Response"];
+  "tours/tour-governance-to-sql-metrics" [label="Tour: From AI Governance Policy to Sanctioned SQL Fairness Metrics"];
   "categories/govern-1" -> "categories/manage-1" [label="manage-1"];
   "categories/govern-1" -> "categories/map-1" [label="map-1"];
   "categories/govern-1" -> "categories/measure-1" [label="measure-1"];
@@ -95,9 +97,11 @@ digraph okf {
   "computations/calibration-drift-score" -> "categories/measure-3" [label="measure-3"];
   "computations/calibration-drift-score" -> "characteristics/valid-and-reliable" [label="valid-and-reliable"];
   "computations/calibration-drift-score" -> "functions/measure" [label="measure"];
+  "computations/calibration-drift-score" -> "tours/tour-continuous-drift-and-safety" [label="tour-continuous-drift-and-safety"];
   "computations/demographic-parity-ratio" -> "categories/measure-1" [label="measure-1"];
   "computations/demographic-parity-ratio" -> "characteristics/fair-with-harmful-bias-managed" [label="fair-with-harmful-bias-managed"];
   "computations/demographic-parity-ratio" -> "functions/measure" [label="measure"];
+  "computations/demographic-parity-ratio" -> "tours/tour-governance-to-sql-metrics" [label="tour-governance-to-sql-metrics"];
   "functions/govern" -> "categories/govern-1" [label="govern-1"];
   "functions/govern" -> "categories/govern-2" [label="govern-2"];
   "functions/govern" -> "categories/govern-3" [label="govern-3"];
@@ -131,4 +135,20 @@ digraph okf {
   "functions/measure" -> "functions/govern" [label="govern"];
   "functions/measure" -> "functions/manage" [label="manage"];
   "functions/measure" -> "functions/map" [label="map"];
+  "tours/tour-continuous-drift-and-safety" -> "categories/manage-1" [label="manage-1"];
+  "tours/tour-continuous-drift-and-safety" -> "categories/map-2" [label="map-2"];
+  "tours/tour-continuous-drift-and-safety" -> "categories/measure-3" [label="measure-3"];
+  "tours/tour-continuous-drift-and-safety" -> "characteristics/safe" [label="safe"];
+  "tours/tour-continuous-drift-and-safety" -> "characteristics/valid-and-reliable" [label="valid-and-reliable"];
+  "tours/tour-continuous-drift-and-safety" -> "computations/calibration-drift-score" [label="calibration-drift-score"];
+  "tours/tour-continuous-drift-and-safety" -> "functions/manage" [label="manage"];
+  "tours/tour-continuous-drift-and-safety" -> "functions/map" [label="map"];
+  "tours/tour-governance-to-sql-metrics" -> "categories/govern-1" [label="govern-1"];
+  "tours/tour-governance-to-sql-metrics" -> "categories/govern-3" [label="govern-3"];
+  "tours/tour-governance-to-sql-metrics" -> "categories/measure-1" [label="measure-1"];
+  "tours/tour-governance-to-sql-metrics" -> "characteristics/accountable-and-transparent" [label="accountable-and-transparent"];
+  "tours/tour-governance-to-sql-metrics" -> "characteristics/fair-with-harmful-bias-managed" [label="fair-with-harmful-bias-managed"];
+  "tours/tour-governance-to-sql-metrics" -> "computations/demographic-parity-ratio" [label="demographic-parity-ratio"];
+  "tours/tour-governance-to-sql-metrics" -> "functions/govern" [label="govern"];
+  "tours/tour-governance-to-sql-metrics" -> "functions/measure" [label="measure"];
 }

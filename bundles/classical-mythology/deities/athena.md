@@ -4,6 +4,7 @@ title: "Athena (Minerva)"
 description: "Virgin goddess of wisdom, handicraft, and strategic warfare, sprung fully armed from the forehead of Zeus."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"
@@ -15,7 +16,7 @@ verified:
     at: "2026-07-31T00:00:00Z"
 generated:
   at: "2026-07-31T00:00:00Z"
-  by: binder/0.8.1-0.20261023014107-c59404ef16b0+dirty
+  by: binder/0.8.1-0.20261026041026-3bd0c625532d
 ---
 
 # Athena (Minerva)
@@ -33,3 +34,7 @@ Virgin goddess of wisdom, handicraft, and strategic warfare, sprung fully armed 
 - [odyssey](/quests/odyssey.md)
 - [quest-for-the-golden-fleece](/quests/quest-for-the-golden-fleece.md)
 - [mount-olympus](/places/mount-olympus.md)
+
+## Related
+
+- [zeus](/deities/zeus.md)

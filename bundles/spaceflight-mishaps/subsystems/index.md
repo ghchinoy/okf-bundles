@@ -1,0 +1,10 @@
+# Concepts
+
+* [Service Module Sector 4 Cryogenic Oxygen Tank & Heater Assembly](apollo-eps-oxygen-cryo.md) - Supercritical cryogenic oxygen vessel equipped with 28V/65V thermostatic heater switches and stirring fans feeding Apollo fuel cells.
+* [Block I Command Module Environmental Control & PTFE Cabin Wiring](command-module-cabin-wiring.md) - Early Block I Apollo cabin wiring bundles and 16.7 psi pure-oxygen pressurization architecture prior to Block II fireproofing.
+* [External Tank BX-250 Forward Bipod Ramp Cryogenic Insulation Foam](external-tank-bipod-foam.md) - Hand-sprayed polyisocyanurate foam insulating the forward orbiter-to-tank attachment fitting against cryogenic ice formation.
+* [Genesis Sample Return Capsule G-Switch Deceleration Avionics](genesis-gravity-switch-avionics.md) - Redundant mechanical mass-on-spring deceleration switches designed to sense atmospheric reentry braking and trigger mortar deployment of the drogue parachute.
+* [HST 2.4-Meter Hyperbolic Ritchey-Chrétien Primary Mirror](hst-ritchey-chretien-primary-mirror.md) - Ultra-low-expansion glass primary mirror ground to an unintended conic constant due to a miscalibrated reflective null corrector during figuring.
+* [MCO Reaction Wheel Desaturation & Hydrazine Attitude Control Subsystem](mco-attitude-control-thrusters.md) - Asymmetric solar-array spacecraft attitude control system requiring frequent reaction-wheel angular momentum desaturation burns monitored via ground SM_FORCES software.
+* [Orbiter Thermal Protection System (TPS) Wing Leading Edge RCC Panels](orbiter-tps-reinforced-carbon.md) - 22 Reinforced Carbon-Carbon (RCC) panels per wing designed to withstand 1,650 °C reentry plasma stagnation temperatures but brittle under high-energy kinetic impact.
+* [Solid Rocket Booster (SRB) Tang-and-Clevis Field Joint & Viton O-Rings](srb-field-joint-oring.md) - Original two-O-ring tang-and-clevis steel case joint subject to dynamic joint rotation and zinc-chromate putty blow-holes under ignition transient.

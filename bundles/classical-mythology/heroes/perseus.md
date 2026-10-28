@@ -4,6 +4,7 @@ title: "Perseus"
 description: "Legendary founder of Mycenae and slayer of the Gorgon Medusa, aided by Athena and Hermes."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "heroes", "public-domain"]
 sources:
   - id: "gutenberg-4928"
@@ -15,7 +16,7 @@ verified:
     at: "2026-07-31T00:00:00Z"
 generated:
   at: "2026-07-31T00:00:00Z"
-  by: binder/0.8.1-0.20261023014107-c59404ef16b0+dirty
+  by: binder/0.8.1-0.20261026041026-3bd0c625532d
 ---
 
 # Perseus
@@ -27,3 +28,7 @@ Legendary founder of Mycenae and slayer of the Gorgon Medusa, aided by Athena an
 - [athena](/deities/athena.md)
 - [hermes](/deities/hermes.md)
 - [aegis](/artifacts/aegis.md)
+
+## Related
+
+- [zeus](/deities/zeus.md)

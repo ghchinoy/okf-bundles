@@ -1,0 +1,1655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>binder graph</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;}table{border-collapse:collapse;margin-bottom:2rem;}th,td{border:1px solid #ccc;padding:4px 8px;text-align:left;}caption{font-weight:bold;text-align:left;margin-bottom:.5rem;}</style>
+</head>
+<body>
+<h1>binder graph</h1>
+<table>
+<caption>Concepts</caption>
+<tr><th>id</th><th>title</th><th>type</th><th>tier</th><th>stale</th></tr>
+<tr><td>computations/homa-ir-homeostatic-model-assessment</td><td>HOMA-IR &amp; Disposition Index Glycemic Feedback Loop Gain Computation</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/myhre-co2-radiative-forcing-log-law</td><td>Myhre–IPCC Logarithmic CO2 Radiative Forcing &amp; Equilibrium Climate Sensitivity</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>Ocean Carbonate Revelle Buffer Factor &amp; Aragonite Saturation Horizon Audit</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/anthropogenic-fossil-carbon-flux</td><td>Anthropogenic Fossil Carbon &amp; Land-Use Perturbation Flux (~11 GtC/yr)</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/high-altitude-hypobaric-hypoxia</td><td>High-Altitude Hypobaric Hypoxia &amp; Carotid Body Chemoreceptor Drive</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/milankovitch-orbital-insolation-forcing</td><td>Milankovitch Orbital Pacemaker (Eccentricity, Obliquity, Precession)</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/postprandial-carbohydrate-load</td><td>Postprandial Enteric Carbohydrate Absorption &amp; Incretin Surge</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>Total Solar Irradiance Cycles &amp; Stratospheric Sulfate Volcanic Forcing</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>drivers/sympathetic-fight-or-flight-stressor</td><td>Acute Sympathoadrenal Catecholamine &amp; Stress Perturbation</td><td>Driver</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>Carotid Sinus &amp; Aortic Arch Baroreceptor Autonomic Negative Feedback Loop</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>Reciprocal Bohr &amp; Haldane Hemoglobin Allosteric Gas-Transport Loop</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>Terrestrial CO2 Fertilization vs. Soil Respiration Thermal Crossover Loop</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>Cryosphere Ice–Albedo Positive Feedback Loop (+0.3 to +0.4 W/m2/K)</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>Dual-Hormone Push–Pull Insulin–Glucagon Negative Feedback Loop</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>Permafrost Thaw &amp; Thermokarst Methanogenesis Positive Feedback Loop</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/planck-blackbody-radiative-damping</td><td>Stefan–Boltzmann Planck Outgoing Longwave Radiative Damping (-3.2 W/m2/K)</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>Clausius–Clapeyron Water Vapor &amp; Tropospheric Lapse-Rate Feedback</td><td>Feedback Loop</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>interventions/closed-loop-artificial-pancreas-pid</td><td>Hybrid Closed-Loop Automated Insulin Delivery (CGM + MPC/PID Control)</td><td>Intervention</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>interventions/direct-air-capture-mineralization</td><td>Direct Air Capture (DAC) with Basalt In-Situ Carbonate Mineralization</td><td>Intervention</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>GLP-1 / GIP Receptor Agonist Glucose-Dependent Gain Modulation</td><td>Intervention</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>Ocean Alkalinity Enhancement (Olivine/Carbonate Buffer Restoration)</td><td>Intervention</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/atlantic-meridional-overturning-circulation</td><td>Atlantic Meridional Overturning Circulation (AMOC Thermohaline Conveyor)</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>Alpha-Cell Glucagon &amp; Hepatic Glycogenolysis / Gluconeogenesis Pathway</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>Hypothalamic–Pituitary–Adrenal (HPA) CRH-ACTH-Cortisol Neuroendocrine Axis</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/marine-biological-carbon-pump</td><td>Marine Phytoplankton Biological &amp; Carbonate Counter-Pump</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>Pancreatic Beta-Cell ATP/K+ Sensing &amp; GLUT4 Insulin Translocation Cascade</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/renin-angiotensin-aldosterone-system</td><td>Renin–Angiotensin–Aldosterone System (RAAS) Volume &amp; Pressure Homeostasis</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/silicate-carbonate-weathering-cycle</td><td>Urey Silicate-Carbonate Geochemical Weathering Thermostat</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>pathways/stratospheric-ozone-chapman-cycle</td><td>Chapman Ozone-Oxygen Photochemical Cycle &amp; Catalytic Montreal Recovery</td><td>Pathway</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>Circum-Arctic Permafrost &amp; Yedoma Cryo-Carbon Pool (~1,500 GtC)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>Arterial Blood Gas &amp; Bicarbonate Buffer Pool (pH 7.35–7.45, PaO2/PaCO2)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>Tropospheric CO2 &amp; CH4 Greenhouse Gas Reservoir (~880 GtC)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>Extracellular Blood Plasma Glucose Pool (Homeostatic Setpoint 70–99 mg/dL)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/cryosphere-sea-ice-sheets</td><td>Planetary Cryosphere (Arctic Sea Ice, Greenland &amp; Antarctic Ice Sheets)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>Deep Abyssal Ocean Dissolved Inorganic Carbon Sink (~37,000 GtC)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>Surface Ocean Wind-Mixed Carbonate Reservoir (~900 GtC)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>Terrestrial Vegetation &amp; Soil Organic Carbon Pool (~2,300 GtC)</td><td>Reservoir</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>Amazon Canopy Evapotranspiration Recycling Collapse &amp; Savannization</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>Stommel Salt-Advection Feedback &amp; AMOC Bistable Shutdown Threshold</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>Coral–Symbiodiniaceae Thermal Bleaching &amp; Aragonite Undersaturation Tipping Point</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>Irreversible Decompensated Shock Positive-Feedback Spiral (Guyton Curve Crossover)</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>Diabetic Ketoacidosis (DKA) Runaway Lipolysis &amp; Acidotic Spiral</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tipping-points/west-antarctic-marine-ice-sheet-instability</td><td>Marine Ice Sheet Instability (MISI Retrograde Grounding-Line Retreat)</td><td>Tipping Point</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>Tour: Walter Cannon&#39;s Wisdom of the Body — Glycemic &amp; Hemodynamic Homeostasis vs. Runaway Shock</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>Tour: Planetary Thermostats vs. Amplifying Cascades — Earth&#39;s Climate Feedback Graph</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>Tour: Isomorphic Buffer Chemistry — From Blood Hemoglobin &amp; Bicarbonate to Ocean Acidification</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+</table>
+<table>
+<caption>Edges</caption>
+<tr><th>from</th><th>to</th><th>relationship</th></tr>
+<tr><td>computations/homa-ir-homeostatic-model-assessment</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>computations/homa-ir-homeostatic-model-assessment</td><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>glp1-receptor-agonist-incretin-modulation</td></tr>
+<tr><td>computations/homa-ir-homeostatic-model-assessment</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>computations/homa-ir-homeostatic-model-assessment</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>computations/myhre-co2-radiative-forcing-log-law</td><td>drivers/anthropogenic-fossil-carbon-flux</td><td>anthropogenic-fossil-carbon-flux</td></tr>
+<tr><td>computations/myhre-co2-radiative-forcing-log-law</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>computations/myhre-co2-radiative-forcing-log-law</td><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>water-vapor-lapse-rate-feedback</td></tr>
+<tr><td>computations/myhre-co2-radiative-forcing-log-law</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>bohr-haldane-hemoglobin-allostery</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>interventions/marine-alkalinity-enhancement</td><td>marine-alkalinity-enhancement</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>pathways/marine-biological-carbon-pump</td><td>marine-biological-carbon-pump</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>computations/revelle-buffer-factor-ocean-acidification</td><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>coral-reef-thermal-bleaching-threshold</td></tr>
+<tr><td>drivers/anthropogenic-fossil-carbon-flux</td><td>computations/myhre-co2-radiative-forcing-log-law</td><td>myhre-co2-radiative-forcing-log-law</td></tr>
+<tr><td>drivers/anthropogenic-fossil-carbon-flux</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>drivers/anthropogenic-fossil-carbon-flux</td><td>interventions/direct-air-capture-mineralization</td><td>direct-air-capture-mineralization</td></tr>
+<tr><td>drivers/anthropogenic-fossil-carbon-flux</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>drivers/high-altitude-hypobaric-hypoxia</td><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>bohr-haldane-hemoglobin-allostery</td></tr>
+<tr><td>drivers/high-altitude-hypobaric-hypoxia</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>drivers/milankovitch-orbital-insolation-forcing</td><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>solar-irradiance-volcanic-aerosol-forcing</td></tr>
+<tr><td>drivers/milankovitch-orbital-insolation-forcing</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>drivers/milankovitch-orbital-insolation-forcing</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>drivers/postprandial-carbohydrate-load</td><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>glp1-receptor-agonist-incretin-modulation</td></tr>
+<tr><td>drivers/postprandial-carbohydrate-load</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>drivers/postprandial-carbohydrate-load</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>drivers/milankovitch-orbital-insolation-forcing</td><td>milankovitch-orbital-insolation-forcing</td></tr>
+<tr><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>pathways/stratospheric-ozone-chapman-cycle</td><td>stratospheric-ozone-chapman-cycle</td></tr>
+<tr><td>drivers/sympathetic-fight-or-flight-stressor</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>drivers/sympathetic-fight-or-flight-stressor</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>drivers/sympathetic-fight-or-flight-stressor</td><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>hypothalamic-pituitary-adrenal-axis</td></tr>
+<tr><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>drivers/sympathetic-fight-or-flight-stressor</td><td>sympathetic-fight-or-flight-stressor</td></tr>
+<tr><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>pathways/renin-angiotensin-aldosterone-system</td><td>renin-angiotensin-aldosterone-system</td></tr>
+<tr><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>decompensated-hemorrhagic-shock-cascade</td></tr>
+<tr><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>drivers/high-altitude-hypobaric-hypoxia</td><td>high-altitude-hypobaric-hypoxia</td></tr>
+<tr><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>terrestrial-biosphere-soil-carbon</td></tr>
+<tr><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>amazon-rainforest-savannization-dieback</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>drivers/milankovitch-orbital-insolation-forcing</td><td>milankovitch-orbital-insolation-forcing</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>arctic-boreal-permafrost-carbon</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>feedback-loops/ice-albedo-positive-feedback</td><td>tipping-points/west-antarctic-marine-ice-sheet-instability</td><td>west-antarctic-marine-ice-sheet-instability</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>computations/homa-ir-homeostatic-model-assessment</td><td>homa-ir-homeostatic-model-assessment</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>interventions/closed-loop-artificial-pancreas-pid</td><td>closed-loop-artificial-pancreas-pid</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>glp1-receptor-agonist-incretin-modulation</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>arctic-boreal-permafrost-carbon</td></tr>
+<tr><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>feedback-loops/planck-blackbody-radiative-damping</td><td>computations/myhre-co2-radiative-forcing-log-law</td><td>myhre-co2-radiative-forcing-log-law</td></tr>
+<tr><td>feedback-loops/planck-blackbody-radiative-damping</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>feedback-loops/planck-blackbody-radiative-damping</td><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>water-vapor-lapse-rate-feedback</td></tr>
+<tr><td>feedback-loops/planck-blackbody-radiative-damping</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>computations/myhre-co2-radiative-forcing-log-law</td><td>myhre-co2-radiative-forcing-log-law</td></tr>
+<tr><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>interventions/closed-loop-artificial-pancreas-pid</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>interventions/closed-loop-artificial-pancreas-pid</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>interventions/closed-loop-artificial-pancreas-pid</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>interventions/closed-loop-artificial-pancreas-pid</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>interventions/direct-air-capture-mineralization</td><td>drivers/anthropogenic-fossil-carbon-flux</td><td>anthropogenic-fossil-carbon-flux</td></tr>
+<tr><td>interventions/direct-air-capture-mineralization</td><td>pathways/silicate-carbonate-weathering-cycle</td><td>silicate-carbonate-weathering-cycle</td></tr>
+<tr><td>interventions/direct-air-capture-mineralization</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>computations/homa-ir-homeostatic-model-assessment</td><td>homa-ir-homeostatic-model-assessment</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>drivers/postprandial-carbohydrate-load</td><td>postprandial-carbohydrate-load</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>pathways/silicate-carbonate-weathering-cycle</td><td>silicate-carbonate-weathering-cycle</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>deep-ocean-abyssal-carbon-sink</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>interventions/marine-alkalinity-enhancement</td><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>coral-reef-thermal-bleaching-threshold</td></tr>
+<tr><td>pathways/atlantic-meridional-overturning-circulation</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>pathways/atlantic-meridional-overturning-circulation</td><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>deep-ocean-abyssal-carbon-sink</td></tr>
+<tr><td>pathways/atlantic-meridional-overturning-circulation</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>pathways/atlantic-meridional-overturning-circulation</td><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>amoc-thermohaline-bistable-collapse</td></tr>
+<tr><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>hypothalamic-pituitary-adrenal-axis</td></tr>
+<tr><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>drivers/sympathetic-fight-or-flight-stressor</td><td>sympathetic-fight-or-flight-stressor</td></tr>
+<tr><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>pathways/hypothalamic-pituitary-adrenal-axis</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>pathways/marine-biological-carbon-pump</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>pathways/marine-biological-carbon-pump</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>pathways/marine-biological-carbon-pump</td><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>deep-ocean-abyssal-carbon-sink</td></tr>
+<tr><td>pathways/marine-biological-carbon-pump</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>computations/homa-ir-homeostatic-model-assessment</td><td>homa-ir-homeostatic-model-assessment</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>drivers/postprandial-carbohydrate-load</td><td>postprandial-carbohydrate-load</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>interventions/closed-loop-artificial-pancreas-pid</td><td>closed-loop-artificial-pancreas-pid</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>glp1-receptor-agonist-incretin-modulation</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>pathways/renin-angiotensin-aldosterone-system</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>pathways/renin-angiotensin-aldosterone-system</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>pathways/renin-angiotensin-aldosterone-system</td><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>decompensated-hemorrhagic-shock-cascade</td></tr>
+<tr><td>pathways/silicate-carbonate-weathering-cycle</td><td>interventions/direct-air-capture-mineralization</td><td>direct-air-capture-mineralization</td></tr>
+<tr><td>pathways/silicate-carbonate-weathering-cycle</td><td>interventions/marine-alkalinity-enhancement</td><td>marine-alkalinity-enhancement</td></tr>
+<tr><td>pathways/silicate-carbonate-weathering-cycle</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>pathways/silicate-carbonate-weathering-cycle</td><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>deep-ocean-abyssal-carbon-sink</td></tr>
+<tr><td>pathways/stratospheric-ozone-chapman-cycle</td><td>drivers/solar-irradiance-volcanic-aerosol-forcing</td><td>solar-irradiance-volcanic-aerosol-forcing</td></tr>
+<tr><td>pathways/stratospheric-ozone-chapman-cycle</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>permafrost-methane-clathrate-feedback</td></tr>
+<tr><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>drivers/high-altitude-hypobaric-hypoxia</td><td>high-altitude-hypobaric-hypoxia</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>bohr-haldane-hemoglobin-allostery</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>tour-universal-cybernetics-of-earth-and-body</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>computations/myhre-co2-radiative-forcing-log-law</td><td>myhre-co2-radiative-forcing-log-law</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>drivers/anthropogenic-fossil-carbon-flux</td><td>anthropogenic-fossil-carbon-flux</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>water-vapor-lapse-rate-feedback</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>arctic-boreal-permafrost-carbon</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>terrestrial-biosphere-soil-carbon</td></tr>
+<tr><td>reservoirs/atmospheric-co2-methane-pool</td><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>tour-planetary-thermostats-and-tipping-points</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>computations/homa-ir-homeostatic-model-assessment</td><td>homa-ir-homeostatic-model-assessment</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>drivers/postprandial-carbohydrate-load</td><td>postprandial-carbohydrate-load</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>reservoirs/blood-plasma-glucose-pool</td><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>tour-human-homeostasis-vs-runaway-pathology</td></tr>
+<tr><td>reservoirs/cryosphere-sea-ice-sheets</td><td>drivers/milankovitch-orbital-insolation-forcing</td><td>milankovitch-orbital-insolation-forcing</td></tr>
+<tr><td>reservoirs/cryosphere-sea-ice-sheets</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>reservoirs/cryosphere-sea-ice-sheets</td><td>pathways/atlantic-meridional-overturning-circulation</td><td>atlantic-meridional-overturning-circulation</td></tr>
+<tr><td>reservoirs/cryosphere-sea-ice-sheets</td><td>tipping-points/west-antarctic-marine-ice-sheet-instability</td><td>west-antarctic-marine-ice-sheet-instability</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>interventions/marine-alkalinity-enhancement</td><td>marine-alkalinity-enhancement</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>pathways/atlantic-meridional-overturning-circulation</td><td>atlantic-meridional-overturning-circulation</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>pathways/marine-biological-carbon-pump</td><td>marine-biological-carbon-pump</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>pathways/silicate-carbonate-weathering-cycle</td><td>silicate-carbonate-weathering-cycle</td></tr>
+<tr><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>pathways/atlantic-meridional-overturning-circulation</td><td>atlantic-meridional-overturning-circulation</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>pathways/marine-biological-carbon-pump</td><td>marine-biological-carbon-pump</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>reservoirs/deep-ocean-abyssal-carbon-sink</td><td>deep-ocean-abyssal-carbon-sink</td></tr>
+<tr><td>reservoirs/surface-ocean-mixed-layer</td><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>coral-reef-thermal-bleaching-threshold</td></tr>
+<tr><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>co2-fertilization-stomatal-feedback</td></tr>
+<tr><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>amazon-rainforest-savannization-dieback</td></tr>
+<tr><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>feedback-loops/co2-fertilization-stomatal-feedback</td><td>co2-fertilization-stomatal-feedback</td></tr>
+<tr><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>tipping-points/amazon-rainforest-savannization-dieback</td><td>reservoirs/terrestrial-biosphere-soil-carbon</td><td>terrestrial-biosphere-soil-carbon</td></tr>
+<tr><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>pathways/atlantic-meridional-overturning-circulation</td><td>atlantic-meridional-overturning-circulation</td></tr>
+<tr><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>interventions/marine-alkalinity-enhancement</td><td>marine-alkalinity-enhancement</td></tr>
+<tr><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>pathways/renin-angiotensin-aldosterone-system</td><td>renin-angiotensin-aldosterone-system</td></tr>
+<tr><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>interventions/closed-loop-artificial-pancreas-pid</td><td>closed-loop-artificial-pancreas-pid</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>tipping-points/west-antarctic-marine-ice-sheet-instability</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>tipping-points/west-antarctic-marine-ice-sheet-instability</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>computations/homa-ir-homeostatic-model-assessment</td><td>homa-ir-homeostatic-model-assessment</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>drivers/postprandial-carbohydrate-load</td><td>postprandial-carbohydrate-load</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>feedback-loops/baroreceptor-arterial-pressure-reflex</td><td>baroreceptor-arterial-pressure-reflex</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>feedback-loops/insulin-glucagon-glycemic-homeostasis</td><td>insulin-glucagon-glycemic-homeostasis</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>interventions/closed-loop-artificial-pancreas-pid</td><td>closed-loop-artificial-pancreas-pid</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>interventions/glp1-receptor-agonist-incretin-modulation</td><td>glp1-receptor-agonist-incretin-modulation</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>pathways/hepatic-glycogenolysis-gluconeogenesis</td><td>hepatic-glycogenolysis-gluconeogenesis</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>pathways/pancreatic-beta-cell-insulin-cascade</td><td>pancreatic-beta-cell-insulin-cascade</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>pathways/renin-angiotensin-aldosterone-system</td><td>renin-angiotensin-aldosterone-system</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>reservoirs/blood-plasma-glucose-pool</td><td>blood-plasma-glucose-pool</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>tipping-points/decompensated-hemorrhagic-shock-cascade</td><td>decompensated-hemorrhagic-shock-cascade</td></tr>
+<tr><td>tours/tour-human-homeostasis-vs-runaway-pathology</td><td>tipping-points/diabetic-ketoacidosis-runaway-lipolysis</td><td>diabetic-ketoacidosis-runaway-lipolysis</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>computations/myhre-co2-radiative-forcing-log-law</td><td>myhre-co2-radiative-forcing-log-law</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>drivers/anthropogenic-fossil-carbon-flux</td><td>anthropogenic-fossil-carbon-flux</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>feedback-loops/ice-albedo-positive-feedback</td><td>ice-albedo-positive-feedback</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>feedback-loops/permafrost-methane-clathrate-feedback</td><td>permafrost-methane-clathrate-feedback</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>feedback-loops/planck-blackbody-radiative-damping</td><td>planck-blackbody-radiative-damping</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>feedback-loops/water-vapor-lapse-rate-feedback</td><td>water-vapor-lapse-rate-feedback</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>interventions/direct-air-capture-mineralization</td><td>direct-air-capture-mineralization</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>pathways/atlantic-meridional-overturning-circulation</td><td>atlantic-meridional-overturning-circulation</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>pathways/silicate-carbonate-weathering-cycle</td><td>silicate-carbonate-weathering-cycle</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>reservoirs/arctic-boreal-permafrost-carbon</td><td>arctic-boreal-permafrost-carbon</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>reservoirs/atmospheric-co2-methane-pool</td><td>atmospheric-co2-methane-pool</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>reservoirs/cryosphere-sea-ice-sheets</td><td>cryosphere-sea-ice-sheets</td></tr>
+<tr><td>tours/tour-planetary-thermostats-and-tipping-points</td><td>tipping-points/amoc-thermohaline-bistable-collapse</td><td>amoc-thermohaline-bistable-collapse</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>computations/revelle-buffer-factor-ocean-acidification</td><td>revelle-buffer-factor-ocean-acidification</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>drivers/high-altitude-hypobaric-hypoxia</td><td>high-altitude-hypobaric-hypoxia</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>feedback-loops/bohr-haldane-hemoglobin-allostery</td><td>bohr-haldane-hemoglobin-allostery</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>interventions/closed-loop-artificial-pancreas-pid</td><td>closed-loop-artificial-pancreas-pid</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>interventions/marine-alkalinity-enhancement</td><td>marine-alkalinity-enhancement</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>pathways/marine-biological-carbon-pump</td><td>marine-biological-carbon-pump</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>reservoirs/arterial-blood-gas-o2-co2-buffer</td><td>arterial-blood-gas-o2-co2-buffer</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>reservoirs/surface-ocean-mixed-layer</td><td>surface-ocean-mixed-layer</td></tr>
+<tr><td>tours/tour-universal-cybernetics-of-earth-and-body</td><td>tipping-points/coral-reef-thermal-bleaching-threshold</td><td>coral-reef-thermal-bleaching-threshold</td></tr>
+</table>
+<script type="application/json" id="graph-data">
+{
+  "nodes": [
+    {
+      "id": "computations/homa-ir-homeostatic-model-assessment",
+      "title": "HOMA-IR \u0026 Disposition Index Glycemic Feedback Loop Gain Computation",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/myhre-co2-radiative-forcing-log-law",
+      "title": "Myhre–IPCC Logarithmic CO2 Radiative Forcing \u0026 Equilibrium Climate Sensitivity",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/revelle-buffer-factor-ocean-acidification",
+      "title": "Ocean Carbonate Revelle Buffer Factor \u0026 Aragonite Saturation Horizon Audit",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/anthropogenic-fossil-carbon-flux",
+      "title": "Anthropogenic Fossil Carbon \u0026 Land-Use Perturbation Flux (~11 GtC/yr)",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/high-altitude-hypobaric-hypoxia",
+      "title": "High-Altitude Hypobaric Hypoxia \u0026 Carotid Body Chemoreceptor Drive",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/milankovitch-orbital-insolation-forcing",
+      "title": "Milankovitch Orbital Pacemaker (Eccentricity, Obliquity, Precession)",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/postprandial-carbohydrate-load",
+      "title": "Postprandial Enteric Carbohydrate Absorption \u0026 Incretin Surge",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "title": "Total Solar Irradiance Cycles \u0026 Stratospheric Sulfate Volcanic Forcing",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "drivers/sympathetic-fight-or-flight-stressor",
+      "title": "Acute Sympathoadrenal Catecholamine \u0026 Stress Perturbation",
+      "type": "Driver",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "title": "Carotid Sinus \u0026 Aortic Arch Baroreceptor Autonomic Negative Feedback Loop",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "title": "Reciprocal Bohr \u0026 Haldane Hemoglobin Allosteric Gas-Transport Loop",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "title": "Terrestrial CO2 Fertilization vs. Soil Respiration Thermal Crossover Loop",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/ice-albedo-positive-feedback",
+      "title": "Cryosphere Ice–Albedo Positive Feedback Loop (+0.3 to +0.4 W/m2/K)",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "title": "Dual-Hormone Push–Pull Insulin–Glucagon Negative Feedback Loop",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "title": "Permafrost Thaw \u0026 Thermokarst Methanogenesis Positive Feedback Loop",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/planck-blackbody-radiative-damping",
+      "title": "Stefan–Boltzmann Planck Outgoing Longwave Radiative Damping (-3.2 W/m2/K)",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "title": "Clausius–Clapeyron Water Vapor \u0026 Tropospheric Lapse-Rate Feedback",
+      "type": "Feedback Loop",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "interventions/closed-loop-artificial-pancreas-pid",
+      "title": "Hybrid Closed-Loop Automated Insulin Delivery (CGM + MPC/PID Control)",
+      "type": "Intervention",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "interventions/direct-air-capture-mineralization",
+      "title": "Direct Air Capture (DAC) with Basalt In-Situ Carbonate Mineralization",
+      "type": "Intervention",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "title": "GLP-1 / GIP Receptor Agonist Glucose-Dependent Gain Modulation",
+      "type": "Intervention",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "interventions/marine-alkalinity-enhancement",
+      "title": "Ocean Alkalinity Enhancement (Olivine/Carbonate Buffer Restoration)",
+      "type": "Intervention",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/atlantic-meridional-overturning-circulation",
+      "title": "Atlantic Meridional Overturning Circulation (AMOC Thermohaline Conveyor)",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "title": "Alpha-Cell Glucagon \u0026 Hepatic Glycogenolysis / Gluconeogenesis Pathway",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "title": "Hypothalamic–Pituitary–Adrenal (HPA) CRH-ACTH-Cortisol Neuroendocrine Axis",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/marine-biological-carbon-pump",
+      "title": "Marine Phytoplankton Biological \u0026 Carbonate Counter-Pump",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "title": "Pancreatic Beta-Cell ATP/K+ Sensing \u0026 GLUT4 Insulin Translocation Cascade",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/renin-angiotensin-aldosterone-system",
+      "title": "Renin–Angiotensin–Aldosterone System (RAAS) Volume \u0026 Pressure Homeostasis",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/silicate-carbonate-weathering-cycle",
+      "title": "Urey Silicate-Carbonate Geochemical Weathering Thermostat",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "pathways/stratospheric-ozone-chapman-cycle",
+      "title": "Chapman Ozone-Oxygen Photochemical Cycle \u0026 Catalytic Montreal Recovery",
+      "type": "Pathway",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/arctic-boreal-permafrost-carbon",
+      "title": "Circum-Arctic Permafrost \u0026 Yedoma Cryo-Carbon Pool (~1,500 GtC)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "title": "Arterial Blood Gas \u0026 Bicarbonate Buffer Pool (pH 7.35–7.45, PaO2/PaCO2)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/atmospheric-co2-methane-pool",
+      "title": "Tropospheric CO2 \u0026 CH4 Greenhouse Gas Reservoir (~880 GtC)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/blood-plasma-glucose-pool",
+      "title": "Extracellular Blood Plasma Glucose Pool (Homeostatic Setpoint 70–99 mg/dL)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/cryosphere-sea-ice-sheets",
+      "title": "Planetary Cryosphere (Arctic Sea Ice, Greenland \u0026 Antarctic Ice Sheets)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "title": "Deep Abyssal Ocean Dissolved Inorganic Carbon Sink (~37,000 GtC)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/surface-ocean-mixed-layer",
+      "title": "Surface Ocean Wind-Mixed Carbonate Reservoir (~900 GtC)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "title": "Terrestrial Vegetation \u0026 Soil Organic Carbon Pool (~2,300 GtC)",
+      "type": "Reservoir",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/amazon-rainforest-savannization-dieback",
+      "title": "Amazon Canopy Evapotranspiration Recycling Collapse \u0026 Savannization",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "title": "Stommel Salt-Advection Feedback \u0026 AMOC Bistable Shutdown Threshold",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "title": "Coral–Symbiodiniaceae Thermal Bleaching \u0026 Aragonite Undersaturation Tipping Point",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "title": "Irreversible Decompensated Shock Positive-Feedback Spiral (Guyton Curve Crossover)",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "title": "Diabetic Ketoacidosis (DKA) Runaway Lipolysis \u0026 Acidotic Spiral",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tipping-points/west-antarctic-marine-ice-sheet-instability",
+      "title": "Marine Ice Sheet Instability (MISI Retrograde Grounding-Line Retreat)",
+      "type": "Tipping Point",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "title": "Tour: Walter Cannon's Wisdom of the Body — Glycemic \u0026 Hemodynamic Homeostasis vs. Runaway Shock",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-planetary-thermostats-and-tipping-points",
+      "title": "Tour: Planetary Thermostats vs. Amplifying Cascades — Earth's Climate Feedback Graph",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "title": "Tour: Isomorphic Buffer Chemistry — From Blood Hemoglobin \u0026 Bicarbonate to Ocean Acidification",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "computations/homa-ir-homeostatic-model-assessment",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "computations/homa-ir-homeostatic-model-assessment",
+      "to": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "text": "glp1-receptor-agonist-incretin-modulation"
+    },
+    {
+      "from": "computations/homa-ir-homeostatic-model-assessment",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "computations/homa-ir-homeostatic-model-assessment",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "computations/myhre-co2-radiative-forcing-log-law",
+      "to": "drivers/anthropogenic-fossil-carbon-flux",
+      "text": "anthropogenic-fossil-carbon-flux"
+    },
+    {
+      "from": "computations/myhre-co2-radiative-forcing-log-law",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "computations/myhre-co2-radiative-forcing-log-law",
+      "to": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "text": "water-vapor-lapse-rate-feedback"
+    },
+    {
+      "from": "computations/myhre-co2-radiative-forcing-log-law",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "computations/revelle-buffer-factor-ocean-acidification",
+      "to": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "text": "bohr-haldane-hemoglobin-allostery"
+    },
+    {
+      "from": "computations/revelle-buffer-factor-ocean-acidification",
+      "to": "interventions/marine-alkalinity-enhancement",
+      "text": "marine-alkalinity-enhancement"
+    },
+    {
+      "from": "computations/revelle-buffer-factor-ocean-acidification",
+      "to": "pathways/marine-biological-carbon-pump",
+      "text": "marine-biological-carbon-pump"
+    },
+    {
+      "from": "computations/revelle-buffer-factor-ocean-acidification",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "computations/revelle-buffer-factor-ocean-acidification",
+      "to": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "text": "coral-reef-thermal-bleaching-threshold"
+    },
+    {
+      "from": "drivers/anthropogenic-fossil-carbon-flux",
+      "to": "computations/myhre-co2-radiative-forcing-log-law",
+      "text": "myhre-co2-radiative-forcing-log-law"
+    },
+    {
+      "from": "drivers/anthropogenic-fossil-carbon-flux",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "drivers/anthropogenic-fossil-carbon-flux",
+      "to": "interventions/direct-air-capture-mineralization",
+      "text": "direct-air-capture-mineralization"
+    },
+    {
+      "from": "drivers/anthropogenic-fossil-carbon-flux",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "drivers/high-altitude-hypobaric-hypoxia",
+      "to": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "text": "bohr-haldane-hemoglobin-allostery"
+    },
+    {
+      "from": "drivers/high-altitude-hypobaric-hypoxia",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "drivers/milankovitch-orbital-insolation-forcing",
+      "to": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "text": "solar-irradiance-volcanic-aerosol-forcing"
+    },
+    {
+      "from": "drivers/milankovitch-orbital-insolation-forcing",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "drivers/milankovitch-orbital-insolation-forcing",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "drivers/postprandial-carbohydrate-load",
+      "to": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "text": "glp1-receptor-agonist-incretin-modulation"
+    },
+    {
+      "from": "drivers/postprandial-carbohydrate-load",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "drivers/postprandial-carbohydrate-load",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "to": "drivers/milankovitch-orbital-insolation-forcing",
+      "text": "milankovitch-orbital-insolation-forcing"
+    },
+    {
+      "from": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "to": "pathways/stratospheric-ozone-chapman-cycle",
+      "text": "stratospheric-ozone-chapman-cycle"
+    },
+    {
+      "from": "drivers/sympathetic-fight-or-flight-stressor",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "drivers/sympathetic-fight-or-flight-stressor",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "drivers/sympathetic-fight-or-flight-stressor",
+      "to": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "text": "hypothalamic-pituitary-adrenal-axis"
+    },
+    {
+      "from": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "to": "drivers/sympathetic-fight-or-flight-stressor",
+      "text": "sympathetic-fight-or-flight-stressor"
+    },
+    {
+      "from": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "to": "pathways/renin-angiotensin-aldosterone-system",
+      "text": "renin-angiotensin-aldosterone-system"
+    },
+    {
+      "from": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "to": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "text": "decompensated-hemorrhagic-shock-cascade"
+    },
+    {
+      "from": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "to": "drivers/high-altitude-hypobaric-hypoxia",
+      "text": "high-altitude-hypobaric-hypoxia"
+    },
+    {
+      "from": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "to": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "text": "terrestrial-biosphere-soil-carbon"
+    },
+    {
+      "from": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "to": "tipping-points/amazon-rainforest-savannization-dieback",
+      "text": "amazon-rainforest-savannization-dieback"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "drivers/milankovitch-orbital-insolation-forcing",
+      "text": "milankovitch-orbital-insolation-forcing"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "reservoirs/arctic-boreal-permafrost-carbon",
+      "text": "arctic-boreal-permafrost-carbon"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "feedback-loops/ice-albedo-positive-feedback",
+      "to": "tipping-points/west-antarctic-marine-ice-sheet-instability",
+      "text": "west-antarctic-marine-ice-sheet-instability"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "computations/homa-ir-homeostatic-model-assessment",
+      "text": "homa-ir-homeostatic-model-assessment"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "interventions/closed-loop-artificial-pancreas-pid",
+      "text": "closed-loop-artificial-pancreas-pid"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "text": "glp1-receptor-agonist-incretin-modulation"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "to": "reservoirs/arctic-boreal-permafrost-carbon",
+      "text": "arctic-boreal-permafrost-carbon"
+    },
+    {
+      "from": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "feedback-loops/planck-blackbody-radiative-damping",
+      "to": "computations/myhre-co2-radiative-forcing-log-law",
+      "text": "myhre-co2-radiative-forcing-log-law"
+    },
+    {
+      "from": "feedback-loops/planck-blackbody-radiative-damping",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "feedback-loops/planck-blackbody-radiative-damping",
+      "to": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "text": "water-vapor-lapse-rate-feedback"
+    },
+    {
+      "from": "feedback-loops/planck-blackbody-radiative-damping",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "to": "computations/myhre-co2-radiative-forcing-log-law",
+      "text": "myhre-co2-radiative-forcing-log-law"
+    },
+    {
+      "from": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "interventions/closed-loop-artificial-pancreas-pid",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "interventions/closed-loop-artificial-pancreas-pid",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "interventions/closed-loop-artificial-pancreas-pid",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "interventions/closed-loop-artificial-pancreas-pid",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "interventions/direct-air-capture-mineralization",
+      "to": "drivers/anthropogenic-fossil-carbon-flux",
+      "text": "anthropogenic-fossil-carbon-flux"
+    },
+    {
+      "from": "interventions/direct-air-capture-mineralization",
+      "to": "pathways/silicate-carbonate-weathering-cycle",
+      "text": "silicate-carbonate-weathering-cycle"
+    },
+    {
+      "from": "interventions/direct-air-capture-mineralization",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "to": "computations/homa-ir-homeostatic-model-assessment",
+      "text": "homa-ir-homeostatic-model-assessment"
+    },
+    {
+      "from": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "to": "drivers/postprandial-carbohydrate-load",
+      "text": "postprandial-carbohydrate-load"
+    },
+    {
+      "from": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "interventions/marine-alkalinity-enhancement",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "interventions/marine-alkalinity-enhancement",
+      "to": "pathways/silicate-carbonate-weathering-cycle",
+      "text": "silicate-carbonate-weathering-cycle"
+    },
+    {
+      "from": "interventions/marine-alkalinity-enhancement",
+      "to": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "text": "deep-ocean-abyssal-carbon-sink"
+    },
+    {
+      "from": "interventions/marine-alkalinity-enhancement",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "interventions/marine-alkalinity-enhancement",
+      "to": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "text": "coral-reef-thermal-bleaching-threshold"
+    },
+    {
+      "from": "pathways/atlantic-meridional-overturning-circulation",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "pathways/atlantic-meridional-overturning-circulation",
+      "to": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "text": "deep-ocean-abyssal-carbon-sink"
+    },
+    {
+      "from": "pathways/atlantic-meridional-overturning-circulation",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "pathways/atlantic-meridional-overturning-circulation",
+      "to": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "text": "amoc-thermohaline-bistable-collapse"
+    },
+    {
+      "from": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "to": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "text": "hypothalamic-pituitary-adrenal-axis"
+    },
+    {
+      "from": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "to": "drivers/sympathetic-fight-or-flight-stressor",
+      "text": "sympathetic-fight-or-flight-stressor"
+    },
+    {
+      "from": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "pathways/hypothalamic-pituitary-adrenal-axis",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "pathways/marine-biological-carbon-pump",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "pathways/marine-biological-carbon-pump",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "pathways/marine-biological-carbon-pump",
+      "to": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "text": "deep-ocean-abyssal-carbon-sink"
+    },
+    {
+      "from": "pathways/marine-biological-carbon-pump",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "computations/homa-ir-homeostatic-model-assessment",
+      "text": "homa-ir-homeostatic-model-assessment"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "drivers/postprandial-carbohydrate-load",
+      "text": "postprandial-carbohydrate-load"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "interventions/closed-loop-artificial-pancreas-pid",
+      "text": "closed-loop-artificial-pancreas-pid"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "text": "glp1-receptor-agonist-incretin-modulation"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "pathways/renin-angiotensin-aldosterone-system",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "pathways/renin-angiotensin-aldosterone-system",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "pathways/renin-angiotensin-aldosterone-system",
+      "to": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "text": "decompensated-hemorrhagic-shock-cascade"
+    },
+    {
+      "from": "pathways/silicate-carbonate-weathering-cycle",
+      "to": "interventions/direct-air-capture-mineralization",
+      "text": "direct-air-capture-mineralization"
+    },
+    {
+      "from": "pathways/silicate-carbonate-weathering-cycle",
+      "to": "interventions/marine-alkalinity-enhancement",
+      "text": "marine-alkalinity-enhancement"
+    },
+    {
+      "from": "pathways/silicate-carbonate-weathering-cycle",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "pathways/silicate-carbonate-weathering-cycle",
+      "to": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "text": "deep-ocean-abyssal-carbon-sink"
+    },
+    {
+      "from": "pathways/stratospheric-ozone-chapman-cycle",
+      "to": "drivers/solar-irradiance-volcanic-aerosol-forcing",
+      "text": "solar-irradiance-volcanic-aerosol-forcing"
+    },
+    {
+      "from": "pathways/stratospheric-ozone-chapman-cycle",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "reservoirs/arctic-boreal-permafrost-carbon",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "reservoirs/arctic-boreal-permafrost-carbon",
+      "to": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "text": "permafrost-methane-clathrate-feedback"
+    },
+    {
+      "from": "reservoirs/arctic-boreal-permafrost-carbon",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "to": "drivers/high-altitude-hypobaric-hypoxia",
+      "text": "high-altitude-hypobaric-hypoxia"
+    },
+    {
+      "from": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "to": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "text": "bohr-haldane-hemoglobin-allostery"
+    },
+    {
+      "from": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "to": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "text": "tour-universal-cybernetics-of-earth-and-body"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "computations/myhre-co2-radiative-forcing-log-law",
+      "text": "myhre-co2-radiative-forcing-log-law"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "drivers/anthropogenic-fossil-carbon-flux",
+      "text": "anthropogenic-fossil-carbon-flux"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "text": "water-vapor-lapse-rate-feedback"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "reservoirs/arctic-boreal-permafrost-carbon",
+      "text": "arctic-boreal-permafrost-carbon"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "text": "terrestrial-biosphere-soil-carbon"
+    },
+    {
+      "from": "reservoirs/atmospheric-co2-methane-pool",
+      "to": "tours/tour-planetary-thermostats-and-tipping-points",
+      "text": "tour-planetary-thermostats-and-tipping-points"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "computations/homa-ir-homeostatic-model-assessment",
+      "text": "homa-ir-homeostatic-model-assessment"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "drivers/postprandial-carbohydrate-load",
+      "text": "postprandial-carbohydrate-load"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "reservoirs/blood-plasma-glucose-pool",
+      "to": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "text": "tour-human-homeostasis-vs-runaway-pathology"
+    },
+    {
+      "from": "reservoirs/cryosphere-sea-ice-sheets",
+      "to": "drivers/milankovitch-orbital-insolation-forcing",
+      "text": "milankovitch-orbital-insolation-forcing"
+    },
+    {
+      "from": "reservoirs/cryosphere-sea-ice-sheets",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "reservoirs/cryosphere-sea-ice-sheets",
+      "to": "pathways/atlantic-meridional-overturning-circulation",
+      "text": "atlantic-meridional-overturning-circulation"
+    },
+    {
+      "from": "reservoirs/cryosphere-sea-ice-sheets",
+      "to": "tipping-points/west-antarctic-marine-ice-sheet-instability",
+      "text": "west-antarctic-marine-ice-sheet-instability"
+    },
+    {
+      "from": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "to": "interventions/marine-alkalinity-enhancement",
+      "text": "marine-alkalinity-enhancement"
+    },
+    {
+      "from": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "to": "pathways/atlantic-meridional-overturning-circulation",
+      "text": "atlantic-meridional-overturning-circulation"
+    },
+    {
+      "from": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "to": "pathways/marine-biological-carbon-pump",
+      "text": "marine-biological-carbon-pump"
+    },
+    {
+      "from": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "to": "pathways/silicate-carbonate-weathering-cycle",
+      "text": "silicate-carbonate-weathering-cycle"
+    },
+    {
+      "from": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "pathways/atlantic-meridional-overturning-circulation",
+      "text": "atlantic-meridional-overturning-circulation"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "pathways/marine-biological-carbon-pump",
+      "text": "marine-biological-carbon-pump"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "reservoirs/deep-ocean-abyssal-carbon-sink",
+      "text": "deep-ocean-abyssal-carbon-sink"
+    },
+    {
+      "from": "reservoirs/surface-ocean-mixed-layer",
+      "to": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "text": "coral-reef-thermal-bleaching-threshold"
+    },
+    {
+      "from": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "to": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "text": "co2-fertilization-stomatal-feedback"
+    },
+    {
+      "from": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "to": "tipping-points/amazon-rainforest-savannization-dieback",
+      "text": "amazon-rainforest-savannization-dieback"
+    },
+    {
+      "from": "tipping-points/amazon-rainforest-savannization-dieback",
+      "to": "feedback-loops/co2-fertilization-stomatal-feedback",
+      "text": "co2-fertilization-stomatal-feedback"
+    },
+    {
+      "from": "tipping-points/amazon-rainforest-savannization-dieback",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "tipping-points/amazon-rainforest-savannization-dieback",
+      "to": "reservoirs/terrestrial-biosphere-soil-carbon",
+      "text": "terrestrial-biosphere-soil-carbon"
+    },
+    {
+      "from": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "to": "pathways/atlantic-meridional-overturning-circulation",
+      "text": "atlantic-meridional-overturning-circulation"
+    },
+    {
+      "from": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "to": "interventions/marine-alkalinity-enhancement",
+      "text": "marine-alkalinity-enhancement"
+    },
+    {
+      "from": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "to": "pathways/renin-angiotensin-aldosterone-system",
+      "text": "renin-angiotensin-aldosterone-system"
+    },
+    {
+      "from": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "interventions/closed-loop-artificial-pancreas-pid",
+      "text": "closed-loop-artificial-pancreas-pid"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "tipping-points/west-antarctic-marine-ice-sheet-instability",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "tipping-points/west-antarctic-marine-ice-sheet-instability",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "computations/homa-ir-homeostatic-model-assessment",
+      "text": "homa-ir-homeostatic-model-assessment"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "drivers/postprandial-carbohydrate-load",
+      "text": "postprandial-carbohydrate-load"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "feedback-loops/baroreceptor-arterial-pressure-reflex",
+      "text": "baroreceptor-arterial-pressure-reflex"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "feedback-loops/insulin-glucagon-glycemic-homeostasis",
+      "text": "insulin-glucagon-glycemic-homeostasis"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "interventions/closed-loop-artificial-pancreas-pid",
+      "text": "closed-loop-artificial-pancreas-pid"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "interventions/glp1-receptor-agonist-incretin-modulation",
+      "text": "glp1-receptor-agonist-incretin-modulation"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "pathways/hepatic-glycogenolysis-gluconeogenesis",
+      "text": "hepatic-glycogenolysis-gluconeogenesis"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "pathways/pancreatic-beta-cell-insulin-cascade",
+      "text": "pancreatic-beta-cell-insulin-cascade"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "pathways/renin-angiotensin-aldosterone-system",
+      "text": "renin-angiotensin-aldosterone-system"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "reservoirs/blood-plasma-glucose-pool",
+      "text": "blood-plasma-glucose-pool"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "tipping-points/decompensated-hemorrhagic-shock-cascade",
+      "text": "decompensated-hemorrhagic-shock-cascade"
+    },
+    {
+      "from": "tours/tour-human-homeostasis-vs-runaway-pathology",
+      "to": "tipping-points/diabetic-ketoacidosis-runaway-lipolysis",
+      "text": "diabetic-ketoacidosis-runaway-lipolysis"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "computations/myhre-co2-radiative-forcing-log-law",
+      "text": "myhre-co2-radiative-forcing-log-law"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "drivers/anthropogenic-fossil-carbon-flux",
+      "text": "anthropogenic-fossil-carbon-flux"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "feedback-loops/ice-albedo-positive-feedback",
+      "text": "ice-albedo-positive-feedback"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "feedback-loops/permafrost-methane-clathrate-feedback",
+      "text": "permafrost-methane-clathrate-feedback"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "feedback-loops/planck-blackbody-radiative-damping",
+      "text": "planck-blackbody-radiative-damping"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "feedback-loops/water-vapor-lapse-rate-feedback",
+      "text": "water-vapor-lapse-rate-feedback"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "interventions/direct-air-capture-mineralization",
+      "text": "direct-air-capture-mineralization"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "pathways/atlantic-meridional-overturning-circulation",
+      "text": "atlantic-meridional-overturning-circulation"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "pathways/silicate-carbonate-weathering-cycle",
+      "text": "silicate-carbonate-weathering-cycle"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "reservoirs/arctic-boreal-permafrost-carbon",
+      "text": "arctic-boreal-permafrost-carbon"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "reservoirs/atmospheric-co2-methane-pool",
+      "text": "atmospheric-co2-methane-pool"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "reservoirs/cryosphere-sea-ice-sheets",
+      "text": "cryosphere-sea-ice-sheets"
+    },
+    {
+      "from": "tours/tour-planetary-thermostats-and-tipping-points",
+      "to": "tipping-points/amoc-thermohaline-bistable-collapse",
+      "text": "amoc-thermohaline-bistable-collapse"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "computations/revelle-buffer-factor-ocean-acidification",
+      "text": "revelle-buffer-factor-ocean-acidification"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "drivers/high-altitude-hypobaric-hypoxia",
+      "text": "high-altitude-hypobaric-hypoxia"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "feedback-loops/bohr-haldane-hemoglobin-allostery",
+      "text": "bohr-haldane-hemoglobin-allostery"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "interventions/closed-loop-artificial-pancreas-pid",
+      "text": "closed-loop-artificial-pancreas-pid"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "interventions/marine-alkalinity-enhancement",
+      "text": "marine-alkalinity-enhancement"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "pathways/marine-biological-carbon-pump",
+      "text": "marine-biological-carbon-pump"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "reservoirs/arterial-blood-gas-o2-co2-buffer",
+      "text": "arterial-blood-gas-o2-co2-buffer"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "reservoirs/surface-ocean-mixed-layer",
+      "text": "surface-ocean-mixed-layer"
+    },
+    {
+      "from": "tours/tour-universal-cybernetics-of-earth-and-body",
+      "to": "tipping-points/coral-reef-thermal-bleaching-threshold",
+      "text": "coral-reef-thermal-bleaching-threshold"
+    }
+  ]
+}
+</script>
+</body>
+</html>

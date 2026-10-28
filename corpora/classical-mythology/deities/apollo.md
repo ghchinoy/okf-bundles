@@ -4,6 +4,7 @@ title: "Apollo"
 description: "Olympian god of music, prophecy, truth, healing, the sun, and archery; twin brother of Artemis and patron of Delphi."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

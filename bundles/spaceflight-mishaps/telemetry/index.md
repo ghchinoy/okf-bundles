@@ -1,0 +1,7 @@
+# Concepts
+
+* [Apollo 13 55:54:53 GET Main Bus B Undervoltage & O2 Tank 2 Pressure Drop](apollo-13-cryo-stir-current-spike.md) - Simultaneous 21-amp current spike during routine cryo fan stir followed 95 seconds later by Tank 2 pressure peaking at 1,008 psi and dropping to zero alongside Main Bus B undervoltage.
+* [HST First-Light Point Spread Function (PSF) 1.5-Arcsecond Spherical Halo](hst-first-light-spherical-psf-halo.md) - WF/PC-1 focus sweep telemetry showing no single focal plane could concentrate more than 15% of starlight within a 0.1-arcsecond core, vs. the 70% design specification.
+* [MCO Two-Way Doppler Residual Drift Across TCM-1 Through TCM-4](mco-trajectory-correction-maneuver-residual.md) - Persistent unmodeled trajectory drift requiring four Trajectory Correction Maneuvers as small-forces angular momentum desaturation files mismatched DSN Doppler tracking by a factor of 4.45.
+* [STS-107 Entry Interface +270s Left Wing Strain Gauge & Thermocouple Cascade](sts-107-reentry-left-wing-thermocouple-drop.md) - Progressive off-scale-low failures of four hydraulic return line thermocouples in the left wheel well followed by roll-trim aileron saturation and Modular Auxiliary Data System (MADS) sensor loss.
+* [STS-51-L T+0.678s Black Smoke Puff & T+58.788s Aft SRB Flame Plume](sts-51l-t-plus-59s-plume-flicker.md) - Tracking camera imagery showing grey/black zinc-oxide smoke puffs at the right SRB aft field joint at liftoff, followed by a growing luminous plume after extreme upper-atmosphere wind shear.

@@ -4,6 +4,7 @@ title: "Parameterized Queries (Prepared Statements)"
 description: "Separate SQL code structure from user-supplied data parameters so that input is never interpreted as SQL commands."
 resource: "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html"
 status: "stable"
+mitigates: ["cwe-89"]
 tags: ["owasp", "sqli-defense"]
 sources:
   - id: "parameterized-queries"

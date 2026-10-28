@@ -4,6 +4,7 @@ title: "Heracles (Hercules)"
 description: "Divine hero, son of Zeus and Alcmene, famed for his extraordinary strength and the completion of the Twelve Labors."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "heroes", "public-domain"]
 sources:
   - id: "gutenberg-4928"

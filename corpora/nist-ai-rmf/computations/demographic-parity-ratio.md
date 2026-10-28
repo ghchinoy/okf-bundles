@@ -23,7 +23,7 @@ verified:
 
 # Demographic Parity Ratio
 
-An OKF v0.2 **Attested Computation** implementing quantitative fairness evaluation for [[measure-1]] and [[fair-with-harmful-bias-managed]] under the [[measure]] function.
+An OKF v0.2 **Attested Computation** implementing quantitative fairness evaluation for [[measure-1]] and [[fair-with-harmful-bias-managed]] under the [[measure]] function. Featured in [[tour-governance-to-sql-metrics]].
 
 ```sql
 WITH group_rates AS (

@@ -4,6 +4,7 @@ title: "Odysseus (Ulysses)"
 description: "King of Ithaca renowned for his intellect, cunning, the Trojan Horse stratagem, and his ten-year homeward voyage."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["achilles", "poseidon"]
 tags: ["mythology", "heroes", "public-domain"]
 sources:
   - id: "gutenberg-4928"
@@ -28,3 +29,4 @@ King of Ithaca renowned for his intellect, cunning, the Trojan Horse stratagem, 
 - [[odyssey]]
 - [[troy]]
 - [[ithaca]]
+- [[tour-wrath-and-homecoming-iliad-odyssey]]

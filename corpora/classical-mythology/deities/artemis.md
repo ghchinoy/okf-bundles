@@ -4,6 +4,7 @@ title: "Artemis (Diana)"
 description: "Olympian goddess of the hunt, the wilderness, wild animals, and the moon; twin sister of Apollo."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

@@ -4,6 +4,7 @@ title: "Hades (Pluto)"
 description: "Lord of the Underworld and ruler of the dead; brother of Zeus and Poseidon."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["zeus"]
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"
@@ -15,7 +16,7 @@ verified:
     at: "2026-07-31T00:00:00Z"
 generated:
   at: "2026-07-31T00:00:00Z"
-  by: binder/0.8.1-0.20261023014107-c59404ef16b0+dirty
+  by: binder/0.8.1-0.20261026041026-3bd0c625532d
 ---
 
 # Hades (Pluto)
@@ -29,3 +30,7 @@ Lord of the Underworld and ruler of the dead; brother of Zeus and Poseidon.
 - [heracles](/heroes/heracles.md)
 - [twelve-labors-of-heracles](/quests/twelve-labors-of-heracles.md)
 - [hermes](/deities/hermes.md)
+
+## Related
+
+- [zeus](/deities/zeus.md)

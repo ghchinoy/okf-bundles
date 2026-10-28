@@ -1,0 +1,8 @@
+# Concepts
+
+* [Anthropogenic Fossil Carbon & Land-Use Perturbation Flux (~11 GtC/yr)](anthropogenic-fossil-carbon-flux.md) - Geologically rapid injection of ancient lithosphere carbon into the coupled atmosphere-ocean-biosphere system, outpacing silicate weathering by two orders of magnitude.
+* [High-Altitude Hypobaric Hypoxia & Carotid Body Chemoreceptor Drive](high-altitude-hypobaric-hypoxia.md) - Reduced ambient inspired oxygen tension (PiO2) driving peripheral chemoreceptor hyperventilation, respiratory alkalosis, and 2,3-BPG allosteric adaptation.
+* [Milankovitch Orbital Pacemaker (Eccentricity, Obliquity, Precession)](milankovitch-orbital-insolation-forcing.md) - Quasi-periodic 100 kyr, 41 kyr, and 23 kyr orbital variations in high-latitude summer insolation that pace glacial-interglacial transitions when amplified by ice-albedo and carbon feedbacks.
+* [Postprandial Enteric Carbohydrate Absorption & Incretin Surge](postprandial-carbohydrate-load.md) - Acute exogenous glucose influx across intestinal SGLT1/GLUT2 transporters paired with L-cell GLP-1 and K-cell GIP incretin release.
+* [Total Solar Irradiance Cycles & Stratospheric Sulfate Volcanic Forcing](solar-irradiance-volcanic-aerosol-forcing.md) - Natural radiative forcing drivers combining the 11-year solar magnetic cycle with episodic explosive volcanic SO2 injections that form reflective stratospheric sulfate aerosols.
+* [Acute Sympathoadrenal Catecholamine & Stress Perturbation](sympathetic-fight-or-flight-stressor.md) - Acute neurogenic or physiological stressor triggering adrenal medullary epinephrine/norepinephrine release and HPA axis activation.

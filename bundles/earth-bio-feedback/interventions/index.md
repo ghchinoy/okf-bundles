@@ -1,0 +1,6 @@
+# Concepts
+
+* [Hybrid Closed-Loop Automated Insulin Delivery (CGM + MPC/PID Control)](closed-loop-artificial-pancreas-pid.md) - Cybernetic biomedical prosthesis pairing continuous interstitial glucose telemetry with Model Predictive Control (MPC) or PID algorithms to restore synthetic glycemic negative feedback.
+* [Direct Air Capture (DAC) with Basalt In-Situ Carbonate Mineralization](direct-air-capture-mineralization.md) - Engineered industrial acceleration of the Urey silicate-weathering pathway, scrubbing atmospheric CO2 and injecting it into mafic basalt formations to precipitate solid calcite within two years.
+* [GLP-1 / GIP Receptor Agonist Glucose-Dependent Gain Modulation](glp1-receptor-agonist-incretin-modulation.md) - Pharmacological intervention that amplifies beta-cell insulin secretion and suppresses alpha-cell glucagon strictly when plasma glucose is elevated, avoiding hypoglycemic overshoot.
+* [Ocean Alkalinity Enhancement (Olivine/Carbonate Buffer Restoration)](marine-alkalinity-enhancement.md) - Geochemical intervention adding ground alkaline silicate or hydroxide minerals to the surface mixed layer to lower the Revelle factor, elevate [CO3^2-], and draw down atmospheric CO2.

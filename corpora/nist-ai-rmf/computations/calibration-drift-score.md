@@ -22,7 +22,7 @@ verified:
 
 # Population Stability Index (PSI) Calibration Drift
 
-An OKF v0.2 **Attested Computation** supporting continuous monitoring in [[measure-3]] and [[valid-and-reliable]] under [[measure]].
+An OKF v0.2 **Attested Computation** supporting continuous monitoring in [[measure-3]] and [[valid-and-reliable]] under [[measure]]. Featured in [[tour-continuous-drift-and-safety]].
 
 ```sql
 SELECT SUM((actual_pct - expected_pct) * LN(actual_pct / NULLIF(expected_pct, 0))) AS psi_score

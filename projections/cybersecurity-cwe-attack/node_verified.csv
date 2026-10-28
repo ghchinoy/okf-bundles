@@ -10,6 +10,8 @@ techniques/t1059,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
 techniques/t1078,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
 techniques/t1190,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
 techniques/t1552,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
+tours/tour-cloud-identity-and-ssrf-defense,0,human:secops-detection-lead,2026-07-31T00:00:00Z,true
+tours/tour-injection-to-rce-killchain,0,human:secops-detection-lead,2026-07-31T00:00:00Z,true
 weaknesses/cwe-22,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
 weaknesses/cwe-287,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false
 weaknesses/cwe-502,0,process:mitre-stix-validator,2026-07-31T00:00:00Z,false

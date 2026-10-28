@@ -21,6 +21,8 @@
 <tr><td>techniques/t1078</td><td>T1078: Valid Accounts</td><td>Technique</td><td>machine-confirmed</td><td>false</td></tr>
 <tr><td>techniques/t1190</td><td>T1190: Exploit Public-Facing Application</td><td>Technique</td><td>machine-confirmed</td><td>false</td></tr>
 <tr><td>techniques/t1552</td><td>T1552: Unsecured Credentials</td><td>Technique</td><td>machine-confirmed</td><td>false</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>Tour: Cloud Metadata SSRF, Credential Theft, and Impossible Travel SIEM Analytics</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>Tour: Anatomy of an Application Injection-to-RCE Kill Chain</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
 <tr><td>weaknesses/cwe-22</td><td>CWE-22: Path Traversal</td><td>Weakness</td><td>machine-confirmed</td><td>false</td></tr>
 <tr><td>weaknesses/cwe-287</td><td>CWE-287: Improper Authentication</td><td>Weakness</td><td>machine-confirmed</td><td>false</td></tr>
 <tr><td>weaknesses/cwe-502</td><td>CWE-502: Deserialization of Untrusted Data</td><td>Weakness</td><td>machine-confirmed</td><td>false</td></tr>
@@ -48,6 +50,7 @@
 <tr><td>mitigations/m1037</td><td>weaknesses/cwe-918</td><td>cwe-918</td></tr>
 <tr><td>mitigations/m1050</td><td>mitigations/csp-header-policy</td><td>csp-header-policy</td></tr>
 <tr><td>mitigations/m1050</td><td>mitigations/parameterized-queries</td><td>parameterized-queries</td></tr>
+<tr><td>mitigations/m1050</td><td>techniques/t1190</td><td>t1190</td></tr>
 <tr><td>mitigations/m1050</td><td>weaknesses/cwe-502</td><td>cwe-502</td></tr>
 <tr><td>mitigations/m1050</td><td>weaknesses/cwe-78</td><td>cwe-78</td></tr>
 <tr><td>mitigations/m1050</td><td>weaknesses/cwe-79</td><td>cwe-79</td></tr>
@@ -60,9 +63,11 @@
 <tr><td>techniques/t1078</td><td>detections/impossible-travel-detection</td><td>impossible-travel-detection</td></tr>
 <tr><td>techniques/t1078</td><td>mitigations/m1032</td><td>m1032</td></tr>
 <tr><td>techniques/t1078</td><td>techniques/t1552</td><td>t1552</td></tr>
+<tr><td>techniques/t1078</td><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>tour-cloud-identity-and-ssrf-defense</td></tr>
 <tr><td>techniques/t1078</td><td>weaknesses/cwe-287</td><td>cwe-287</td></tr>
 <tr><td>techniques/t1190</td><td>mitigations/m1037</td><td>m1037</td></tr>
 <tr><td>techniques/t1190</td><td>mitigations/m1050</td><td>m1050</td></tr>
+<tr><td>techniques/t1190</td><td>tours/tour-injection-to-rce-killchain</td><td>tour-injection-to-rce-killchain</td></tr>
 <tr><td>techniques/t1190</td><td>weaknesses/cwe-22</td><td>cwe-22</td></tr>
 <tr><td>techniques/t1190</td><td>weaknesses/cwe-502</td><td>cwe-502</td></tr>
 <tr><td>techniques/t1190</td><td>weaknesses/cwe-78</td><td>cwe-78</td></tr>
@@ -73,6 +78,23 @@
 <tr><td>techniques/t1552</td><td>mitigations/m1037</td><td>m1037</td></tr>
 <tr><td>techniques/t1552</td><td>techniques/t1078</td><td>t1078</td></tr>
 <tr><td>techniques/t1552</td><td>weaknesses/cwe-918</td><td>cwe-918</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>detections/impossible-travel-detection</td><td>impossible-travel-detection</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>mitigations/m1032</td><td>m1032</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>mitigations/m1037</td><td>m1037</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>techniques/t1078</td><td>t1078</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>techniques/t1552</td><td>t1552</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>weaknesses/cwe-287</td><td>cwe-287</td></tr>
+<tr><td>tours/tour-cloud-identity-and-ssrf-defense</td><td>weaknesses/cwe-918</td><td>cwe-918</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>mitigations/csp-header-policy</td><td>csp-header-policy</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>mitigations/m1022</td><td>m1022</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>mitigations/m1050</td><td>m1050</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>mitigations/parameterized-queries</td><td>parameterized-queries</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>techniques/t1059</td><td>t1059</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>techniques/t1190</td><td>t1190</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>weaknesses/cwe-502</td><td>cwe-502</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>weaknesses/cwe-78</td><td>cwe-78</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>weaknesses/cwe-79</td><td>cwe-79</td></tr>
+<tr><td>tours/tour-injection-to-rce-killchain</td><td>weaknesses/cwe-89</td><td>cwe-89</td></tr>
 <tr><td>weaknesses/cwe-22</td><td>mitigations/m1022</td><td>m1022</td></tr>
 <tr><td>weaknesses/cwe-22</td><td>techniques/t1190</td><td>t1190</td></tr>
 <tr><td>weaknesses/cwe-287</td><td>mitigations/m1032</td><td>m1032</td></tr>
@@ -171,6 +193,20 @@
       "title": "T1552: Unsecured Credentials",
       "type": "Technique",
       "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-cloud-identity-and-ssrf-defense",
+      "title": "Tour: Cloud Metadata SSRF, Credential Theft, and Impossible Travel SIEM Analytics",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-injection-to-rce-killchain",
+      "title": "Tour: Anatomy of an Application Injection-to-RCE Kill Chain",
+      "type": "Tour",
+      "tier": "human-reviewed",
       "stale": false
     },
     {
@@ -306,6 +342,11 @@
     },
     {
       "from": "mitigations/m1050",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "mitigations/m1050",
       "to": "weaknesses/cwe-502",
       "text": "cwe-502"
     },
@@ -366,6 +407,11 @@
     },
     {
       "from": "techniques/t1078",
+      "to": "tours/tour-cloud-identity-and-ssrf-defense",
+      "text": "tour-cloud-identity-and-ssrf-defense"
+    },
+    {
+      "from": "techniques/t1078",
       "to": "weaknesses/cwe-287",
       "text": "cwe-287"
     },
@@ -378,6 +424,11 @@
       "from": "techniques/t1190",
       "to": "mitigations/m1050",
       "text": "m1050"
+    },
+    {
+      "from": "techniques/t1190",
+      "to": "tours/tour-injection-to-rce-killchain",
+      "text": "tour-injection-to-rce-killchain"
     },
     {
       "from": "techniques/t1190",
@@ -428,6 +479,91 @@
       "from": "techniques/t1552",
       "to": "weaknesses/cwe-918",
       "text": "cwe-918"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "detections/impossible-travel-detection",
+      "text": "impossible-travel-detection"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "mitigations/m1032",
+      "text": "m1032"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "mitigations/m1037",
+      "text": "m1037"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "techniques/t1078",
+      "text": "t1078"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "techniques/t1552",
+      "text": "t1552"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "weaknesses/cwe-287",
+      "text": "cwe-287"
+    },
+    {
+      "from": "tours/tour-cloud-identity-and-ssrf-defense",
+      "to": "weaknesses/cwe-918",
+      "text": "cwe-918"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "mitigations/csp-header-policy",
+      "text": "csp-header-policy"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "mitigations/m1022",
+      "text": "m1022"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "mitigations/m1050",
+      "text": "m1050"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "mitigations/parameterized-queries",
+      "text": "parameterized-queries"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "techniques/t1059",
+      "text": "t1059"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "techniques/t1190",
+      "text": "t1190"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "weaknesses/cwe-502",
+      "text": "cwe-502"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "weaknesses/cwe-78",
+      "text": "cwe-78"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "weaknesses/cwe-79",
+      "text": "cwe-79"
+    },
+    {
+      "from": "tours/tour-injection-to-rce-killchain",
+      "to": "weaknesses/cwe-89",
+      "text": "cwe-89"
     },
     {
       "from": "weaknesses/cwe-22",

@@ -1,0 +1,10 @@
+# Concepts
+
+* [Circum-Arctic Permafrost & Yedoma Cryo-Carbon Pool (~1,500 GtC)](arctic-boreal-permafrost-carbon.md) - Frozen high-latitude organic peat and Pleistocene loess deposits containing roughly twice as much carbon as the pre-industrial atmosphere.
+* [Arterial Blood Gas & Bicarbonate Buffer Pool (pH 7.35–7.45, PaO2/PaCO2)](arterial-blood-gas-o2-co2-buffer.md) - Intravascular carbonic-anhydrase / hemoglobin buffer system coupling pulmonary alveolar ventilation with cellular oxidative phosphorylation.
+* [Tropospheric CO2 & CH4 Greenhouse Gas Reservoir (~880 GtC)](atmospheric-co2-methane-pool.md) - Well-mixed atmospheric carbon pool coupling planetary longwave infrared radiative trapping with terrestrial photosynthesis and air-sea gas exchange.
+* [Extracellular Blood Plasma Glucose Pool (Homeostatic Setpoint 70–99 mg/dL)](blood-plasma-glucose-pool.md) - Tightly regulated circulating hexose fuel pool (~4 grams total in human plasma) essential for obligate cerebral metabolism while preventing osmotic and glycation toxicity.
+* [Planetary Cryosphere (Arctic Sea Ice, Greenland & Antarctic Ice Sheets)](cryosphere-sea-ice-sheets.md) - High-albedo planetary ice reservoirs reflecting 60–85% of incident shortwave solar radiation and locking ~65 meters of global sea-level equivalent.
+* [Deep Abyssal Ocean Dissolved Inorganic Carbon Sink (~37,000 GtC)](deep-ocean-abyssal-carbon-sink.md) - Largest active planetary carbon reservoir storing cold, high-pressure dissolved inorganic carbon and remineralized marine snow over millennial overturning timescales.
+* [Surface Ocean Wind-Mixed Carbonate Reservoir (~900 GtC)](surface-ocean-mixed-layer.md) - Upper 50–200 m photic ocean layer exchanging dissolved inorganic carbon (CO2, HCO3-, CO3^2-) with the atmosphere and feeding both the biological pump and thermohaline circulation.
+* [Terrestrial Vegetation & Soil Organic Carbon Pool (~2,300 GtC)](terrestrial-biosphere-soil-carbon.md) - Living forest biomass and soil humus exchanging ~120 GtC/yr with the atmosphere via RuBisCO photosynthesis and autotrophic/heterotrophic respiration.

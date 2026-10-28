@@ -4,6 +4,7 @@ title: "Poseidon (Neptune)"
 description: "Olympian god of the sea, storms, earthquakes, and horses; brother of Zeus and Hades."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["athena", "odysseus"]
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

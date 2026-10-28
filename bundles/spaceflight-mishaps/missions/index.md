@@ -1,0 +1,10 @@
+# Concepts
+
+* [Apollo 1 (AS-204 Plugs-Out Test)](apollo-1.md) - January 1967 launchpad test in which a cabin flash fire in a high-pressure 100% oxygen atmosphere claimed the lives of Gus Grissom, Ed White, and Roger Chaffee.
+* [Apollo 13 (Service Module Cryogenic Oxygen Tank No. 2 Rupture)](apollo-13.md) - April 1970 lunar mission aborted after an internal electrical short in Cryogenic Oxygen Tank 2 caused a tank rupture 321,860 km from Earth, followed by successful Lunar Module lifeboat return.
+* [Genesis Solar Wind Sample Return Capsule Hard Landing](genesis-sample-return.md) - September 2004 drogue parachute deployment failure in Utah caused by gravity-switch deceleration sensors mounted upside-down due to inverted CAD drawing specifications.
+* [Hubble Space Telescope (HST) Primary Mirror Aberration & SM1 Recovery](hst-servicing-mission-1.md) - Discovery after 1990 launch of 2.2-micron spherical aberration on the 2.4-meter primary mirror and subsequent 1993 STS-61 on-orbit optical correction via COSTAR and WFPC2.
+* [Mars Climate Orbiter (MCO) Navigation Loss](mars-climate-orbiter.md) - September 1999 loss of spacecraft during Mars orbital insertion when ground software output angular momentum impulse in pound-force seconds instead of contracted newton-seconds.
+* [Mars Polar Lander (MPL) Descent Engine Cutoff](mars-polar-lander.md) - December 1999 loss of lander during Mars descent caused by landing-leg deployment transient Hall-effect sensor spikes falsely triggering engine shutdown 40 meters above the surface.
+* [STS-107 Space Shuttle Columbia Mishap](sts-107-columbia.md) - February 2003 loss of Columbia during atmospheric reentry after External Tank left bipod ramp foam struck and breached Wing Leading Edge Reinforced Carbon-Carbon Panel 8 at launch.
+* [STS-51-L Space Shuttle Challenger Mishap](sts-51l-challenger.md) - January 1986 loss of Challenger 73 seconds into flight caused by cold-temperature failure of the right Solid Rocket Booster aft field-joint O-ring seals.

@@ -4,6 +4,7 @@ title: "Hera (Juno)"
 description: "Queen of the Olympian gods, goddess of marriage, women, childbirth, and family, and sister-wife of Zeus."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+contrasts_with: ["heracles"]
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

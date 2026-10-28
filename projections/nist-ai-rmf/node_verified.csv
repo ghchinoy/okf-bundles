@@ -25,3 +25,5 @@ functions/govern,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true
 functions/manage,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true
 functions/map,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true
 functions/measure,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true
+tours/tour-continuous-drift-and-safety,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true
+tours/tour-governance-to-sql-metrics,0,human:nist-ai-rmf-working-group,2026-07-31T00:00:00Z,true

@@ -181,6 +181,20 @@
       "type": "Function",
       "tier": "human-reviewed",
       "stale": false
+    },
+    {
+      "id": "tours/tour-continuous-drift-and-safety",
+      "title": "Tour: Continuous Production Drift Monitoring and Safety Incident Response",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-governance-to-sql-metrics",
+      "title": "Tour: From AI Governance Policy to Sanctioned SQL Fairness Metrics",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
     }
   ],
   "edges": [
@@ -525,6 +539,11 @@
       "text": "measure"
     },
     {
+      "from": "computations/calibration-drift-score",
+      "to": "tours/tour-continuous-drift-and-safety",
+      "text": "tour-continuous-drift-and-safety"
+    },
+    {
       "from": "computations/demographic-parity-ratio",
       "to": "categories/measure-1",
       "text": "measure-1"
@@ -538,6 +557,11 @@
       "from": "computations/demographic-parity-ratio",
       "to": "functions/measure",
       "text": "measure"
+    },
+    {
+      "from": "computations/demographic-parity-ratio",
+      "to": "tours/tour-governance-to-sql-metrics",
+      "text": "tour-governance-to-sql-metrics"
     },
     {
       "from": "functions/govern",
@@ -703,6 +727,86 @@
       "from": "functions/measure",
       "to": "functions/map",
       "text": "map"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "categories/manage-1",
+      "text": "manage-1"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "categories/map-2",
+      "text": "map-2"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "categories/measure-3",
+      "text": "measure-3"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "characteristics/safe",
+      "text": "safe"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "characteristics/valid-and-reliable",
+      "text": "valid-and-reliable"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "computations/calibration-drift-score",
+      "text": "calibration-drift-score"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "functions/manage",
+      "text": "manage"
+    },
+    {
+      "from": "tours/tour-continuous-drift-and-safety",
+      "to": "functions/map",
+      "text": "map"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "categories/govern-1",
+      "text": "govern-1"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "categories/govern-3",
+      "text": "govern-3"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "categories/measure-1",
+      "text": "measure-1"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "characteristics/accountable-and-transparent",
+      "text": "accountable-and-transparent"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "characteristics/fair-with-harmful-bias-managed",
+      "text": "fair-with-harmful-bias-managed"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "computations/demographic-parity-ratio",
+      "text": "demographic-parity-ratio"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "functions/govern",
+      "text": "govern"
+    },
+    {
+      "from": "tours/tour-governance-to-sql-metrics",
+      "to": "functions/measure",
+      "text": "measure"
     }
   ]
 }

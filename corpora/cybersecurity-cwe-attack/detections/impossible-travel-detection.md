@@ -9,6 +9,7 @@ parameters:
 executor: "process:siem-detection-engine"
 attester: "process:sigma-sql-attester"
 status: "stable"
+mitigates: ["t1078", "cwe-287"]
 sources:
   - id: "mitre-car-2020-09-001"
     resource: "https://car.mitre.org/"

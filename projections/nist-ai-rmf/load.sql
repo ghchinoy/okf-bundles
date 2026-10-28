@@ -33,7 +33,9 @@ INSERT INTO Nodes (node_key, title, type, tier, stale, stale_after) VALUES
   ('functions/govern', 'GOVERN', 'Function', 'human-reviewed', false, NULL),
   ('functions/manage', 'MANAGE', 'Function', 'human-reviewed', false, NULL),
   ('functions/map', 'MAP', 'Function', 'human-reviewed', false, NULL),
-  ('functions/measure', 'MEASURE', 'Function', 'human-reviewed', false, NULL);
+  ('functions/measure', 'MEASURE', 'Function', 'human-reviewed', false, NULL),
+  ('tours/tour-continuous-drift-and-safety', 'Tour: Continuous Production Drift Monitoring and Safety Incident Response', 'Tour', 'human-reviewed', false, NULL),
+  ('tours/tour-governance-to-sql-metrics', 'Tour: From AI Governance Policy to Sanctioned SQL Fairness Metrics', 'Tour', 'human-reviewed', false, NULL);
 
 INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('categories/govern-1', 'categories/manage-1', 'manage-1'),
@@ -104,9 +106,11 @@ INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('computations/calibration-drift-score', 'categories/measure-3', 'measure-3'),
   ('computations/calibration-drift-score', 'characteristics/valid-and-reliable', 'valid-and-reliable'),
   ('computations/calibration-drift-score', 'functions/measure', 'measure'),
+  ('computations/calibration-drift-score', 'tours/tour-continuous-drift-and-safety', 'tour-continuous-drift-and-safety'),
   ('computations/demographic-parity-ratio', 'categories/measure-1', 'measure-1'),
   ('computations/demographic-parity-ratio', 'characteristics/fair-with-harmful-bias-managed', 'fair-with-harmful-bias-managed'),
   ('computations/demographic-parity-ratio', 'functions/measure', 'measure'),
+  ('computations/demographic-parity-ratio', 'tours/tour-governance-to-sql-metrics', 'tour-governance-to-sql-metrics'),
   ('functions/govern', 'categories/govern-1', 'govern-1'),
   ('functions/govern', 'categories/govern-2', 'govern-2'),
   ('functions/govern', 'categories/govern-3', 'govern-3'),
@@ -139,4 +143,20 @@ INSERT INTO Edges (from_key, to_key, rel) VALUES
   ('functions/measure', 'computations/demographic-parity-ratio', 'demographic-parity-ratio'),
   ('functions/measure', 'functions/govern', 'govern'),
   ('functions/measure', 'functions/manage', 'manage'),
-  ('functions/measure', 'functions/map', 'map');
+  ('functions/measure', 'functions/map', 'map'),
+  ('tours/tour-continuous-drift-and-safety', 'categories/manage-1', 'manage-1'),
+  ('tours/tour-continuous-drift-and-safety', 'categories/map-2', 'map-2'),
+  ('tours/tour-continuous-drift-and-safety', 'categories/measure-3', 'measure-3'),
+  ('tours/tour-continuous-drift-and-safety', 'characteristics/safe', 'safe'),
+  ('tours/tour-continuous-drift-and-safety', 'characteristics/valid-and-reliable', 'valid-and-reliable'),
+  ('tours/tour-continuous-drift-and-safety', 'computations/calibration-drift-score', 'calibration-drift-score'),
+  ('tours/tour-continuous-drift-and-safety', 'functions/manage', 'manage'),
+  ('tours/tour-continuous-drift-and-safety', 'functions/map', 'map'),
+  ('tours/tour-governance-to-sql-metrics', 'categories/govern-1', 'govern-1'),
+  ('tours/tour-governance-to-sql-metrics', 'categories/govern-3', 'govern-3'),
+  ('tours/tour-governance-to-sql-metrics', 'categories/measure-1', 'measure-1'),
+  ('tours/tour-governance-to-sql-metrics', 'characteristics/accountable-and-transparent', 'accountable-and-transparent'),
+  ('tours/tour-governance-to-sql-metrics', 'characteristics/fair-with-harmful-bias-managed', 'fair-with-harmful-bias-managed'),
+  ('tours/tour-governance-to-sql-metrics', 'computations/demographic-parity-ratio', 'demographic-parity-ratio'),
+  ('tours/tour-governance-to-sql-metrics', 'functions/govern', 'govern'),
+  ('tours/tour-governance-to-sql-metrics', 'functions/measure', 'measure');

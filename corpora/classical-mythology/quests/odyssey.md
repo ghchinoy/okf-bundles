@@ -4,6 +4,7 @@ title: "The Odyssey (Voyage of Odysseus)"
 description: "Ten-year perilous return journey of Odysseus from the fall of Troy back to Ithaca."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+prerequisite: ["trojan-war"]
 tags: ["mythology", "quests", "public-domain"]
 sources:
   - id: "gutenberg-4928"

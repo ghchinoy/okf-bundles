@@ -25,6 +25,8 @@ digraph okf {
   "quests/quest-for-the-golden-fleece" [label="Quest of the Argonauts for the Golden Fleece"];
   "quests/trojan-war" [label="The Trojan War"];
   "quests/twelve-labors-of-heracles" [label="The Twelve Labors of Heracles"];
+  "tours/tour-olympian-interventions-and-quests" [label="Tour: Divine Patronage, Relics, and the Great Heroic Quests"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" [label="Tour: Wrath and Homecoming — Contrast of Achilles and Odysseus"];
   "artifacts/aegis" -> "deities/athena" [label="athena"];
   "artifacts/aegis" -> "deities/zeus" [label="zeus"];
   "artifacts/aegis" -> "heroes/perseus" [label="perseus"];
@@ -91,6 +93,7 @@ digraph okf {
   "deities/zeus" -> "heroes/perseus" [label="perseus"];
   "deities/zeus" -> "places/mount-olympus" [label="mount-olympus"];
   "deities/zeus" -> "quests/trojan-war" [label="trojan-war"];
+  "deities/zeus" -> "tours/tour-olympian-interventions-and-quests" [label="tour-olympian-interventions-and-quests"];
   "heroes/achilles" -> "deities/apollo" [label="apollo"];
   "heroes/achilles" -> "heroes/odysseus" [label="odysseus"];
   "heroes/achilles" -> "places/troy" [label="troy"];
@@ -116,6 +119,7 @@ digraph okf {
   "heroes/odysseus" -> "places/troy" [label="troy"];
   "heroes/odysseus" -> "quests/odyssey" [label="odyssey"];
   "heroes/odysseus" -> "quests/trojan-war" [label="trojan-war"];
+  "heroes/odysseus" -> "tours/tour-wrath-and-homecoming-iliad-odyssey" [label="tour-wrath-and-homecoming-iliad-odyssey"];
   "heroes/perseus" -> "artifacts/aegis" [label="aegis"];
   "heroes/perseus" -> "deities/athena" [label="athena"];
   "heroes/perseus" -> "deities/hermes" [label="hermes"];
@@ -144,6 +148,7 @@ digraph okf {
   "places/underworld" -> "deities/hermes" [label="hermes"];
   "places/underworld" -> "heroes/heracles" [label="heracles"];
   "places/underworld" -> "heroes/odysseus" [label="odysseus"];
+  "places/underworld" -> "places/mount-olympus" [label="mount-olympus"];
   "places/underworld" -> "quests/odyssey" [label="odyssey"];
   "places/underworld" -> "quests/twelve-labors-of-heracles" [label="twelve-labors-of-heracles"];
   "quests/odyssey" -> "deities/athena" [label="athena"];
@@ -176,4 +181,26 @@ digraph okf {
   "quests/twelve-labors-of-heracles" -> "heroes/heracles" [label="heracles"];
   "quests/twelve-labors-of-heracles" -> "places/delphi" [label="delphi"];
   "quests/twelve-labors-of-heracles" -> "places/underworld" [label="underworld"];
+  "tours/tour-olympian-interventions-and-quests" -> "artifacts/aegis" [label="aegis"];
+  "tours/tour-olympian-interventions-and-quests" -> "artifacts/golden-fleece" [label="golden-fleece"];
+  "tours/tour-olympian-interventions-and-quests" -> "deities/hades" [label="hades"];
+  "tours/tour-olympian-interventions-and-quests" -> "deities/hera" [label="hera"];
+  "tours/tour-olympian-interventions-and-quests" -> "deities/zeus" [label="zeus"];
+  "tours/tour-olympian-interventions-and-quests" -> "heroes/heracles" [label="heracles"];
+  "tours/tour-olympian-interventions-and-quests" -> "heroes/jason" [label="jason"];
+  "tours/tour-olympian-interventions-and-quests" -> "heroes/perseus" [label="perseus"];
+  "tours/tour-olympian-interventions-and-quests" -> "places/delphi" [label="delphi"];
+  "tours/tour-olympian-interventions-and-quests" -> "quests/quest-for-the-golden-fleece" [label="quest-for-the-golden-fleece"];
+  "tours/tour-olympian-interventions-and-quests" -> "quests/twelve-labors-of-heracles" [label="twelve-labors-of-heracles"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "deities/apollo" [label="apollo"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "deities/athena" [label="athena"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "deities/poseidon" [label="poseidon"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "heroes/achilles" [label="achilles"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "heroes/odysseus" [label="odysseus"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "places/ithaca" [label="ithaca"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "places/mount-olympus" [label="mount-olympus"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "places/troy" [label="troy"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "places/underworld" [label="underworld"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "quests/odyssey" [label="odyssey"];
+  "tours/tour-wrath-and-homecoming-iliad-odyssey" -> "quests/trojan-war" [label="trojan-war"];
 }

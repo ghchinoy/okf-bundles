@@ -4,6 +4,7 @@ title: "Athena (Minerva)"
 description: "Virgin goddess of wisdom, handicraft, and strategic warfare, sprung fully armed from the forehead of Zeus."
 resource: "https://www.gutenberg.org/ebooks/4928"
 status: "stable"
+parent: "zeus"
 tags: ["mythology", "deities", "public-domain"]
 sources:
   - id: "gutenberg-4928"

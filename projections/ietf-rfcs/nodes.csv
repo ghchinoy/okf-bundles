@@ -16,3 +16,5 @@ http/rfc9114,RFC 9114: HTTP/3,RFC,machine-confirmed,false,
 http/rfc9457,RFC 9457: Problem Details for HTTP APIs,RFC,machine-confirmed,false,
 security/rfc5246,RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2 (Obsoleted),RFC,machine-confirmed,true,2018-08-01
 security/rfc8446,RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3,RFC,machine-confirmed,false,
+tours/tour-evolution-of-http-and-quic,Tour: From Obsoleted HTTP/1.1 & TLS 1.2 to HTTP/3 over QUIC,Tour,machine-confirmed,false,
+tours/tour-modern-api-identity-oauth21,"Tour: Securing Modern JSON APIs with OAuth 2.1, PKCE, and JWT",Tour,machine-confirmed,false,

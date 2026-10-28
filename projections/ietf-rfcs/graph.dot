@@ -18,9 +18,12 @@ digraph okf {
   "http/rfc9457" [label="RFC 9457: Problem Details for HTTP APIs"];
   "security/rfc5246" [label="RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2 (Obsoleted)"];
   "security/rfc8446" [label="RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3"];
+  "tours/tour-evolution-of-http-and-quic" [label="Tour: From Obsoleted HTTP/1.1 & TLS 1.2 to HTTP/3 over QUIC"];
+  "tours/tour-modern-api-identity-oauth21" [label="Tour: Securing Modern JSON APIs with OAuth 2.1, PKCE, and JWT"];
   "auth/draft-ietf-oauth-v2-1" -> "auth/rfc6749" [label="rfc6749"];
   "auth/draft-ietf-oauth-v2-1" -> "auth/rfc6750" [label="rfc6750"];
   "auth/draft-ietf-oauth-v2-1" -> "auth/rfc7636" [label="rfc7636"];
+  "auth/draft-ietf-oauth-v2-1" -> "tours/tour-modern-api-identity-oauth21" [label="tour-modern-api-identity-oauth21"];
   "auth/rfc6749" -> "auth/draft-ietf-oauth-v2-1" [label="draft-ietf-oauth-v2-1"];
   "auth/rfc6749" -> "auth/rfc6750" [label="rfc6750"];
   "auth/rfc6749" -> "auth/rfc7519" [label="rfc7519"];
@@ -54,6 +57,7 @@ digraph okf {
   "http/rfc9110" -> "http/rfc9114" [label="rfc9114"];
   "http/rfc9110" -> "http/rfc9457" [label="rfc9457"];
   "http/rfc9110" -> "security/rfc8446" [label="rfc8446"];
+  "http/rfc9110" -> "tours/tour-evolution-of-http-and-quic" [label="tour-evolution-of-http-and-quic"];
   "http/rfc9111" -> "http/rfc2616" [label="rfc2616"];
   "http/rfc9111" -> "http/rfc9110" [label="rfc9110"];
   "http/rfc9113" -> "http/rfc9110" [label="rfc9110"];
@@ -69,4 +73,21 @@ digraph okf {
   "security/rfc8446" -> "http/rfc9000" [label="rfc9000"];
   "security/rfc8446" -> "http/rfc9110" [label="rfc9110"];
   "security/rfc8446" -> "security/rfc5246" [label="rfc5246"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc2616" [label="rfc2616"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc9000" [label="rfc9000"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc9110" [label="rfc9110"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc9111" [label="rfc9111"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc9113" [label="rfc9113"];
+  "tours/tour-evolution-of-http-and-quic" -> "http/rfc9114" [label="rfc9114"];
+  "tours/tour-evolution-of-http-and-quic" -> "security/rfc5246" [label="rfc5246"];
+  "tours/tour-evolution-of-http-and-quic" -> "security/rfc8446" [label="rfc8446"];
+  "tours/tour-modern-api-identity-oauth21" -> "auth/draft-ietf-oauth-v2-1" [label="draft-ietf-oauth-v2-1"];
+  "tours/tour-modern-api-identity-oauth21" -> "auth/rfc6749" [label="rfc6749"];
+  "tours/tour-modern-api-identity-oauth21" -> "auth/rfc6750" [label="rfc6750"];
+  "tours/tour-modern-api-identity-oauth21" -> "auth/rfc7519" [label="rfc7519"];
+  "tours/tour-modern-api-identity-oauth21" -> "auth/rfc7636" [label="rfc7636"];
+  "tours/tour-modern-api-identity-oauth21" -> "data/rfc3986" [label="rfc3986"];
+  "tours/tour-modern-api-identity-oauth21" -> "data/rfc8259" [label="rfc8259"];
+  "tours/tour-modern-api-identity-oauth21" -> "data/rfc9562" [label="rfc9562"];
+  "tours/tour-modern-api-identity-oauth21" -> "http/rfc9457" [label="rfc9457"];
 }

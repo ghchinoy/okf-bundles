@@ -1,0 +1,29 @@
+---
+type: "Mission"
+title: "Apollo 1 (AS-204 Plugs-Out Test)"
+description: "January 1967 launchpad test in which a cabin flash fire in a high-pressure 100% oxygen atmosphere claimed the lives of Gus Grissom, Ed White, and Roger Chaffee."
+resource: "https://llis.nasa.gov/"
+status: "stable"
+triggered_by: ["high-pressure-pure-oxygen-flash-fire", "command-module-cabin-wiring"]
+tags: ["spaceflight", "missions", "nasa", "systems-engineering"]
+sources:
+  - id: "nasa-llis-sp-6105"
+    resource: "https://llis.nasa.gov/"
+    title: "NASA Lessons Learned Information System (LLIS) & NASA/SP-2016-6105 Systems Engineering Handbook"
+    author: "process:nasa-mishap-investigation-board"
+verified:
+  - by: "human:aerospace-safety-panel"
+    at: "2026-07-31T00:00:00Z"
+---
+
+# Apollo 1 (AS-204 Plugs-Out Test)
+
+January 1967 launchpad test in which a cabin flash fire in a high-pressure 100% oxygen atmosphere claimed the lives of Gus Grissom, Ed White, and Roger Chaffee.
+
+## Causal & Systems Engineering Links
+- [[command-module-cabin-wiring]]
+- [[high-pressure-pure-oxygen-flash-fire]]
+- [[go-fever-schedule-pressure]]
+- [[inadequate-flight-like-test-as-you-fly]]
+- [[nitrogen-oxygen-cabin-atmosphere-redesign]]
+- [[apollo-13]]

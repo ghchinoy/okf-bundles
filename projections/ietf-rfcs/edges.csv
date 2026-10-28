@@ -2,6 +2,7 @@ from_key,to_key,rel
 auth/draft-ietf-oauth-v2-1,auth/rfc6749,rfc6749
 auth/draft-ietf-oauth-v2-1,auth/rfc6750,rfc6750
 auth/draft-ietf-oauth-v2-1,auth/rfc7636,rfc7636
+auth/draft-ietf-oauth-v2-1,tours/tour-modern-api-identity-oauth21,tour-modern-api-identity-oauth21
 auth/rfc6749,auth/draft-ietf-oauth-v2-1,draft-ietf-oauth-v2-1
 auth/rfc6749,auth/rfc6750,rfc6750
 auth/rfc6749,auth/rfc7519,rfc7519
@@ -35,6 +36,7 @@ http/rfc9110,http/rfc9113,rfc9113
 http/rfc9110,http/rfc9114,rfc9114
 http/rfc9110,http/rfc9457,rfc9457
 http/rfc9110,security/rfc8446,rfc8446
+http/rfc9110,tours/tour-evolution-of-http-and-quic,tour-evolution-of-http-and-quic
 http/rfc9111,http/rfc2616,rfc2616
 http/rfc9111,http/rfc9110,rfc9110
 http/rfc9113,http/rfc9110,rfc9110
@@ -50,3 +52,20 @@ security/rfc5246,security/rfc8446,rfc8446
 security/rfc8446,http/rfc9000,rfc9000
 security/rfc8446,http/rfc9110,rfc9110
 security/rfc8446,security/rfc5246,rfc5246
+tours/tour-evolution-of-http-and-quic,http/rfc2616,rfc2616
+tours/tour-evolution-of-http-and-quic,http/rfc9000,rfc9000
+tours/tour-evolution-of-http-and-quic,http/rfc9110,rfc9110
+tours/tour-evolution-of-http-and-quic,http/rfc9111,rfc9111
+tours/tour-evolution-of-http-and-quic,http/rfc9113,rfc9113
+tours/tour-evolution-of-http-and-quic,http/rfc9114,rfc9114
+tours/tour-evolution-of-http-and-quic,security/rfc5246,rfc5246
+tours/tour-evolution-of-http-and-quic,security/rfc8446,rfc8446
+tours/tour-modern-api-identity-oauth21,auth/draft-ietf-oauth-v2-1,draft-ietf-oauth-v2-1
+tours/tour-modern-api-identity-oauth21,auth/rfc6749,rfc6749
+tours/tour-modern-api-identity-oauth21,auth/rfc6750,rfc6750
+tours/tour-modern-api-identity-oauth21,auth/rfc7519,rfc7519
+tours/tour-modern-api-identity-oauth21,auth/rfc7636,rfc7636
+tours/tour-modern-api-identity-oauth21,data/rfc3986,rfc3986
+tours/tour-modern-api-identity-oauth21,data/rfc8259,rfc8259
+tours/tour-modern-api-identity-oauth21,data/rfc9562,rfc9562
+tours/tour-modern-api-identity-oauth21,http/rfc9457,rfc9457

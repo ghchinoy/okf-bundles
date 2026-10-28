@@ -5,6 +5,9 @@ description: "Consolidates OAuth 2.0 (RFC 6749), Bearer Tokens (RFC 6750), PKCE 
 resource: "https://datatracker.ietf.org/doc/draft-ietf-oauth-v2-1/"
 status: "draft"
 stale_after: "2027-06-01"
+supersedes: ["rfc6749"]
+prerequisite: ["rfc7636", "rfc6750"]
+related: ["tour-modern-api-identity-oauth21"]
 tags: ["oauth21", "draft", "authorization"]
 sources:
   - id: "draft-ietf-oauth-v2-1"
@@ -27,3 +30,4 @@ Consolidates OAuth 2.0 (RFC 6749), Bearer Tokens (RFC 6750), PKCE (RFC 7636), an
 - [[rfc6749]]
 - [[rfc6750]]
 - [[rfc7636]]
+- [[tour-modern-api-identity-oauth21]]

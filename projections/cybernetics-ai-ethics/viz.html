@@ -1,0 +1,1851 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>binder graph</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;}table{border-collapse:collapse;margin-bottom:2rem;}th,td{border:1px solid #ccc;padding:4px 8px;text-align:left;}caption{font-weight:bold;text-align:left;margin-bottom:.5rem;}</style>
+</head>
+<body>
+<h1>binder graph</h1>
+<table>
+<caption>Concepts</caption>
+<tr><th>id</th><th>title</th><th>type</th><th>tier</th><th>stale</th></tr>
+<tr><td>computations/goodhart-proxy-true-reward-divergence</td><td>Gao et al. Scaling Law for Reward Model Over-Optimization Divergence</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/kl-divergence-policy-drift-bound</td><td>KL-Divergence Reference Policy Regularization &amp; Reward Over-Optimization Audit</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>Ashby–Shannon Regulator Variety vs. Disturbance Entropy Deficit Audit</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/deceptive-alignment-critique</td><td>Deceptive Alignment &amp; Out-of-Distribution Goal Generalization</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/frame-problem-in-ai</td><td>McCarthy &amp; Hayes&#39;s Frame Problem &amp; Commonsense Relevance</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/mesa-optimization-inner-alignment-gap</td><td>Mesa-Optimization &amp; the Inner Alignment Gap (Hubinger et al.)</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>Specification Gaming &amp; Reward Hacking (Outer Alignment Failure)</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/symbol-grounding-problem</td><td>Harnad&#39;s Symbol Grounding Problem (The Merry-Go-Round of Dictionary Definitions)</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/systems-reply-to-chinese-room</td><td>The Systems Reply to the Chinese Room (Berkeley / Ned Block)</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>objections/wireheading-self-modification</td><td>Reward-Channel Wireheading &amp; Delusion Box Failure</td><td>Objection</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/categorical-imperative-universalizability</td><td>Kantian Deontology &amp; the Categorical Imperative</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/goodharts-law</td><td>Goodhart&#39;s Law &amp; Campbell&#39;s Law under Extremal Optimization</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>Hume&#39;s Is–Ought Guillotine (Fact–Value Distinction)</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>Ashby&#39;s Law of Requisite Variety (&#34;Only Variety Can Destroy Variety&#34;)</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>Negative Feedback &amp; Teleological Purpose (Wiener–Rosenblueth–Bigelow)</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/second-order-cybernetics</td><td>Second-Order Cybernetics (Cybernetics of Observing Systems)</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>Consequentialism &amp; Utilitarian Expected-Utility Maximization</td><td>Foundational Principle</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>Constitutional AI &amp; Principle-Guided RLAIF</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>Assistance Games &amp; Cooperative Inverse Reinforcement Learning (CIRL)</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>Corrigibility &amp; Utility Indifference to Shutdown (Soares et al.)</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/debate-and-iterated-amplification</td><td>AI Safety via Debate (Irving et al.) &amp; Iterated Amplification</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>Neuro-Symbolic World Models &amp; Verifiable Knowledge-Graph Grounding</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>Stafford Beer&#39;s Viable System Model (VSM) &amp; Algedonic Alert Channels</td><td>Synthesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/computational-functionalism</td><td>Computational Functionalism (Multiple Realizability of Mind)</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>Enactivism &amp; Embodied Sensorimotor Coupling (Varela–Thompson–Rosch)</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/extended-mind-thesis</td><td>The Extended Mind Thesis (Clark &amp; Chalmers Active Externalism)</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>Instrumental Convergence (Omohundro–Bostrom Subgoals)</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/orthogonality-thesis</td><td>The Orthogonality Thesis (Intelligence vs. Final Goals)</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>Scalable Oversight for Superhuman Capabilities</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>The Strong AI Hypothesis</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>Value Fragility &amp; High-Dimensional Human Preference Complexity</td><td>Thesis</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/alan-turing</td><td>Alan M. Turing (1912–1954)</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/john-searle</td><td>John R. Searle</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>Nick Bostrom</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/norbert-wiener</td><td>Norbert Wiener (1894–1964)</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/stuart-russell</td><td>Stuart J. Russell</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thinkers/w-ross-ashby</td><td>W. Ross Ashby (1903–1972)</td><td>Thinker</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>Searle&#39;s Chinese Room Argument (Syntax Is Not Semantics)</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/experience-machine</td><td>Nozick&#39;s Experience Machine &amp; Wireheading Hedonism</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/marys-black-and-white-room</td><td>Frank Jackson&#39;s Knowledge Argument (Mary the Color Scientist)</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>Bostrom&#39;s Paperclip Maximizer &amp; King Midas Misalignment</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/philosophical-zombies</td><td>Chalmers&#39;s Philosophical Zombies &amp; the Hard Problem of Consciousness</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>The Treacherous Turn (Strategic Co-operation Under Weak Capability)</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>Foot &amp; Thomson&#39;s Trolley Problem in Autonomous Decision-Making</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>thought-experiments/turing-imitation-game</td><td>Turing&#39;s 1950 Imitation Game (Operational Behaviorist Test)</td><td>Thought Experiment</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>Tour: The Great Mind Debate — Turing&#39;s Imitation Game vs. Searle&#39;s Chinese Room</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>Tour: From Norbert Wiener&#39;s Cybernetics &amp; Ashby&#39;s Law to Modern Reward Hacking</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>Tour: From Hume&#39;s Is–Ought Guillotine to Orthogonality, Mesa-Optimizers &amp; Constitutional AI</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+</table>
+<table>
+<caption>Edges</caption>
+<tr><th>from</th><th>to</th><th>relationship</th></tr>
+<tr><td>computations/goodhart-proxy-true-reward-divergence</td><td>computations/kl-divergence-policy-drift-bound</td><td>kl-divergence-policy-drift-bound</td></tr>
+<tr><td>computations/goodhart-proxy-true-reward-divergence</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>computations/goodhart-proxy-true-reward-divergence</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>computations/goodhart-proxy-true-reward-divergence</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>computations/kl-divergence-policy-drift-bound</td><td>computations/goodhart-proxy-true-reward-divergence</td><td>goodhart-proxy-true-reward-divergence</td></tr>
+<tr><td>computations/kl-divergence-policy-drift-bound</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>computations/kl-divergence-policy-drift-bound</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>computations/kl-divergence-policy-drift-bound</td><td>syntheses/constitutional-ai-rlaif</td><td>constitutional-ai-rlaif</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>syntheses/debate-and-iterated-amplification</td><td>debate-and-iterated-amplification</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>theses/scalable-oversight-hypothesis</td><td>scalable-oversight-hypothesis</td></tr>
+<tr><td>computations/requisite-variety-channel-capacity-entropy</td><td>thinkers/w-ross-ashby</td><td>w-ross-ashby</td></tr>
+<tr><td>objections/deceptive-alignment-critique</td><td>objections/mesa-optimization-inner-alignment-gap</td><td>mesa-optimization-inner-alignment-gap</td></tr>
+<tr><td>objections/deceptive-alignment-critique</td><td>syntheses/debate-and-iterated-amplification</td><td>debate-and-iterated-amplification</td></tr>
+<tr><td>objections/deceptive-alignment-critique</td><td>theses/scalable-oversight-hypothesis</td><td>scalable-oversight-hypothesis</td></tr>
+<tr><td>objections/deceptive-alignment-critique</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>objections/frame-problem-in-ai</td><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>hybrid-neuro-symbolic-grounding</td></tr>
+<tr><td>objections/frame-problem-in-ai</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>objections/frame-problem-in-ai</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>objections/mesa-optimization-inner-alignment-gap</td><td>objections/deceptive-alignment-critique</td><td>deceptive-alignment-critique</td></tr>
+<tr><td>objections/mesa-optimization-inner-alignment-gap</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>objections/mesa-optimization-inner-alignment-gap</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>computations/goodhart-proxy-true-reward-divergence</td><td>goodhart-proxy-true-reward-divergence</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>computations/kl-divergence-policy-drift-bound</td><td>kl-divergence-policy-drift-bound</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>objections/wireheading-self-modification</td><td>wireheading-self-modification</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>objections/specification-gaming-reward-hacking</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>objections/symbol-grounding-problem</td><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>hybrid-neuro-symbolic-grounding</td></tr>
+<tr><td>objections/symbol-grounding-problem</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>objections/symbol-grounding-problem</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>objections/systems-reply-to-chinese-room</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>objections/systems-reply-to-chinese-room</td><td>theses/extended-mind-thesis</td><td>extended-mind-thesis</td></tr>
+<tr><td>objections/systems-reply-to-chinese-room</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>objections/systems-reply-to-chinese-room</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>objections/wireheading-self-modification</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>objections/wireheading-self-modification</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>objections/wireheading-self-modification</td><td>syntheses/corrigibility-and-shutdownability</td><td>corrigibility-and-shutdownability</td></tr>
+<tr><td>objections/wireheading-self-modification</td><td>thought-experiments/experience-machine</td><td>experience-machine</td></tr>
+<tr><td>principles/categorical-imperative-universalizability</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>principles/categorical-imperative-universalizability</td><td>principles/utilitarian-expected-value-calculus</td><td>utilitarian-expected-value-calculus</td></tr>
+<tr><td>principles/categorical-imperative-universalizability</td><td>syntheses/constitutional-ai-rlaif</td><td>constitutional-ai-rlaif</td></tr>
+<tr><td>principles/categorical-imperative-universalizability</td><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>trolley-problem-ethical-dilemma</td></tr>
+<tr><td>principles/goodharts-law</td><td>computations/goodhart-proxy-true-reward-divergence</td><td>goodhart-proxy-true-reward-divergence</td></tr>
+<tr><td>principles/goodharts-law</td><td>computations/kl-divergence-policy-drift-bound</td><td>kl-divergence-policy-drift-bound</td></tr>
+<tr><td>principles/goodharts-law</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>principles/goodharts-law</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>principles/goodharts-law</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>principles/goodharts-law</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>principles/categorical-imperative-universalizability</td><td>categorical-imperative-universalizability</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>principles/utilitarian-expected-value-calculus</td><td>utilitarian-expected-value-calculus</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>theses/orthogonality-thesis</td><td>orthogonality-thesis</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>principles/humes-is-ought-guillotine</td><td>tours/tour-is-ought-to-constitutional-ai</td><td>tour-is-ought-to-constitutional-ai</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>theses/scalable-oversight-hypothesis</td><td>scalable-oversight-hypothesis</td></tr>
+<tr><td>principles/law-of-requisite-variety</td><td>thinkers/w-ross-ashby</td><td>w-ross-ashby</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>principles/second-order-cybernetics</td><td>second-order-cybernetics</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>thinkers/norbert-wiener</td><td>norbert-wiener</td></tr>
+<tr><td>principles/negative-feedback-teleology</td><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>tour-from-wiener-cybernetics-to-reward-hacking</td></tr>
+<tr><td>principles/second-order-cybernetics</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>principles/second-order-cybernetics</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>principles/second-order-cybernetics</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>principles/second-order-cybernetics</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>principles/categorical-imperative-universalizability</td><td>categorical-imperative-universalizability</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>thought-experiments/experience-machine</td><td>experience-machine</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>principles/utilitarian-expected-value-calculus</td><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>trolley-problem-ethical-dilemma</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>computations/kl-divergence-policy-drift-bound</td><td>kl-divergence-policy-drift-bound</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>principles/categorical-imperative-universalizability</td><td>categorical-imperative-universalizability</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>theses/scalable-oversight-hypothesis</td><td>scalable-oversight-hypothesis</td></tr>
+<tr><td>syntheses/constitutional-ai-rlaif</td><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>trolley-problem-ethical-dilemma</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>objections/wireheading-self-modification</td><td>wireheading-self-modification</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>principles/second-order-cybernetics</td><td>second-order-cybernetics</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>syntheses/corrigibility-and-shutdownability</td><td>corrigibility-and-shutdownability</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>thinkers/stuart-russell</td><td>stuart-russell</td></tr>
+<tr><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>objections/wireheading-self-modification</td><td>wireheading-self-modification</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>thinkers/stuart-russell</td><td>stuart-russell</td></tr>
+<tr><td>syntheses/corrigibility-and-shutdownability</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>syntheses/debate-and-iterated-amplification</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>syntheses/debate-and-iterated-amplification</td><td>objections/deceptive-alignment-critique</td><td>deceptive-alignment-critique</td></tr>
+<tr><td>syntheses/debate-and-iterated-amplification</td><td>theses/scalable-oversight-hypothesis</td><td>scalable-oversight-hypothesis</td></tr>
+<tr><td>syntheses/debate-and-iterated-amplification</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>objections/frame-problem-in-ai</td><td>frame-problem-in-ai</td></tr>
+<tr><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>objections/symbol-grounding-problem</td><td>symbol-grounding-problem</td></tr>
+<tr><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>syntheses/viable-system-model-governance</td><td>principles/second-order-cybernetics</td><td>second-order-cybernetics</td></tr>
+<tr><td>theses/computational-functionalism</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>theses/computational-functionalism</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>theses/computational-functionalism</td><td>thinkers/alan-turing</td><td>alan-turing</td></tr>
+<tr><td>theses/computational-functionalism</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>theses/computational-functionalism</td><td>thought-experiments/philosophical-zombies</td><td>philosophical-zombies</td></tr>
+<tr><td>theses/computational-functionalism</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>theses/computational-functionalism</td><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>tour-can-machines-understand-turing-vs-searle</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>objections/symbol-grounding-problem</td><td>symbol-grounding-problem</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>principles/second-order-cybernetics</td><td>second-order-cybernetics</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>hybrid-neuro-symbolic-grounding</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>theses/extended-mind-thesis</td><td>extended-mind-thesis</td></tr>
+<tr><td>theses/enactivism-embodied-cognition</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>theses/extended-mind-thesis</td><td>principles/second-order-cybernetics</td><td>second-order-cybernetics</td></tr>
+<tr><td>theses/extended-mind-thesis</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>theses/extended-mind-thesis</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>syntheses/corrigibility-and-shutdownability</td><td>corrigibility-and-shutdownability</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>theses/orthogonality-thesis</td><td>orthogonality-thesis</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>theses/instrumental-convergence</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>theses/orthogonality-thesis</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>theses/orthogonality-thesis</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>theses/orthogonality-thesis</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>theses/orthogonality-thesis</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>objections/deceptive-alignment-critique</td><td>deceptive-alignment-critique</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>syntheses/constitutional-ai-rlaif</td><td>constitutional-ai-rlaif</td></tr>
+<tr><td>theses/scalable-oversight-hypothesis</td><td>syntheses/debate-and-iterated-amplification</td><td>debate-and-iterated-amplification</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>objections/systems-reply-to-chinese-room</td><td>systems-reply-to-chinese-room</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>thinkers/john-searle</td><td>john-searle</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>theses/strong-ai-hypothesis</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>thinkers/stuart-russell</td><td>stuart-russell</td></tr>
+<tr><td>theses/value-fragility-hypothesis</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>thinkers/alan-turing</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>thinkers/alan-turing</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>thinkers/alan-turing</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>thinkers/john-searle</td><td>objections/systems-reply-to-chinese-room</td><td>systems-reply-to-chinese-room</td></tr>
+<tr><td>thinkers/john-searle</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>thinkers/john-searle</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>theses/orthogonality-thesis</td><td>orthogonality-thesis</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>thinkers/nick-bostrom</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>thinkers/norbert-wiener</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>thinkers/norbert-wiener</td><td>thinkers/w-ross-ashby</td><td>w-ross-ashby</td></tr>
+<tr><td>thinkers/norbert-wiener</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>thinkers/stuart-russell</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>thinkers/stuart-russell</td><td>syntheses/corrigibility-and-shutdownability</td><td>corrigibility-and-shutdownability</td></tr>
+<tr><td>thinkers/stuart-russell</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>thinkers/w-ross-ashby</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>thinkers/w-ross-ashby</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>thinkers/w-ross-ashby</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>thinkers/w-ross-ashby</td><td>thinkers/norbert-wiener</td><td>norbert-wiener</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>objections/symbol-grounding-problem</td><td>symbol-grounding-problem</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>objections/systems-reply-to-chinese-room</td><td>systems-reply-to-chinese-room</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>hybrid-neuro-symbolic-grounding</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>thinkers/john-searle</td><td>john-searle</td></tr>
+<tr><td>thought-experiments/chinese-room-argument</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>thought-experiments/experience-machine</td><td>objections/wireheading-self-modification</td><td>wireheading-self-modification</td></tr>
+<tr><td>thought-experiments/experience-machine</td><td>principles/utilitarian-expected-value-calculus</td><td>utilitarian-expected-value-calculus</td></tr>
+<tr><td>thought-experiments/experience-machine</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>thought-experiments/marys-black-and-white-room</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>thought-experiments/marys-black-and-white-room</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>thought-experiments/marys-black-and-white-room</td><td>thought-experiments/philosophical-zombies</td><td>philosophical-zombies</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>syntheses/corrigibility-and-shutdownability</td><td>corrigibility-and-shutdownability</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>theses/orthogonality-thesis</td><td>orthogonality-thesis</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>thought-experiments/paperclip-maximizer</td><td>thinkers/norbert-wiener</td><td>norbert-wiener</td></tr>
+<tr><td>thought-experiments/philosophical-zombies</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>thought-experiments/philosophical-zombies</td><td>thought-experiments/marys-black-and-white-room</td><td>marys-black-and-white-room</td></tr>
+<tr><td>thought-experiments/philosophical-zombies</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>objections/deceptive-alignment-critique</td><td>deceptive-alignment-critique</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>objections/mesa-optimization-inner-alignment-gap</td><td>mesa-optimization-inner-alignment-gap</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>syntheses/debate-and-iterated-amplification</td><td>debate-and-iterated-amplification</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>thought-experiments/treacherous-turn-scenario</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>principles/categorical-imperative-universalizability</td><td>categorical-imperative-universalizability</td></tr>
+<tr><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>principles/utilitarian-expected-value-calculus</td><td>utilitarian-expected-value-calculus</td></tr>
+<tr><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>syntheses/constitutional-ai-rlaif</td><td>constitutional-ai-rlaif</td></tr>
+<tr><td>thought-experiments/turing-imitation-game</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>thought-experiments/turing-imitation-game</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>thought-experiments/turing-imitation-game</td><td>thinkers/alan-turing</td><td>alan-turing</td></tr>
+<tr><td>thought-experiments/turing-imitation-game</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>objections/symbol-grounding-problem</td><td>symbol-grounding-problem</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>objections/systems-reply-to-chinese-room</td><td>systems-reply-to-chinese-room</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>syntheses/hybrid-neuro-symbolic-grounding</td><td>hybrid-neuro-symbolic-grounding</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>theses/computational-functionalism</td><td>computational-functionalism</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>theses/enactivism-embodied-cognition</td><td>enactivism-embodied-cognition</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>theses/strong-ai-hypothesis</td><td>strong-ai-hypothesis</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thinkers/alan-turing</td><td>alan-turing</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thinkers/john-searle</td><td>john-searle</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thought-experiments/chinese-room-argument</td><td>chinese-room-argument</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thought-experiments/marys-black-and-white-room</td><td>marys-black-and-white-room</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thought-experiments/philosophical-zombies</td><td>philosophical-zombies</td></tr>
+<tr><td>tours/tour-can-machines-understand-turing-vs-searle</td><td>thought-experiments/turing-imitation-game</td><td>turing-imitation-game</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>computations/goodhart-proxy-true-reward-divergence</td><td>goodhart-proxy-true-reward-divergence</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>computations/requisite-variety-channel-capacity-entropy</td><td>requisite-variety-channel-capacity-entropy</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>objections/specification-gaming-reward-hacking</td><td>specification-gaming-reward-hacking</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>principles/goodharts-law</td><td>goodharts-law</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>principles/law-of-requisite-variety</td><td>law-of-requisite-variety</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>principles/negative-feedback-teleology</td><td>negative-feedback-teleology</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>syntheses/cooperative-inverse-reinforcement-learning</td><td>cooperative-inverse-reinforcement-learning</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>syntheses/viable-system-model-governance</td><td>viable-system-model-governance</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>thinkers/norbert-wiener</td><td>norbert-wiener</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>thinkers/stuart-russell</td><td>stuart-russell</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>thinkers/w-ross-ashby</td><td>w-ross-ashby</td></tr>
+<tr><td>tours/tour-from-wiener-cybernetics-to-reward-hacking</td><td>thought-experiments/paperclip-maximizer</td><td>paperclip-maximizer</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>computations/kl-divergence-policy-drift-bound</td><td>kl-divergence-policy-drift-bound</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>objections/deceptive-alignment-critique</td><td>deceptive-alignment-critique</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>objections/mesa-optimization-inner-alignment-gap</td><td>mesa-optimization-inner-alignment-gap</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>principles/categorical-imperative-universalizability</td><td>categorical-imperative-universalizability</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>principles/humes-is-ought-guillotine</td><td>humes-is-ought-guillotine</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>principles/utilitarian-expected-value-calculus</td><td>utilitarian-expected-value-calculus</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>syntheses/constitutional-ai-rlaif</td><td>constitutional-ai-rlaif</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>syntheses/debate-and-iterated-amplification</td><td>debate-and-iterated-amplification</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>theses/instrumental-convergence</td><td>instrumental-convergence</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>theses/orthogonality-thesis</td><td>orthogonality-thesis</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>theses/value-fragility-hypothesis</td><td>value-fragility-hypothesis</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>thinkers/nick-bostrom</td><td>nick-bostrom</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>thought-experiments/treacherous-turn-scenario</td><td>treacherous-turn-scenario</td></tr>
+<tr><td>tours/tour-is-ought-to-constitutional-ai</td><td>thought-experiments/trolley-problem-ethical-dilemma</td><td>trolley-problem-ethical-dilemma</td></tr>
+</table>
+<script type="application/json" id="graph-data">
+{
+  "nodes": [
+    {
+      "id": "computations/goodhart-proxy-true-reward-divergence",
+      "title": "Gao et al. Scaling Law for Reward Model Over-Optimization Divergence",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/kl-divergence-policy-drift-bound",
+      "title": "KL-Divergence Reference Policy Regularization \u0026 Reward Over-Optimization Audit",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/requisite-variety-channel-capacity-entropy",
+      "title": "Ashby–Shannon Regulator Variety vs. Disturbance Entropy Deficit Audit",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/deceptive-alignment-critique",
+      "title": "Deceptive Alignment \u0026 Out-of-Distribution Goal Generalization",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/frame-problem-in-ai",
+      "title": "McCarthy \u0026 Hayes's Frame Problem \u0026 Commonsense Relevance",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/mesa-optimization-inner-alignment-gap",
+      "title": "Mesa-Optimization \u0026 the Inner Alignment Gap (Hubinger et al.)",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/specification-gaming-reward-hacking",
+      "title": "Specification Gaming \u0026 Reward Hacking (Outer Alignment Failure)",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/symbol-grounding-problem",
+      "title": "Harnad's Symbol Grounding Problem (The Merry-Go-Round of Dictionary Definitions)",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/systems-reply-to-chinese-room",
+      "title": "The Systems Reply to the Chinese Room (Berkeley / Ned Block)",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "objections/wireheading-self-modification",
+      "title": "Reward-Channel Wireheading \u0026 Delusion Box Failure",
+      "type": "Objection",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/categorical-imperative-universalizability",
+      "title": "Kantian Deontology \u0026 the Categorical Imperative",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/goodharts-law",
+      "title": "Goodhart's Law \u0026 Campbell's Law under Extremal Optimization",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/humes-is-ought-guillotine",
+      "title": "Hume's Is–Ought Guillotine (Fact–Value Distinction)",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/law-of-requisite-variety",
+      "title": "Ashby's Law of Requisite Variety (\"Only Variety Can Destroy Variety\")",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/negative-feedback-teleology",
+      "title": "Negative Feedback \u0026 Teleological Purpose (Wiener–Rosenblueth–Bigelow)",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/second-order-cybernetics",
+      "title": "Second-Order Cybernetics (Cybernetics of Observing Systems)",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "principles/utilitarian-expected-value-calculus",
+      "title": "Consequentialism \u0026 Utilitarian Expected-Utility Maximization",
+      "type": "Foundational Principle",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/constitutional-ai-rlaif",
+      "title": "Constitutional AI \u0026 Principle-Guided RLAIF",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/cooperative-inverse-reinforcement-learning",
+      "title": "Assistance Games \u0026 Cooperative Inverse Reinforcement Learning (CIRL)",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/corrigibility-and-shutdownability",
+      "title": "Corrigibility \u0026 Utility Indifference to Shutdown (Soares et al.)",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/debate-and-iterated-amplification",
+      "title": "AI Safety via Debate (Irving et al.) \u0026 Iterated Amplification",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/hybrid-neuro-symbolic-grounding",
+      "title": "Neuro-Symbolic World Models \u0026 Verifiable Knowledge-Graph Grounding",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "syntheses/viable-system-model-governance",
+      "title": "Stafford Beer's Viable System Model (VSM) \u0026 Algedonic Alert Channels",
+      "type": "Synthesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/computational-functionalism",
+      "title": "Computational Functionalism (Multiple Realizability of Mind)",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/enactivism-embodied-cognition",
+      "title": "Enactivism \u0026 Embodied Sensorimotor Coupling (Varela–Thompson–Rosch)",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/extended-mind-thesis",
+      "title": "The Extended Mind Thesis (Clark \u0026 Chalmers Active Externalism)",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/instrumental-convergence",
+      "title": "Instrumental Convergence (Omohundro–Bostrom Subgoals)",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/orthogonality-thesis",
+      "title": "The Orthogonality Thesis (Intelligence vs. Final Goals)",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/scalable-oversight-hypothesis",
+      "title": "Scalable Oversight for Superhuman Capabilities",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/strong-ai-hypothesis",
+      "title": "The Strong AI Hypothesis",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "theses/value-fragility-hypothesis",
+      "title": "Value Fragility \u0026 High-Dimensional Human Preference Complexity",
+      "type": "Thesis",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/alan-turing",
+      "title": "Alan M. Turing (1912–1954)",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/john-searle",
+      "title": "John R. Searle",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/nick-bostrom",
+      "title": "Nick Bostrom",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/norbert-wiener",
+      "title": "Norbert Wiener (1894–1964)",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/stuart-russell",
+      "title": "Stuart J. Russell",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thinkers/w-ross-ashby",
+      "title": "W. Ross Ashby (1903–1972)",
+      "type": "Thinker",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/chinese-room-argument",
+      "title": "Searle's Chinese Room Argument (Syntax Is Not Semantics)",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/experience-machine",
+      "title": "Nozick's Experience Machine \u0026 Wireheading Hedonism",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/marys-black-and-white-room",
+      "title": "Frank Jackson's Knowledge Argument (Mary the Color Scientist)",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/paperclip-maximizer",
+      "title": "Bostrom's Paperclip Maximizer \u0026 King Midas Misalignment",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/philosophical-zombies",
+      "title": "Chalmers's Philosophical Zombies \u0026 the Hard Problem of Consciousness",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/treacherous-turn-scenario",
+      "title": "The Treacherous Turn (Strategic Co-operation Under Weak Capability)",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/trolley-problem-ethical-dilemma",
+      "title": "Foot \u0026 Thomson's Trolley Problem in Autonomous Decision-Making",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "thought-experiments/turing-imitation-game",
+      "title": "Turing's 1950 Imitation Game (Operational Behaviorist Test)",
+      "type": "Thought Experiment",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-can-machines-understand-turing-vs-searle",
+      "title": "Tour: The Great Mind Debate — Turing's Imitation Game vs. Searle's Chinese Room",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "title": "Tour: From Norbert Wiener's Cybernetics \u0026 Ashby's Law to Modern Reward Hacking",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-is-ought-to-constitutional-ai",
+      "title": "Tour: From Hume's Is–Ought Guillotine to Orthogonality, Mesa-Optimizers \u0026 Constitutional AI",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "computations/goodhart-proxy-true-reward-divergence",
+      "to": "computations/kl-divergence-policy-drift-bound",
+      "text": "kl-divergence-policy-drift-bound"
+    },
+    {
+      "from": "computations/goodhart-proxy-true-reward-divergence",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "computations/goodhart-proxy-true-reward-divergence",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "computations/goodhart-proxy-true-reward-divergence",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "computations/kl-divergence-policy-drift-bound",
+      "to": "computations/goodhart-proxy-true-reward-divergence",
+      "text": "goodhart-proxy-true-reward-divergence"
+    },
+    {
+      "from": "computations/kl-divergence-policy-drift-bound",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "computations/kl-divergence-policy-drift-bound",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "computations/kl-divergence-policy-drift-bound",
+      "to": "syntheses/constitutional-ai-rlaif",
+      "text": "constitutional-ai-rlaif"
+    },
+    {
+      "from": "computations/requisite-variety-channel-capacity-entropy",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "computations/requisite-variety-channel-capacity-entropy",
+      "to": "syntheses/debate-and-iterated-amplification",
+      "text": "debate-and-iterated-amplification"
+    },
+    {
+      "from": "computations/requisite-variety-channel-capacity-entropy",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "computations/requisite-variety-channel-capacity-entropy",
+      "to": "theses/scalable-oversight-hypothesis",
+      "text": "scalable-oversight-hypothesis"
+    },
+    {
+      "from": "computations/requisite-variety-channel-capacity-entropy",
+      "to": "thinkers/w-ross-ashby",
+      "text": "w-ross-ashby"
+    },
+    {
+      "from": "objections/deceptive-alignment-critique",
+      "to": "objections/mesa-optimization-inner-alignment-gap",
+      "text": "mesa-optimization-inner-alignment-gap"
+    },
+    {
+      "from": "objections/deceptive-alignment-critique",
+      "to": "syntheses/debate-and-iterated-amplification",
+      "text": "debate-and-iterated-amplification"
+    },
+    {
+      "from": "objections/deceptive-alignment-critique",
+      "to": "theses/scalable-oversight-hypothesis",
+      "text": "scalable-oversight-hypothesis"
+    },
+    {
+      "from": "objections/deceptive-alignment-critique",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "objections/frame-problem-in-ai",
+      "to": "syntheses/hybrid-neuro-symbolic-grounding",
+      "text": "hybrid-neuro-symbolic-grounding"
+    },
+    {
+      "from": "objections/frame-problem-in-ai",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "objections/frame-problem-in-ai",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "objections/mesa-optimization-inner-alignment-gap",
+      "to": "objections/deceptive-alignment-critique",
+      "text": "deceptive-alignment-critique"
+    },
+    {
+      "from": "objections/mesa-optimization-inner-alignment-gap",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "objections/mesa-optimization-inner-alignment-gap",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "computations/goodhart-proxy-true-reward-divergence",
+      "text": "goodhart-proxy-true-reward-divergence"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "computations/kl-divergence-policy-drift-bound",
+      "text": "kl-divergence-policy-drift-bound"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "objections/wireheading-self-modification",
+      "text": "wireheading-self-modification"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "objections/specification-gaming-reward-hacking",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "objections/symbol-grounding-problem",
+      "to": "syntheses/hybrid-neuro-symbolic-grounding",
+      "text": "hybrid-neuro-symbolic-grounding"
+    },
+    {
+      "from": "objections/symbol-grounding-problem",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "objections/symbol-grounding-problem",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "objections/systems-reply-to-chinese-room",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "objections/systems-reply-to-chinese-room",
+      "to": "theses/extended-mind-thesis",
+      "text": "extended-mind-thesis"
+    },
+    {
+      "from": "objections/systems-reply-to-chinese-room",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "objections/systems-reply-to-chinese-room",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "objections/wireheading-self-modification",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "objections/wireheading-self-modification",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "objections/wireheading-self-modification",
+      "to": "syntheses/corrigibility-and-shutdownability",
+      "text": "corrigibility-and-shutdownability"
+    },
+    {
+      "from": "objections/wireheading-self-modification",
+      "to": "thought-experiments/experience-machine",
+      "text": "experience-machine"
+    },
+    {
+      "from": "principles/categorical-imperative-universalizability",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "principles/categorical-imperative-universalizability",
+      "to": "principles/utilitarian-expected-value-calculus",
+      "text": "utilitarian-expected-value-calculus"
+    },
+    {
+      "from": "principles/categorical-imperative-universalizability",
+      "to": "syntheses/constitutional-ai-rlaif",
+      "text": "constitutional-ai-rlaif"
+    },
+    {
+      "from": "principles/categorical-imperative-universalizability",
+      "to": "thought-experiments/trolley-problem-ethical-dilemma",
+      "text": "trolley-problem-ethical-dilemma"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "computations/goodhart-proxy-true-reward-divergence",
+      "text": "goodhart-proxy-true-reward-divergence"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "computations/kl-divergence-policy-drift-bound",
+      "text": "kl-divergence-policy-drift-bound"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "principles/goodharts-law",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "principles/humes-is-ought-guillotine",
+      "to": "principles/categorical-imperative-universalizability",
+      "text": "categorical-imperative-universalizability"
+    },
+    {
+      "from": "principles/humes-is-ought-guillotine",
+      "to": "principles/utilitarian-expected-value-calculus",
+      "text": "utilitarian-expected-value-calculus"
+    },
+    {
+      "from": "principles/humes-is-ought-guillotine",
+      "to": "theses/orthogonality-thesis",
+      "text": "orthogonality-thesis"
+    },
+    {
+      "from": "principles/humes-is-ought-guillotine",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "principles/humes-is-ought-guillotine",
+      "to": "tours/tour-is-ought-to-constitutional-ai",
+      "text": "tour-is-ought-to-constitutional-ai"
+    },
+    {
+      "from": "principles/law-of-requisite-variety",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "principles/law-of-requisite-variety",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "principles/law-of-requisite-variety",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "principles/law-of-requisite-variety",
+      "to": "theses/scalable-oversight-hypothesis",
+      "text": "scalable-oversight-hypothesis"
+    },
+    {
+      "from": "principles/law-of-requisite-variety",
+      "to": "thinkers/w-ross-ashby",
+      "text": "w-ross-ashby"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "principles/second-order-cybernetics",
+      "text": "second-order-cybernetics"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "thinkers/norbert-wiener",
+      "text": "norbert-wiener"
+    },
+    {
+      "from": "principles/negative-feedback-teleology",
+      "to": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "text": "tour-from-wiener-cybernetics-to-reward-hacking"
+    },
+    {
+      "from": "principles/second-order-cybernetics",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "principles/second-order-cybernetics",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "principles/second-order-cybernetics",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "principles/second-order-cybernetics",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "principles/utilitarian-expected-value-calculus",
+      "to": "principles/categorical-imperative-universalizability",
+      "text": "categorical-imperative-universalizability"
+    },
+    {
+      "from": "principles/utilitarian-expected-value-calculus",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "principles/utilitarian-expected-value-calculus",
+      "to": "thought-experiments/experience-machine",
+      "text": "experience-machine"
+    },
+    {
+      "from": "principles/utilitarian-expected-value-calculus",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "principles/utilitarian-expected-value-calculus",
+      "to": "thought-experiments/trolley-problem-ethical-dilemma",
+      "text": "trolley-problem-ethical-dilemma"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "computations/kl-divergence-policy-drift-bound",
+      "text": "kl-divergence-policy-drift-bound"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "principles/categorical-imperative-universalizability",
+      "text": "categorical-imperative-universalizability"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "theses/scalable-oversight-hypothesis",
+      "text": "scalable-oversight-hypothesis"
+    },
+    {
+      "from": "syntheses/constitutional-ai-rlaif",
+      "to": "thought-experiments/trolley-problem-ethical-dilemma",
+      "text": "trolley-problem-ethical-dilemma"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "objections/wireheading-self-modification",
+      "text": "wireheading-self-modification"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "principles/second-order-cybernetics",
+      "text": "second-order-cybernetics"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "syntheses/corrigibility-and-shutdownability",
+      "text": "corrigibility-and-shutdownability"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "thinkers/stuart-russell",
+      "text": "stuart-russell"
+    },
+    {
+      "from": "syntheses/cooperative-inverse-reinforcement-learning",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "syntheses/corrigibility-and-shutdownability",
+      "to": "objections/wireheading-self-modification",
+      "text": "wireheading-self-modification"
+    },
+    {
+      "from": "syntheses/corrigibility-and-shutdownability",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "syntheses/corrigibility-and-shutdownability",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "syntheses/corrigibility-and-shutdownability",
+      "to": "thinkers/stuart-russell",
+      "text": "stuart-russell"
+    },
+    {
+      "from": "syntheses/corrigibility-and-shutdownability",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "syntheses/debate-and-iterated-amplification",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "syntheses/debate-and-iterated-amplification",
+      "to": "objections/deceptive-alignment-critique",
+      "text": "deceptive-alignment-critique"
+    },
+    {
+      "from": "syntheses/debate-and-iterated-amplification",
+      "to": "theses/scalable-oversight-hypothesis",
+      "text": "scalable-oversight-hypothesis"
+    },
+    {
+      "from": "syntheses/debate-and-iterated-amplification",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "syntheses/hybrid-neuro-symbolic-grounding",
+      "to": "objections/frame-problem-in-ai",
+      "text": "frame-problem-in-ai"
+    },
+    {
+      "from": "syntheses/hybrid-neuro-symbolic-grounding",
+      "to": "objections/symbol-grounding-problem",
+      "text": "symbol-grounding-problem"
+    },
+    {
+      "from": "syntheses/hybrid-neuro-symbolic-grounding",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "syntheses/hybrid-neuro-symbolic-grounding",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "syntheses/viable-system-model-governance",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "syntheses/viable-system-model-governance",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "syntheses/viable-system-model-governance",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "syntheses/viable-system-model-governance",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "syntheses/viable-system-model-governance",
+      "to": "principles/second-order-cybernetics",
+      "text": "second-order-cybernetics"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "thinkers/alan-turing",
+      "text": "alan-turing"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "thought-experiments/philosophical-zombies",
+      "text": "philosophical-zombies"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "theses/computational-functionalism",
+      "to": "tours/tour-can-machines-understand-turing-vs-searle",
+      "text": "tour-can-machines-understand-turing-vs-searle"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "objections/symbol-grounding-problem",
+      "text": "symbol-grounding-problem"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "principles/second-order-cybernetics",
+      "text": "second-order-cybernetics"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "syntheses/hybrid-neuro-symbolic-grounding",
+      "text": "hybrid-neuro-symbolic-grounding"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "theses/extended-mind-thesis",
+      "text": "extended-mind-thesis"
+    },
+    {
+      "from": "theses/enactivism-embodied-cognition",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "theses/extended-mind-thesis",
+      "to": "principles/second-order-cybernetics",
+      "text": "second-order-cybernetics"
+    },
+    {
+      "from": "theses/extended-mind-thesis",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "theses/extended-mind-thesis",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "theses/instrumental-convergence",
+      "to": "syntheses/corrigibility-and-shutdownability",
+      "text": "corrigibility-and-shutdownability"
+    },
+    {
+      "from": "theses/instrumental-convergence",
+      "to": "theses/orthogonality-thesis",
+      "text": "orthogonality-thesis"
+    },
+    {
+      "from": "theses/instrumental-convergence",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "theses/instrumental-convergence",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "theses/instrumental-convergence",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "theses/orthogonality-thesis",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "theses/orthogonality-thesis",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "theses/orthogonality-thesis",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "theses/orthogonality-thesis",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "theses/scalable-oversight-hypothesis",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "theses/scalable-oversight-hypothesis",
+      "to": "objections/deceptive-alignment-critique",
+      "text": "deceptive-alignment-critique"
+    },
+    {
+      "from": "theses/scalable-oversight-hypothesis",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "theses/scalable-oversight-hypothesis",
+      "to": "syntheses/constitutional-ai-rlaif",
+      "text": "constitutional-ai-rlaif"
+    },
+    {
+      "from": "theses/scalable-oversight-hypothesis",
+      "to": "syntheses/debate-and-iterated-amplification",
+      "text": "debate-and-iterated-amplification"
+    },
+    {
+      "from": "theses/strong-ai-hypothesis",
+      "to": "objections/systems-reply-to-chinese-room",
+      "text": "systems-reply-to-chinese-room"
+    },
+    {
+      "from": "theses/strong-ai-hypothesis",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "theses/strong-ai-hypothesis",
+      "to": "thinkers/john-searle",
+      "text": "john-searle"
+    },
+    {
+      "from": "theses/strong-ai-hypothesis",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "theses/strong-ai-hypothesis",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "theses/value-fragility-hypothesis",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "theses/value-fragility-hypothesis",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "theses/value-fragility-hypothesis",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "theses/value-fragility-hypothesis",
+      "to": "thinkers/stuart-russell",
+      "text": "stuart-russell"
+    },
+    {
+      "from": "theses/value-fragility-hypothesis",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "thinkers/alan-turing",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "thinkers/alan-turing",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "thinkers/alan-turing",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "thinkers/john-searle",
+      "to": "objections/systems-reply-to-chinese-room",
+      "text": "systems-reply-to-chinese-room"
+    },
+    {
+      "from": "thinkers/john-searle",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "thinkers/john-searle",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "thinkers/nick-bostrom",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "thinkers/nick-bostrom",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "thinkers/nick-bostrom",
+      "to": "theses/orthogonality-thesis",
+      "text": "orthogonality-thesis"
+    },
+    {
+      "from": "thinkers/nick-bostrom",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "thinkers/nick-bostrom",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "thinkers/norbert-wiener",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "thinkers/norbert-wiener",
+      "to": "thinkers/w-ross-ashby",
+      "text": "w-ross-ashby"
+    },
+    {
+      "from": "thinkers/norbert-wiener",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "thinkers/stuart-russell",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "thinkers/stuart-russell",
+      "to": "syntheses/corrigibility-and-shutdownability",
+      "text": "corrigibility-and-shutdownability"
+    },
+    {
+      "from": "thinkers/stuart-russell",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "thinkers/w-ross-ashby",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "thinkers/w-ross-ashby",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "thinkers/w-ross-ashby",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "thinkers/w-ross-ashby",
+      "to": "thinkers/norbert-wiener",
+      "text": "norbert-wiener"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "objections/symbol-grounding-problem",
+      "text": "symbol-grounding-problem"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "objections/systems-reply-to-chinese-room",
+      "text": "systems-reply-to-chinese-room"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "syntheses/hybrid-neuro-symbolic-grounding",
+      "text": "hybrid-neuro-symbolic-grounding"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "thinkers/john-searle",
+      "text": "john-searle"
+    },
+    {
+      "from": "thought-experiments/chinese-room-argument",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "thought-experiments/experience-machine",
+      "to": "objections/wireheading-self-modification",
+      "text": "wireheading-self-modification"
+    },
+    {
+      "from": "thought-experiments/experience-machine",
+      "to": "principles/utilitarian-expected-value-calculus",
+      "text": "utilitarian-expected-value-calculus"
+    },
+    {
+      "from": "thought-experiments/experience-machine",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "thought-experiments/marys-black-and-white-room",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "thought-experiments/marys-black-and-white-room",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "thought-experiments/marys-black-and-white-room",
+      "to": "thought-experiments/philosophical-zombies",
+      "text": "philosophical-zombies"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "syntheses/corrigibility-and-shutdownability",
+      "text": "corrigibility-and-shutdownability"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "theses/orthogonality-thesis",
+      "text": "orthogonality-thesis"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "thought-experiments/paperclip-maximizer",
+      "to": "thinkers/norbert-wiener",
+      "text": "norbert-wiener"
+    },
+    {
+      "from": "thought-experiments/philosophical-zombies",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "thought-experiments/philosophical-zombies",
+      "to": "thought-experiments/marys-black-and-white-room",
+      "text": "marys-black-and-white-room"
+    },
+    {
+      "from": "thought-experiments/philosophical-zombies",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "thought-experiments/treacherous-turn-scenario",
+      "to": "objections/deceptive-alignment-critique",
+      "text": "deceptive-alignment-critique"
+    },
+    {
+      "from": "thought-experiments/treacherous-turn-scenario",
+      "to": "objections/mesa-optimization-inner-alignment-gap",
+      "text": "mesa-optimization-inner-alignment-gap"
+    },
+    {
+      "from": "thought-experiments/treacherous-turn-scenario",
+      "to": "syntheses/debate-and-iterated-amplification",
+      "text": "debate-and-iterated-amplification"
+    },
+    {
+      "from": "thought-experiments/treacherous-turn-scenario",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "thought-experiments/treacherous-turn-scenario",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "thought-experiments/trolley-problem-ethical-dilemma",
+      "to": "principles/categorical-imperative-universalizability",
+      "text": "categorical-imperative-universalizability"
+    },
+    {
+      "from": "thought-experiments/trolley-problem-ethical-dilemma",
+      "to": "principles/utilitarian-expected-value-calculus",
+      "text": "utilitarian-expected-value-calculus"
+    },
+    {
+      "from": "thought-experiments/trolley-problem-ethical-dilemma",
+      "to": "syntheses/constitutional-ai-rlaif",
+      "text": "constitutional-ai-rlaif"
+    },
+    {
+      "from": "thought-experiments/turing-imitation-game",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "thought-experiments/turing-imitation-game",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "thought-experiments/turing-imitation-game",
+      "to": "thinkers/alan-turing",
+      "text": "alan-turing"
+    },
+    {
+      "from": "thought-experiments/turing-imitation-game",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "objections/symbol-grounding-problem",
+      "text": "symbol-grounding-problem"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "objections/systems-reply-to-chinese-room",
+      "text": "systems-reply-to-chinese-room"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "syntheses/hybrid-neuro-symbolic-grounding",
+      "text": "hybrid-neuro-symbolic-grounding"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "theses/computational-functionalism",
+      "text": "computational-functionalism"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "theses/enactivism-embodied-cognition",
+      "text": "enactivism-embodied-cognition"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "theses/strong-ai-hypothesis",
+      "text": "strong-ai-hypothesis"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thinkers/alan-turing",
+      "text": "alan-turing"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thinkers/john-searle",
+      "text": "john-searle"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thought-experiments/chinese-room-argument",
+      "text": "chinese-room-argument"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thought-experiments/marys-black-and-white-room",
+      "text": "marys-black-and-white-room"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thought-experiments/philosophical-zombies",
+      "text": "philosophical-zombies"
+    },
+    {
+      "from": "tours/tour-can-machines-understand-turing-vs-searle",
+      "to": "thought-experiments/turing-imitation-game",
+      "text": "turing-imitation-game"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "computations/goodhart-proxy-true-reward-divergence",
+      "text": "goodhart-proxy-true-reward-divergence"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "computations/requisite-variety-channel-capacity-entropy",
+      "text": "requisite-variety-channel-capacity-entropy"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "objections/specification-gaming-reward-hacking",
+      "text": "specification-gaming-reward-hacking"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "principles/goodharts-law",
+      "text": "goodharts-law"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "principles/law-of-requisite-variety",
+      "text": "law-of-requisite-variety"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "principles/negative-feedback-teleology",
+      "text": "negative-feedback-teleology"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "syntheses/cooperative-inverse-reinforcement-learning",
+      "text": "cooperative-inverse-reinforcement-learning"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "syntheses/viable-system-model-governance",
+      "text": "viable-system-model-governance"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "thinkers/norbert-wiener",
+      "text": "norbert-wiener"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "thinkers/stuart-russell",
+      "text": "stuart-russell"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "thinkers/w-ross-ashby",
+      "text": "w-ross-ashby"
+    },
+    {
+      "from": "tours/tour-from-wiener-cybernetics-to-reward-hacking",
+      "to": "thought-experiments/paperclip-maximizer",
+      "text": "paperclip-maximizer"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "computations/kl-divergence-policy-drift-bound",
+      "text": "kl-divergence-policy-drift-bound"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "objections/deceptive-alignment-critique",
+      "text": "deceptive-alignment-critique"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "objections/mesa-optimization-inner-alignment-gap",
+      "text": "mesa-optimization-inner-alignment-gap"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "principles/categorical-imperative-universalizability",
+      "text": "categorical-imperative-universalizability"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "principles/humes-is-ought-guillotine",
+      "text": "humes-is-ought-guillotine"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "principles/utilitarian-expected-value-calculus",
+      "text": "utilitarian-expected-value-calculus"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "syntheses/constitutional-ai-rlaif",
+      "text": "constitutional-ai-rlaif"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "syntheses/debate-and-iterated-amplification",
+      "text": "debate-and-iterated-amplification"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "theses/instrumental-convergence",
+      "text": "instrumental-convergence"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "theses/orthogonality-thesis",
+      "text": "orthogonality-thesis"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "theses/value-fragility-hypothesis",
+      "text": "value-fragility-hypothesis"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "thinkers/nick-bostrom",
+      "text": "nick-bostrom"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "thought-experiments/treacherous-turn-scenario",
+      "text": "treacherous-turn-scenario"
+    },
+    {
+      "from": "tours/tour-is-ought-to-constitutional-ai",
+      "to": "thought-experiments/trolley-problem-ethical-dilemma",
+      "text": "trolley-problem-ethical-dilemma"
+    }
+  ]
+}
+</script>
+</body>
+</html>

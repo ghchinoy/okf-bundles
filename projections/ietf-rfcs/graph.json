@@ -118,6 +118,20 @@
       "type": "RFC",
       "tier": "machine-confirmed",
       "stale": false
+    },
+    {
+      "id": "tours/tour-evolution-of-http-and-quic",
+      "title": "Tour: From Obsoleted HTTP/1.1 \u0026 TLS 1.2 to HTTP/3 over QUIC",
+      "type": "Tour",
+      "tier": "machine-confirmed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-modern-api-identity-oauth21",
+      "title": "Tour: Securing Modern JSON APIs with OAuth 2.1, PKCE, and JWT",
+      "type": "Tour",
+      "tier": "machine-confirmed",
+      "stale": false
     }
   ],
   "edges": [
@@ -135,6 +149,11 @@
       "from": "auth/draft-ietf-oauth-v2-1",
       "to": "auth/rfc7636",
       "text": "rfc7636"
+    },
+    {
+      "from": "auth/draft-ietf-oauth-v2-1",
+      "to": "tours/tour-modern-api-identity-oauth21",
+      "text": "tour-modern-api-identity-oauth21"
     },
     {
       "from": "auth/rfc6749",
@@ -302,6 +321,11 @@
       "text": "rfc8446"
     },
     {
+      "from": "http/rfc9110",
+      "to": "tours/tour-evolution-of-http-and-quic",
+      "text": "tour-evolution-of-http-and-quic"
+    },
+    {
       "from": "http/rfc9111",
       "to": "http/rfc2616",
       "text": "rfc2616"
@@ -375,6 +399,91 @@
       "from": "security/rfc8446",
       "to": "security/rfc5246",
       "text": "rfc5246"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc2616",
+      "text": "rfc2616"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc9000",
+      "text": "rfc9000"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc9110",
+      "text": "rfc9110"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc9111",
+      "text": "rfc9111"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc9113",
+      "text": "rfc9113"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "http/rfc9114",
+      "text": "rfc9114"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "security/rfc5246",
+      "text": "rfc5246"
+    },
+    {
+      "from": "tours/tour-evolution-of-http-and-quic",
+      "to": "security/rfc8446",
+      "text": "rfc8446"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "auth/draft-ietf-oauth-v2-1",
+      "text": "draft-ietf-oauth-v2-1"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "auth/rfc6749",
+      "text": "rfc6749"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "auth/rfc6750",
+      "text": "rfc6750"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "auth/rfc7519",
+      "text": "rfc7519"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "auth/rfc7636",
+      "text": "rfc7636"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "data/rfc3986",
+      "text": "rfc3986"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "data/rfc8259",
+      "text": "rfc8259"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "data/rfc9562",
+      "text": "rfc9562"
+    },
+    {
+      "from": "tours/tour-modern-api-identity-oauth21",
+      "to": "http/rfc9457",
+      "text": "rfc9457"
     }
   ]
 }

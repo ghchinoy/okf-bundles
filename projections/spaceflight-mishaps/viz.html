@@ -1,0 +1,1859 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>binder graph</title>
+<style>body{font-family:system-ui,sans-serif;margin:2rem;}table{border-collapse:collapse;margin-bottom:2rem;}th,td{border:1px solid #ccc;padding:4px 8px;text-align:left;}caption{font-weight:bold;text-align:left;margin-bottom:.5rem;}</style>
+</head>
+<body>
+<h1>binder graph</h1>
+<table>
+<caption>Concepts</caption>
+<tr><th>id</th><th>title</th><th>type</th><th>tier</th><th>stale</th></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>SRB Field-Joint O-Ring Thermal Distress &amp; Erosion Logistic Regression</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>Spacecraft Fault-Tree Minimal Cut-Set &amp; Single-Point Failure Audit</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>Deep-Space Doppler Navigation Residual vs. Small-Forces Impulse Audit</td><td>Attested Computation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>Submerged Cryo-Heater Detent Switch Welding &amp; PTFE Insulation Ignition</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>16.7 psi Pure-Oxygen Cabin Flash Fire Propagation</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>4.45x lbf·s vs. N·s Small-Forces Impulse Unit Conversion Mismatch</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/inverted-g-switch-sensor-installation</td><td>180-Degree Inverted Deceleration G-Switch Orientation</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>Unfiltered Hall-Effect Touchdown Sensor Latching During Leg Deployment</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>Wing Leading Edge RCC Panel 8 Kinetic Impact Breach &amp; Spar Burn-Through</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>1.3-mm Reflective Null Corrector Field Lens Misspacing</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>Viton Fluorocarbon O-Ring Low-Temperature Glass-Transition Resiliency Loss</td><td>Failure Mode</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/apollo-1</td><td>Apollo 1 (AS-204 Plugs-Out Test)</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/apollo-13</td><td>Apollo 13 (Service Module Cryogenic Oxygen Tank No. 2 Rupture)</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>Genesis Solar Wind Sample Return Capsule Hard Landing</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>Hubble Space Telescope (HST) Primary Mirror Aberration &amp; SM1 Recovery</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>Mars Climate Orbiter (MCO) Navigation Loss</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>Mars Polar Lander (MPL) Descent Engine Cutoff</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>STS-107 Space Shuttle Columbia Mishap</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>STS-51-L Space Shuttle Challenger Mishap</td><td>Mission</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>Operational Schedule Pressure (&#34;Go Fever&#34;) &amp; Manifest Compression</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>Violation of &#34;Test as You Fly, Fly as You Test&#34; Principle</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>Normalization of Deviance (Vaughan Sociological Model)</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>Siloed Software/Hardware Interface Control Document (ICD) Governance</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/single-vendor-metrology-blindspot</td><td>Single-Instrument Metrology Reliance &amp; Ignored Refractive Null Discrepancy</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>Communication Filtering of Dissenting Engineering Judgments</td><td>Organizational Factor</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/captured-feature-triple-oring-joint-heater</td><td>Redesigned Solid Rocket Motor (RSRM) Capture-Feature Tang, Third O-Ring &amp; Joint Heaters</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>COSTAR Corrective Optics Space Telescope Axial Replacement &amp; Independent Optical Cross-Checks</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>Independent Technical Authority (ITA) &amp; Formal Dissenting Opinion Escalation Path</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>Block II 60/40 N2-O2 Launch Pad Atmosphere &amp; Outward-Opening Quick-Release Hatch</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>Orbiter Boom Sensor System (OBSS), Bipod Ramp Elimination &amp; Rendezvous Pitch Maneuver</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>Mandatory SI Metric Interface Typing &amp; Hardware-in-the-Loop End-to-End Polarity Checks</td><td>Remediation</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/apollo-eps-oxygen-cryo</td><td>Service Module Sector 4 Cryogenic Oxygen Tank &amp; Heater Assembly</td><td>Subsystem</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/command-module-cabin-wiring</td><td>Block I Command Module Environmental Control &amp; PTFE Cabin Wiring</td><td>Subsystem</td><td>human-reviewed</td><td>true</td></tr>
+<tr><td>subsystems/external-tank-bipod-foam</td><td>External Tank BX-250 Forward Bipod Ramp Cryogenic Insulation Foam</td><td>Subsystem</td><td>human-reviewed</td><td>true</td></tr>
+<tr><td>subsystems/genesis-gravity-switch-avionics</td><td>Genesis Sample Return Capsule G-Switch Deceleration Avionics</td><td>Subsystem</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>HST 2.4-Meter Hyperbolic Ritchey-Chrétien Primary Mirror</td><td>Subsystem</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/mco-attitude-control-thrusters</td><td>MCO Reaction Wheel Desaturation &amp; Hydrazine Attitude Control Subsystem</td><td>Subsystem</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/orbiter-tps-reinforced-carbon</td><td>Orbiter Thermal Protection System (TPS) Wing Leading Edge RCC Panels</td><td>Subsystem</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>subsystems/srb-field-joint-oring</td><td>Solid Rocket Booster (SRB) Tang-and-Clevis Field Joint &amp; Viton O-Rings</td><td>Subsystem</td><td>human-reviewed</td><td>true</td></tr>
+<tr><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>Apollo 13 55:54:53 GET Main Bus B Undervoltage &amp; O2 Tank 2 Pressure Drop</td><td>Telemetry Anomaly</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>telemetry/hst-first-light-spherical-psf-halo</td><td>HST First-Light Point Spread Function (PSF) 1.5-Arcsecond Spherical Halo</td><td>Telemetry Anomaly</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>MCO Two-Way Doppler Residual Drift Across TCM-1 Through TCM-4</td><td>Telemetry Anomaly</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>STS-107 Entry Interface +270s Left Wing Strain Gauge &amp; Thermocouple Cascade</td><td>Telemetry Anomaly</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>STS-51-L T+0.678s Black Smoke Puff &amp; T+58.788s Aft SRB Flame Plume</td><td>Telemetry Anomaly</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>Tour: Invisible Math, Inverted Sensors, and Metrology Flaws in Deep Space</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>Tour: Normalization of Deviance — From Challenger O-Rings to Columbia Foam</td><td>Tour</td><td>human-reviewed</td><td>false</td></tr>
+</table>
+<table>
+<caption>Edges</caption>
+<tr><th>from</th><th>to</th><th>relationship</th></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>remediations/captured-feature-triple-oring-joint-heater</td><td>captured-feature-triple-oring-joint-heater</td></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>subsystems/srb-field-joint-oring</td><td>srb-field-joint-oring</td></tr>
+<tr><td>computations/oring-erosion-thermal-margin-sql</td><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>sts-51l-t-plus-59s-plume-flicker</td></tr>
+<tr><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>failure-modes/cryo-tank-teflon-ignition</td><td>cryo-tank-teflon-ignition</td></tr>
+<tr><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>subsystems/mco-attitude-control-thrusters</td><td>mco-attitude-control-thrusters</td></tr>
+<tr><td>computations/trajectory-navigation-residual-divergence-sql</td><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>mco-trajectory-correction-maneuver-residual</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>probabilistic-risk-assessment-cutset-sql</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>subsystems/apollo-eps-oxygen-cryo</td><td>apollo-eps-oxygen-cryo</td></tr>
+<tr><td>failure-modes/cryo-tank-teflon-ignition</td><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>apollo-13-cryo-stir-current-spike</td></tr>
+<tr><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>organizational-factors/go-fever-schedule-pressure</td><td>go-fever-schedule-pressure</td></tr>
+<tr><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>nitrogen-oxygen-cabin-atmosphere-redesign</td></tr>
+<tr><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>subsystems/command-module-cabin-wiring</td><td>command-module-cabin-wiring</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>subsystems/mco-attitude-control-thrusters</td><td>mco-attitude-control-thrusters</td></tr>
+<tr><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>mco-trajectory-correction-maneuver-residual</td></tr>
+<tr><td>failure-modes/inverted-g-switch-sensor-installation</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>failure-modes/inverted-g-switch-sensor-installation</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>failure-modes/inverted-g-switch-sensor-installation</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>failure-modes/inverted-g-switch-sensor-installation</td><td>subsystems/genesis-gravity-switch-avionics</td><td>genesis-gravity-switch-avionics</td></tr>
+<tr><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>on-orbit-tps-laser-boom-inspection</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>subsystems/external-tank-bipod-foam</td><td>external-tank-bipod-foam</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>subsystems/orbiter-tps-reinforced-carbon</td><td>orbiter-tps-reinforced-carbon</td></tr>
+<tr><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>sts-107-reentry-left-wing-thermocouple-drop</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>organizational-factors/single-vendor-metrology-blindspot</td><td>single-vendor-metrology-blindspot</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>hst-ritchey-chretien-primary-mirror</td></tr>
+<tr><td>failure-modes/reflective-null-corrector-spacing-error</td><td>telemetry/hst-first-light-spherical-psf-halo</td><td>hst-first-light-spherical-psf-halo</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>remediations/captured-feature-triple-oring-joint-heater</td><td>captured-feature-triple-oring-joint-heater</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>subsystems/srb-field-joint-oring</td><td>srb-field-joint-oring</td></tr>
+<tr><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>sts-51l-t-plus-59s-plume-flicker</td></tr>
+<tr><td>missions/apollo-1</td><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>high-pressure-pure-oxygen-flash-fire</td></tr>
+<tr><td>missions/apollo-1</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>missions/apollo-1</td><td>organizational-factors/go-fever-schedule-pressure</td><td>go-fever-schedule-pressure</td></tr>
+<tr><td>missions/apollo-1</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>missions/apollo-1</td><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>nitrogen-oxygen-cabin-atmosphere-redesign</td></tr>
+<tr><td>missions/apollo-1</td><td>subsystems/command-module-cabin-wiring</td><td>command-module-cabin-wiring</td></tr>
+<tr><td>missions/apollo-13</td><td>computations/probabilistic-risk-assessment-cutset-sql</td><td>probabilistic-risk-assessment-cutset-sql</td></tr>
+<tr><td>missions/apollo-13</td><td>failure-modes/cryo-tank-teflon-ignition</td><td>cryo-tank-teflon-ignition</td></tr>
+<tr><td>missions/apollo-13</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>missions/apollo-13</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>missions/apollo-13</td><td>subsystems/apollo-eps-oxygen-cryo</td><td>apollo-eps-oxygen-cryo</td></tr>
+<tr><td>missions/apollo-13</td><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>apollo-13-cryo-stir-current-spike</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>missions/genesis-sample-return</td><td>subsystems/genesis-gravity-switch-avionics</td><td>genesis-gravity-switch-avionics</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>organizational-factors/single-vendor-metrology-blindspot</td><td>single-vendor-metrology-blindspot</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>hst-ritchey-chretien-primary-mirror</td></tr>
+<tr><td>missions/hst-servicing-mission-1</td><td>telemetry/hst-first-light-spherical-psf-halo</td><td>hst-first-light-spherical-psf-halo</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>subsystems/mco-attitude-control-thrusters</td><td>mco-attitude-control-thrusters</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>mco-trajectory-correction-maneuver-residual</td></tr>
+<tr><td>missions/mars-climate-orbiter</td><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>tour-invisible-math-and-metrology-bugs-in-deep-space</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>premature-hall-effect-touchdown-cutoff</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>missions/mars-polar-lander</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>suppressed-dissenting-engineering-opinion</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>on-orbit-tps-laser-boom-inspection</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>subsystems/external-tank-bipod-foam</td><td>external-tank-bipod-foam</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>subsystems/orbiter-tps-reinforced-carbon</td><td>orbiter-tps-reinforced-carbon</td></tr>
+<tr><td>missions/sts-107-columbia</td><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>sts-107-reentry-left-wing-thermocouple-drop</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>organizational-factors/go-fever-schedule-pressure</td><td>go-fever-schedule-pressure</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>suppressed-dissenting-engineering-opinion</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>remediations/captured-feature-triple-oring-joint-heater</td><td>captured-feature-triple-oring-joint-heater</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>subsystems/srb-field-joint-oring</td><td>srb-field-joint-oring</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>sts-51l-t-plus-59s-plume-flicker</td></tr>
+<tr><td>missions/sts-51l-challenger</td><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>tour-normalization-of-deviance-challenger-columbia</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>suppressed-dissenting-engineering-opinion</td></tr>
+<tr><td>organizational-factors/go-fever-schedule-pressure</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>failure-modes/cryo-tank-teflon-ignition</td><td>cryo-tank-teflon-ignition</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>premature-hall-effect-touchdown-cutoff</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>organizational-factors/normalization-of-deviance</td><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>tour-normalization-of-deviance-challenger-columbia</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>organizational-factors/siloed-interface-control-documents</td><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>tour-invisible-math-and-metrology-bugs-in-deep-space</td></tr>
+<tr><td>organizational-factors/single-vendor-metrology-blindspot</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>organizational-factors/single-vendor-metrology-blindspot</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>organizational-factors/single-vendor-metrology-blindspot</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>organizational-factors/single-vendor-metrology-blindspot</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>organizational-factors/go-fever-schedule-pressure</td><td>go-fever-schedule-pressure</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>remediations/captured-feature-triple-oring-joint-heater</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>remediations/captured-feature-triple-oring-joint-heater</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>remediations/captured-feature-triple-oring-joint-heater</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>remediations/captured-feature-triple-oring-joint-heater</td><td>subsystems/srb-field-joint-oring</td><td>srb-field-joint-oring</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>organizational-factors/single-vendor-metrology-blindspot</td><td>single-vendor-metrology-blindspot</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>hst-ritchey-chretien-primary-mirror</td></tr>
+<tr><td>remediations/costar-corrective-axial-optics</td><td>telemetry/hst-first-light-spherical-psf-halo</td><td>hst-first-light-spherical-psf-halo</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>organizational-factors/go-fever-schedule-pressure</td><td>go-fever-schedule-pressure</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>remediations/independent-technical-authority-ita</td><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>suppressed-dissenting-engineering-opinion</td></tr>
+<tr><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>high-pressure-pure-oxygen-flash-fire</td></tr>
+<tr><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>subsystems/command-module-cabin-wiring</td><td>command-module-cabin-wiring</td></tr>
+<tr><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>subsystems/external-tank-bipod-foam</td><td>external-tank-bipod-foam</td></tr>
+<tr><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>subsystems/orbiter-tps-reinforced-carbon</td><td>orbiter-tps-reinforced-carbon</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>premature-hall-effect-touchdown-cutoff</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>remediations/strict-si-unit-icd-automated-verification</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>subsystems/apollo-eps-oxygen-cryo</td><td>failure-modes/cryo-tank-teflon-ignition</td><td>cryo-tank-teflon-ignition</td></tr>
+<tr><td>subsystems/apollo-eps-oxygen-cryo</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>subsystems/apollo-eps-oxygen-cryo</td><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>apollo-13-cryo-stir-current-spike</td></tr>
+<tr><td>subsystems/command-module-cabin-wiring</td><td>failure-modes/high-pressure-pure-oxygen-flash-fire</td><td>high-pressure-pure-oxygen-flash-fire</td></tr>
+<tr><td>subsystems/command-module-cabin-wiring</td><td>missions/apollo-1</td><td>apollo-1</td></tr>
+<tr><td>subsystems/command-module-cabin-wiring</td><td>remediations/nitrogen-oxygen-cabin-atmosphere-redesign</td><td>nitrogen-oxygen-cabin-atmosphere-redesign</td></tr>
+<tr><td>subsystems/external-tank-bipod-foam</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>subsystems/external-tank-bipod-foam</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>subsystems/external-tank-bipod-foam</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>subsystems/external-tank-bipod-foam</td><td>subsystems/orbiter-tps-reinforced-carbon</td><td>orbiter-tps-reinforced-carbon</td></tr>
+<tr><td>subsystems/genesis-gravity-switch-avionics</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>subsystems/genesis-gravity-switch-avionics</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>subsystems/genesis-gravity-switch-avionics</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>subsystems/hst-ritchey-chretien-primary-mirror</td><td>telemetry/hst-first-light-spherical-psf-halo</td><td>hst-first-light-spherical-psf-halo</td></tr>
+<tr><td>subsystems/mco-attitude-control-thrusters</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>subsystems/mco-attitude-control-thrusters</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>subsystems/mco-attitude-control-thrusters</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>subsystems/mco-attitude-control-thrusters</td><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>mco-trajectory-correction-maneuver-residual</td></tr>
+<tr><td>subsystems/orbiter-tps-reinforced-carbon</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>subsystems/orbiter-tps-reinforced-carbon</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>subsystems/orbiter-tps-reinforced-carbon</td><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>on-orbit-tps-laser-boom-inspection</td></tr>
+<tr><td>subsystems/orbiter-tps-reinforced-carbon</td><td>subsystems/external-tank-bipod-foam</td><td>external-tank-bipod-foam</td></tr>
+<tr><td>subsystems/srb-field-joint-oring</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>subsystems/srb-field-joint-oring</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>subsystems/srb-field-joint-oring</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>subsystems/srb-field-joint-oring</td><td>remediations/captured-feature-triple-oring-joint-heater</td><td>captured-feature-triple-oring-joint-heater</td></tr>
+<tr><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>failure-modes/cryo-tank-teflon-ignition</td><td>cryo-tank-teflon-ignition</td></tr>
+<tr><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>missions/apollo-13</td><td>apollo-13</td></tr>
+<tr><td>telemetry/apollo-13-cryo-stir-current-spike</td><td>subsystems/apollo-eps-oxygen-cryo</td><td>apollo-eps-oxygen-cryo</td></tr>
+<tr><td>telemetry/hst-first-light-spherical-psf-halo</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>telemetry/hst-first-light-spherical-psf-halo</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>telemetry/hst-first-light-spherical-psf-halo</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>subsystems/orbiter-tps-reinforced-carbon</td><td>orbiter-tps-reinforced-carbon</td></tr>
+<tr><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>computations/trajectory-navigation-residual-divergence-sql</td><td>trajectory-navigation-residual-divergence-sql</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>failure-modes/imperial-metric-impulse-unit-mismatch</td><td>imperial-metric-impulse-unit-mismatch</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>failure-modes/inverted-g-switch-sensor-installation</td><td>inverted-g-switch-sensor-installation</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>failure-modes/premature-hall-effect-touchdown-cutoff</td><td>premature-hall-effect-touchdown-cutoff</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>failure-modes/reflective-null-corrector-spacing-error</td><td>reflective-null-corrector-spacing-error</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>missions/genesis-sample-return</td><td>genesis-sample-return</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>missions/hst-servicing-mission-1</td><td>hst-servicing-mission-1</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>missions/mars-climate-orbiter</td><td>mars-climate-orbiter</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>missions/mars-polar-lander</td><td>mars-polar-lander</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>organizational-factors/inadequate-flight-like-test-as-you-fly</td><td>inadequate-flight-like-test-as-you-fly</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>organizational-factors/siloed-interface-control-documents</td><td>siloed-interface-control-documents</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>remediations/costar-corrective-axial-optics</td><td>costar-corrective-axial-optics</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>remediations/strict-si-unit-icd-automated-verification</td><td>strict-si-unit-icd-automated-verification</td></tr>
+<tr><td>tours/tour-invisible-math-and-metrology-bugs-in-deep-space</td><td>telemetry/mco-trajectory-correction-maneuver-residual</td><td>mco-trajectory-correction-maneuver-residual</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>computations/oring-erosion-thermal-margin-sql</td><td>oring-erosion-thermal-margin-sql</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>failure-modes/rcc-leading-edge-kinetic-breach</td><td>rcc-leading-edge-kinetic-breach</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>failure-modes/viton-oring-low-temp-extrusion-blowby</td><td>viton-oring-low-temp-extrusion-blowby</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>missions/sts-107-columbia</td><td>sts-107-columbia</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>missions/sts-51l-challenger</td><td>sts-51l-challenger</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>organizational-factors/normalization-of-deviance</td><td>normalization-of-deviance</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>organizational-factors/suppressed-dissenting-engineering-opinion</td><td>suppressed-dissenting-engineering-opinion</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>remediations/captured-feature-triple-oring-joint-heater</td><td>captured-feature-triple-oring-joint-heater</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>remediations/independent-technical-authority-ita</td><td>independent-technical-authority-ita</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>remediations/on-orbit-tps-laser-boom-inspection</td><td>on-orbit-tps-laser-boom-inspection</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>subsystems/external-tank-bipod-foam</td><td>external-tank-bipod-foam</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>subsystems/srb-field-joint-oring</td><td>srb-field-joint-oring</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>telemetry/sts-107-reentry-left-wing-thermocouple-drop</td><td>sts-107-reentry-left-wing-thermocouple-drop</td></tr>
+<tr><td>tours/tour-normalization-of-deviance-challenger-columbia</td><td>telemetry/sts-51l-t-plus-59s-plume-flicker</td><td>sts-51l-t-plus-59s-plume-flicker</td></tr>
+</table>
+<script type="application/json" id="graph-data">
+{
+  "nodes": [
+    {
+      "id": "computations/oring-erosion-thermal-margin-sql",
+      "title": "SRB Field-Joint O-Ring Thermal Distress \u0026 Erosion Logistic Regression",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/probabilistic-risk-assessment-cutset-sql",
+      "title": "Spacecraft Fault-Tree Minimal Cut-Set \u0026 Single-Point Failure Audit",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "computations/trajectory-navigation-residual-divergence-sql",
+      "title": "Deep-Space Doppler Navigation Residual vs. Small-Forces Impulse Audit",
+      "type": "Attested Computation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/cryo-tank-teflon-ignition",
+      "title": "Submerged Cryo-Heater Detent Switch Welding \u0026 PTFE Insulation Ignition",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "title": "16.7 psi Pure-Oxygen Cabin Flash Fire Propagation",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "title": "4.45x lbf·s vs. N·s Small-Forces Impulse Unit Conversion Mismatch",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/inverted-g-switch-sensor-installation",
+      "title": "180-Degree Inverted Deceleration G-Switch Orientation",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "title": "Unfiltered Hall-Effect Touchdown Sensor Latching During Leg Deployment",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "title": "Wing Leading Edge RCC Panel 8 Kinetic Impact Breach \u0026 Spar Burn-Through",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/reflective-null-corrector-spacing-error",
+      "title": "1.3-mm Reflective Null Corrector Field Lens Misspacing",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "title": "Viton Fluorocarbon O-Ring Low-Temperature Glass-Transition Resiliency Loss",
+      "type": "Failure Mode",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/apollo-1",
+      "title": "Apollo 1 (AS-204 Plugs-Out Test)",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/apollo-13",
+      "title": "Apollo 13 (Service Module Cryogenic Oxygen Tank No. 2 Rupture)",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/genesis-sample-return",
+      "title": "Genesis Solar Wind Sample Return Capsule Hard Landing",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/hst-servicing-mission-1",
+      "title": "Hubble Space Telescope (HST) Primary Mirror Aberration \u0026 SM1 Recovery",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/mars-climate-orbiter",
+      "title": "Mars Climate Orbiter (MCO) Navigation Loss",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/mars-polar-lander",
+      "title": "Mars Polar Lander (MPL) Descent Engine Cutoff",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/sts-107-columbia",
+      "title": "STS-107 Space Shuttle Columbia Mishap",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "missions/sts-51l-challenger",
+      "title": "STS-51-L Space Shuttle Challenger Mishap",
+      "type": "Mission",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/go-fever-schedule-pressure",
+      "title": "Operational Schedule Pressure (\"Go Fever\") \u0026 Manifest Compression",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "title": "Violation of \"Test as You Fly, Fly as You Test\" Principle",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/normalization-of-deviance",
+      "title": "Normalization of Deviance (Vaughan Sociological Model)",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/siloed-interface-control-documents",
+      "title": "Siloed Software/Hardware Interface Control Document (ICD) Governance",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/single-vendor-metrology-blindspot",
+      "title": "Single-Instrument Metrology Reliance \u0026 Ignored Refractive Null Discrepancy",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "title": "Communication Filtering of Dissenting Engineering Judgments",
+      "type": "Organizational Factor",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/captured-feature-triple-oring-joint-heater",
+      "title": "Redesigned Solid Rocket Motor (RSRM) Capture-Feature Tang, Third O-Ring \u0026 Joint Heaters",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/costar-corrective-axial-optics",
+      "title": "COSTAR Corrective Optics Space Telescope Axial Replacement \u0026 Independent Optical Cross-Checks",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/independent-technical-authority-ita",
+      "title": "Independent Technical Authority (ITA) \u0026 Formal Dissenting Opinion Escalation Path",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "title": "Block II 60/40 N2-O2 Launch Pad Atmosphere \u0026 Outward-Opening Quick-Release Hatch",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/on-orbit-tps-laser-boom-inspection",
+      "title": "Orbiter Boom Sensor System (OBSS), Bipod Ramp Elimination \u0026 Rendezvous Pitch Maneuver",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "remediations/strict-si-unit-icd-automated-verification",
+      "title": "Mandatory SI Metric Interface Typing \u0026 Hardware-in-the-Loop End-to-End Polarity Checks",
+      "type": "Remediation",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/apollo-eps-oxygen-cryo",
+      "title": "Service Module Sector 4 Cryogenic Oxygen Tank \u0026 Heater Assembly",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/command-module-cabin-wiring",
+      "title": "Block I Command Module Environmental Control \u0026 PTFE Cabin Wiring",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": true
+    },
+    {
+      "id": "subsystems/external-tank-bipod-foam",
+      "title": "External Tank BX-250 Forward Bipod Ramp Cryogenic Insulation Foam",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": true
+    },
+    {
+      "id": "subsystems/genesis-gravity-switch-avionics",
+      "title": "Genesis Sample Return Capsule G-Switch Deceleration Avionics",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "title": "HST 2.4-Meter Hyperbolic Ritchey-Chrétien Primary Mirror",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/mco-attitude-control-thrusters",
+      "title": "MCO Reaction Wheel Desaturation \u0026 Hydrazine Attitude Control Subsystem",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/orbiter-tps-reinforced-carbon",
+      "title": "Orbiter Thermal Protection System (TPS) Wing Leading Edge RCC Panels",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "subsystems/srb-field-joint-oring",
+      "title": "Solid Rocket Booster (SRB) Tang-and-Clevis Field Joint \u0026 Viton O-Rings",
+      "type": "Subsystem",
+      "tier": "human-reviewed",
+      "stale": true
+    },
+    {
+      "id": "telemetry/apollo-13-cryo-stir-current-spike",
+      "title": "Apollo 13 55:54:53 GET Main Bus B Undervoltage \u0026 O2 Tank 2 Pressure Drop",
+      "type": "Telemetry Anomaly",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "telemetry/hst-first-light-spherical-psf-halo",
+      "title": "HST First-Light Point Spread Function (PSF) 1.5-Arcsecond Spherical Halo",
+      "type": "Telemetry Anomaly",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "title": "MCO Two-Way Doppler Residual Drift Across TCM-1 Through TCM-4",
+      "type": "Telemetry Anomaly",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "title": "STS-107 Entry Interface +270s Left Wing Strain Gauge \u0026 Thermocouple Cascade",
+      "type": "Telemetry Anomaly",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "title": "STS-51-L T+0.678s Black Smoke Puff \u0026 T+58.788s Aft SRB Flame Plume",
+      "type": "Telemetry Anomaly",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "title": "Tour: Invisible Math, Inverted Sensors, and Metrology Flaws in Deep Space",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    },
+    {
+      "id": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "title": "Tour: Normalization of Deviance — From Challenger O-Rings to Columbia Foam",
+      "type": "Tour",
+      "tier": "human-reviewed",
+      "stale": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "remediations/captured-feature-triple-oring-joint-heater",
+      "text": "captured-feature-triple-oring-joint-heater"
+    },
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "subsystems/srb-field-joint-oring",
+      "text": "srb-field-joint-oring"
+    },
+    {
+      "from": "computations/oring-erosion-thermal-margin-sql",
+      "to": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "text": "sts-51l-t-plus-59s-plume-flicker"
+    },
+    {
+      "from": "computations/probabilistic-risk-assessment-cutset-sql",
+      "to": "failure-modes/cryo-tank-teflon-ignition",
+      "text": "cryo-tank-teflon-ignition"
+    },
+    {
+      "from": "computations/probabilistic-risk-assessment-cutset-sql",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "computations/probabilistic-risk-assessment-cutset-sql",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "computations/probabilistic-risk-assessment-cutset-sql",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "subsystems/mco-attitude-control-thrusters",
+      "text": "mco-attitude-control-thrusters"
+    },
+    {
+      "from": "computations/trajectory-navigation-residual-divergence-sql",
+      "to": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "text": "mco-trajectory-correction-maneuver-residual"
+    },
+    {
+      "from": "failure-modes/cryo-tank-teflon-ignition",
+      "to": "computations/probabilistic-risk-assessment-cutset-sql",
+      "text": "probabilistic-risk-assessment-cutset-sql"
+    },
+    {
+      "from": "failure-modes/cryo-tank-teflon-ignition",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "failure-modes/cryo-tank-teflon-ignition",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "failure-modes/cryo-tank-teflon-ignition",
+      "to": "subsystems/apollo-eps-oxygen-cryo",
+      "text": "apollo-eps-oxygen-cryo"
+    },
+    {
+      "from": "failure-modes/cryo-tank-teflon-ignition",
+      "to": "telemetry/apollo-13-cryo-stir-current-spike",
+      "text": "apollo-13-cryo-stir-current-spike"
+    },
+    {
+      "from": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "to": "organizational-factors/go-fever-schedule-pressure",
+      "text": "go-fever-schedule-pressure"
+    },
+    {
+      "from": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "to": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "text": "nitrogen-oxygen-cabin-atmosphere-redesign"
+    },
+    {
+      "from": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "to": "subsystems/command-module-cabin-wiring",
+      "text": "command-module-cabin-wiring"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "subsystems/mco-attitude-control-thrusters",
+      "text": "mco-attitude-control-thrusters"
+    },
+    {
+      "from": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "to": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "text": "mco-trajectory-correction-maneuver-residual"
+    },
+    {
+      "from": "failure-modes/inverted-g-switch-sensor-installation",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "failure-modes/inverted-g-switch-sensor-installation",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "failure-modes/inverted-g-switch-sensor-installation",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "failure-modes/inverted-g-switch-sensor-installation",
+      "to": "subsystems/genesis-gravity-switch-avionics",
+      "text": "genesis-gravity-switch-avionics"
+    },
+    {
+      "from": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "remediations/on-orbit-tps-laser-boom-inspection",
+      "text": "on-orbit-tps-laser-boom-inspection"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "subsystems/external-tank-bipod-foam",
+      "text": "external-tank-bipod-foam"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "subsystems/orbiter-tps-reinforced-carbon",
+      "text": "orbiter-tps-reinforced-carbon"
+    },
+    {
+      "from": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "to": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "text": "sts-107-reentry-left-wing-thermocouple-drop"
+    },
+    {
+      "from": "failure-modes/reflective-null-corrector-spacing-error",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "failure-modes/reflective-null-corrector-spacing-error",
+      "to": "organizational-factors/single-vendor-metrology-blindspot",
+      "text": "single-vendor-metrology-blindspot"
+    },
+    {
+      "from": "failure-modes/reflective-null-corrector-spacing-error",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "failure-modes/reflective-null-corrector-spacing-error",
+      "to": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "text": "hst-ritchey-chretien-primary-mirror"
+    },
+    {
+      "from": "failure-modes/reflective-null-corrector-spacing-error",
+      "to": "telemetry/hst-first-light-spherical-psf-halo",
+      "text": "hst-first-light-spherical-psf-halo"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "remediations/captured-feature-triple-oring-joint-heater",
+      "text": "captured-feature-triple-oring-joint-heater"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "subsystems/srb-field-joint-oring",
+      "text": "srb-field-joint-oring"
+    },
+    {
+      "from": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "to": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "text": "sts-51l-t-plus-59s-plume-flicker"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "text": "high-pressure-pure-oxygen-flash-fire"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "organizational-factors/go-fever-schedule-pressure",
+      "text": "go-fever-schedule-pressure"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "text": "nitrogen-oxygen-cabin-atmosphere-redesign"
+    },
+    {
+      "from": "missions/apollo-1",
+      "to": "subsystems/command-module-cabin-wiring",
+      "text": "command-module-cabin-wiring"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "computations/probabilistic-risk-assessment-cutset-sql",
+      "text": "probabilistic-risk-assessment-cutset-sql"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "failure-modes/cryo-tank-teflon-ignition",
+      "text": "cryo-tank-teflon-ignition"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "subsystems/apollo-eps-oxygen-cryo",
+      "text": "apollo-eps-oxygen-cryo"
+    },
+    {
+      "from": "missions/apollo-13",
+      "to": "telemetry/apollo-13-cryo-stir-current-spike",
+      "text": "apollo-13-cryo-stir-current-spike"
+    },
+    {
+      "from": "missions/genesis-sample-return",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "missions/genesis-sample-return",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "missions/genesis-sample-return",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "missions/genesis-sample-return",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "missions/genesis-sample-return",
+      "to": "subsystems/genesis-gravity-switch-avionics",
+      "text": "genesis-gravity-switch-avionics"
+    },
+    {
+      "from": "missions/hst-servicing-mission-1",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "missions/hst-servicing-mission-1",
+      "to": "organizational-factors/single-vendor-metrology-blindspot",
+      "text": "single-vendor-metrology-blindspot"
+    },
+    {
+      "from": "missions/hst-servicing-mission-1",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "missions/hst-servicing-mission-1",
+      "to": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "text": "hst-ritchey-chretien-primary-mirror"
+    },
+    {
+      "from": "missions/hst-servicing-mission-1",
+      "to": "telemetry/hst-first-light-spherical-psf-halo",
+      "text": "hst-first-light-spherical-psf-halo"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "subsystems/mco-attitude-control-thrusters",
+      "text": "mco-attitude-control-thrusters"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "text": "mco-trajectory-correction-maneuver-residual"
+    },
+    {
+      "from": "missions/mars-climate-orbiter",
+      "to": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "text": "tour-invisible-math-and-metrology-bugs-in-deep-space"
+    },
+    {
+      "from": "missions/mars-polar-lander",
+      "to": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "text": "premature-hall-effect-touchdown-cutoff"
+    },
+    {
+      "from": "missions/mars-polar-lander",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "missions/mars-polar-lander",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "missions/mars-polar-lander",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "missions/mars-polar-lander",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "text": "suppressed-dissenting-engineering-opinion"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "remediations/on-orbit-tps-laser-boom-inspection",
+      "text": "on-orbit-tps-laser-boom-inspection"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "subsystems/external-tank-bipod-foam",
+      "text": "external-tank-bipod-foam"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "subsystems/orbiter-tps-reinforced-carbon",
+      "text": "orbiter-tps-reinforced-carbon"
+    },
+    {
+      "from": "missions/sts-107-columbia",
+      "to": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "text": "sts-107-reentry-left-wing-thermocouple-drop"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "organizational-factors/go-fever-schedule-pressure",
+      "text": "go-fever-schedule-pressure"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "text": "suppressed-dissenting-engineering-opinion"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "remediations/captured-feature-triple-oring-joint-heater",
+      "text": "captured-feature-triple-oring-joint-heater"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "subsystems/srb-field-joint-oring",
+      "text": "srb-field-joint-oring"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "text": "sts-51l-t-plus-59s-plume-flicker"
+    },
+    {
+      "from": "missions/sts-51l-challenger",
+      "to": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "text": "tour-normalization-of-deviance-challenger-columbia"
+    },
+    {
+      "from": "organizational-factors/go-fever-schedule-pressure",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "organizational-factors/go-fever-schedule-pressure",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "organizational-factors/go-fever-schedule-pressure",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "organizational-factors/go-fever-schedule-pressure",
+      "to": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "text": "suppressed-dissenting-engineering-opinion"
+    },
+    {
+      "from": "organizational-factors/go-fever-schedule-pressure",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "failure-modes/cryo-tank-teflon-ignition",
+      "text": "cryo-tank-teflon-ignition"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "text": "premature-hall-effect-touchdown-cutoff"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "organizational-factors/normalization-of-deviance",
+      "to": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "text": "tour-normalization-of-deviance-challenger-columbia"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "organizational-factors/siloed-interface-control-documents",
+      "to": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "text": "tour-invisible-math-and-metrology-bugs-in-deep-space"
+    },
+    {
+      "from": "organizational-factors/single-vendor-metrology-blindspot",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "organizational-factors/single-vendor-metrology-blindspot",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "organizational-factors/single-vendor-metrology-blindspot",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "organizational-factors/single-vendor-metrology-blindspot",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "to": "organizational-factors/go-fever-schedule-pressure",
+      "text": "go-fever-schedule-pressure"
+    },
+    {
+      "from": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "remediations/captured-feature-triple-oring-joint-heater",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "remediations/captured-feature-triple-oring-joint-heater",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "remediations/captured-feature-triple-oring-joint-heater",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "remediations/captured-feature-triple-oring-joint-heater",
+      "to": "subsystems/srb-field-joint-oring",
+      "text": "srb-field-joint-oring"
+    },
+    {
+      "from": "remediations/costar-corrective-axial-optics",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "remediations/costar-corrective-axial-optics",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "remediations/costar-corrective-axial-optics",
+      "to": "organizational-factors/single-vendor-metrology-blindspot",
+      "text": "single-vendor-metrology-blindspot"
+    },
+    {
+      "from": "remediations/costar-corrective-axial-optics",
+      "to": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "text": "hst-ritchey-chretien-primary-mirror"
+    },
+    {
+      "from": "remediations/costar-corrective-axial-optics",
+      "to": "telemetry/hst-first-light-spherical-psf-halo",
+      "text": "hst-first-light-spherical-psf-halo"
+    },
+    {
+      "from": "remediations/independent-technical-authority-ita",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "remediations/independent-technical-authority-ita",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "remediations/independent-technical-authority-ita",
+      "to": "organizational-factors/go-fever-schedule-pressure",
+      "text": "go-fever-schedule-pressure"
+    },
+    {
+      "from": "remediations/independent-technical-authority-ita",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "remediations/independent-technical-authority-ita",
+      "to": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "text": "suppressed-dissenting-engineering-opinion"
+    },
+    {
+      "from": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "to": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "text": "high-pressure-pure-oxygen-flash-fire"
+    },
+    {
+      "from": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "to": "subsystems/command-module-cabin-wiring",
+      "text": "command-module-cabin-wiring"
+    },
+    {
+      "from": "remediations/on-orbit-tps-laser-boom-inspection",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "remediations/on-orbit-tps-laser-boom-inspection",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "remediations/on-orbit-tps-laser-boom-inspection",
+      "to": "subsystems/external-tank-bipod-foam",
+      "text": "external-tank-bipod-foam"
+    },
+    {
+      "from": "remediations/on-orbit-tps-laser-boom-inspection",
+      "to": "subsystems/orbiter-tps-reinforced-carbon",
+      "text": "orbiter-tps-reinforced-carbon"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "text": "premature-hall-effect-touchdown-cutoff"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "remediations/strict-si-unit-icd-automated-verification",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "subsystems/apollo-eps-oxygen-cryo",
+      "to": "failure-modes/cryo-tank-teflon-ignition",
+      "text": "cryo-tank-teflon-ignition"
+    },
+    {
+      "from": "subsystems/apollo-eps-oxygen-cryo",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "subsystems/apollo-eps-oxygen-cryo",
+      "to": "telemetry/apollo-13-cryo-stir-current-spike",
+      "text": "apollo-13-cryo-stir-current-spike"
+    },
+    {
+      "from": "subsystems/command-module-cabin-wiring",
+      "to": "failure-modes/high-pressure-pure-oxygen-flash-fire",
+      "text": "high-pressure-pure-oxygen-flash-fire"
+    },
+    {
+      "from": "subsystems/command-module-cabin-wiring",
+      "to": "missions/apollo-1",
+      "text": "apollo-1"
+    },
+    {
+      "from": "subsystems/command-module-cabin-wiring",
+      "to": "remediations/nitrogen-oxygen-cabin-atmosphere-redesign",
+      "text": "nitrogen-oxygen-cabin-atmosphere-redesign"
+    },
+    {
+      "from": "subsystems/external-tank-bipod-foam",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "subsystems/external-tank-bipod-foam",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "subsystems/external-tank-bipod-foam",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "subsystems/external-tank-bipod-foam",
+      "to": "subsystems/orbiter-tps-reinforced-carbon",
+      "text": "orbiter-tps-reinforced-carbon"
+    },
+    {
+      "from": "subsystems/genesis-gravity-switch-avionics",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "subsystems/genesis-gravity-switch-avionics",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "subsystems/genesis-gravity-switch-avionics",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "subsystems/hst-ritchey-chretien-primary-mirror",
+      "to": "telemetry/hst-first-light-spherical-psf-halo",
+      "text": "hst-first-light-spherical-psf-halo"
+    },
+    {
+      "from": "subsystems/mco-attitude-control-thrusters",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "subsystems/mco-attitude-control-thrusters",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "subsystems/mco-attitude-control-thrusters",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "subsystems/mco-attitude-control-thrusters",
+      "to": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "text": "mco-trajectory-correction-maneuver-residual"
+    },
+    {
+      "from": "subsystems/orbiter-tps-reinforced-carbon",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "subsystems/orbiter-tps-reinforced-carbon",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "subsystems/orbiter-tps-reinforced-carbon",
+      "to": "remediations/on-orbit-tps-laser-boom-inspection",
+      "text": "on-orbit-tps-laser-boom-inspection"
+    },
+    {
+      "from": "subsystems/orbiter-tps-reinforced-carbon",
+      "to": "subsystems/external-tank-bipod-foam",
+      "text": "external-tank-bipod-foam"
+    },
+    {
+      "from": "subsystems/srb-field-joint-oring",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "subsystems/srb-field-joint-oring",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "subsystems/srb-field-joint-oring",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "subsystems/srb-field-joint-oring",
+      "to": "remediations/captured-feature-triple-oring-joint-heater",
+      "text": "captured-feature-triple-oring-joint-heater"
+    },
+    {
+      "from": "telemetry/apollo-13-cryo-stir-current-spike",
+      "to": "failure-modes/cryo-tank-teflon-ignition",
+      "text": "cryo-tank-teflon-ignition"
+    },
+    {
+      "from": "telemetry/apollo-13-cryo-stir-current-spike",
+      "to": "missions/apollo-13",
+      "text": "apollo-13"
+    },
+    {
+      "from": "telemetry/apollo-13-cryo-stir-current-spike",
+      "to": "subsystems/apollo-eps-oxygen-cryo",
+      "text": "apollo-eps-oxygen-cryo"
+    },
+    {
+      "from": "telemetry/hst-first-light-spherical-psf-halo",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "telemetry/hst-first-light-spherical-psf-halo",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "telemetry/hst-first-light-spherical-psf-halo",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "to": "subsystems/orbiter-tps-reinforced-carbon",
+      "text": "orbiter-tps-reinforced-carbon"
+    },
+    {
+      "from": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "computations/trajectory-navigation-residual-divergence-sql",
+      "text": "trajectory-navigation-residual-divergence-sql"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "failure-modes/imperial-metric-impulse-unit-mismatch",
+      "text": "imperial-metric-impulse-unit-mismatch"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "failure-modes/inverted-g-switch-sensor-installation",
+      "text": "inverted-g-switch-sensor-installation"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "failure-modes/premature-hall-effect-touchdown-cutoff",
+      "text": "premature-hall-effect-touchdown-cutoff"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "failure-modes/reflective-null-corrector-spacing-error",
+      "text": "reflective-null-corrector-spacing-error"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "missions/genesis-sample-return",
+      "text": "genesis-sample-return"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "missions/hst-servicing-mission-1",
+      "text": "hst-servicing-mission-1"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "missions/mars-climate-orbiter",
+      "text": "mars-climate-orbiter"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "missions/mars-polar-lander",
+      "text": "mars-polar-lander"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "organizational-factors/inadequate-flight-like-test-as-you-fly",
+      "text": "inadequate-flight-like-test-as-you-fly"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "organizational-factors/siloed-interface-control-documents",
+      "text": "siloed-interface-control-documents"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "remediations/costar-corrective-axial-optics",
+      "text": "costar-corrective-axial-optics"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "remediations/strict-si-unit-icd-automated-verification",
+      "text": "strict-si-unit-icd-automated-verification"
+    },
+    {
+      "from": "tours/tour-invisible-math-and-metrology-bugs-in-deep-space",
+      "to": "telemetry/mco-trajectory-correction-maneuver-residual",
+      "text": "mco-trajectory-correction-maneuver-residual"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "computations/oring-erosion-thermal-margin-sql",
+      "text": "oring-erosion-thermal-margin-sql"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "failure-modes/rcc-leading-edge-kinetic-breach",
+      "text": "rcc-leading-edge-kinetic-breach"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "failure-modes/viton-oring-low-temp-extrusion-blowby",
+      "text": "viton-oring-low-temp-extrusion-blowby"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "missions/sts-107-columbia",
+      "text": "sts-107-columbia"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "missions/sts-51l-challenger",
+      "text": "sts-51l-challenger"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "organizational-factors/normalization-of-deviance",
+      "text": "normalization-of-deviance"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "organizational-factors/suppressed-dissenting-engineering-opinion",
+      "text": "suppressed-dissenting-engineering-opinion"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "remediations/captured-feature-triple-oring-joint-heater",
+      "text": "captured-feature-triple-oring-joint-heater"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "remediations/independent-technical-authority-ita",
+      "text": "independent-technical-authority-ita"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "remediations/on-orbit-tps-laser-boom-inspection",
+      "text": "on-orbit-tps-laser-boom-inspection"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "subsystems/external-tank-bipod-foam",
+      "text": "external-tank-bipod-foam"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "subsystems/srb-field-joint-oring",
+      "text": "srb-field-joint-oring"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "telemetry/sts-107-reentry-left-wing-thermocouple-drop",
+      "text": "sts-107-reentry-left-wing-thermocouple-drop"
+    },
+    {
+      "from": "tours/tour-normalization-of-deviance-challenger-columbia",
+      "to": "telemetry/sts-51l-t-plus-59s-plume-flicker",
+      "text": "sts-51l-t-plus-59s-plume-flicker"
+    }
+  ]
+}
+</script>
+</body>
+</html>
